@@ -29,6 +29,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 			4. [Stegoanálisis](#stegoanálisis)
 				1. [Herramientas varias de stegoanalisis](#herramientas-varias-de-stegoanalisis)
 				2. [Lecturas recomendadas](#lecturas-recomendadas)
+		2. [Steganografía artística](#steganografía-artística)
 6. [Forense](#forense)
 	1. [Capturas de ram](#capturas-de-ram)
 		1. [Volatility](#volatility)
@@ -66,6 +67,8 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 	- **mssqlclient:** Un cliente para conectarte a una base de datos SQL
 	- **psexec:** Abrir shell remoto con privilegios
 - **nc:** Super útil, permite conectarse a todo tipo de servicios, mandar comandos, escuchar en un determinado puerto...
+- **Plataforma Atenea:** Plataforma que contiene una recopilación de muchos CTFs
+- **https://ctftime.org/:** Página donde participar en CTFs o ver los write ups de CTFs pasados
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se pueden leer la info de una tarjeta de pago, existe una app de android con la que podemos hacerlo facilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
@@ -224,6 +227,52 @@ stegcracker: Fuerza bruta sobre al algoritmo de Steghide
 - **Esteganografia y Estegoanálisis**
 - **Esteganografia  y canales encubiertos** - Por Dr. Alfonso Muñoz
 - **StegoSploit**
+
+### Steganografía artística
+
+- **Videojuegos:**
+	- **Casos de uso:** Jugar a otro videojuego o introducir datos en un videojuego
+	- **Contramedidas y detección (Stegoanálisis):** Se buscan desviaciones en la duración de partidas, nivel de juego y el resultado del mismo
+	- **Herramientas:** 
+		- **ChessSteganography:** Utiliza los movimientos de ajedrez para codificar un mensaje
+		- **Hammer:** Herramienta de edición de mapas. Otro podría ser https://www.mipui.net/
+		- **stego-toolkit:** Metaherramienta en forma de imagen de Docker que contiene muchas otras herramientas populares instaladas
+		- **Steganography Tools:** Listado con herramientas de esteganografía
+- **Imagen digital:**
+	- **Casos de uso:** LSB, ocultar información mediante paleta de colores, ocultar información mediante coeficientes y ocultar información mediante la transformada de ondícula (wavelet)
+	- **Contramedidas y detección (Stegoanálisis):** Histograma, ataques visuales y estadísticos, detección basada en la firma y basada en el hash y detección basada en el aprendizaje automático.
+	- **Herramientas:** 
+		- **GIMP:** Editor de imagenes
+		- **StegoSuite:** Herramienta libre steganografía en Java
+		- **StegOnline:** Combina y mejora características de otras herramientas
+		- **stego-toolkil**
+		- **Steganography Software:** repositorio histórico de diversas herramientas
+		- **Steghide:** Programa de esteganografía que puede ocultar datos en varios tipos de archivos
+		- **Steganography Tools**
+	- **Ejemplo:**
+		- **Estereopgramas:** Son imágenes hechas de tal forma que permiten generar cosas en 3D
+- **Audio digital:**
+	- **Casos de uso:** LSB, ocultar información mediante el eco, fase de la señal, codificación de paridad y difusión del espectro (espectrograma)
+	- **Contramedidas y detección (Stegoanálisis):** Se suele estracción de características y aprendizaje automático
+	- **Herramientas:** 
+		- **Sonic Visualizer**
+		- **Audacity**
+		- **Spectrum Analyzer**
+		- **DeepSound**
+		- **Wav Steg**
+		- **stego-toolkit**
+		- **OpenPuff**
+		- **Spectrology
+		- **Steghide**
+		- **Steganography Tools**
+- **Video digital:**
+	- **Casos de uso:** LSB, detectar el borde, transformada discreta del coseno (DCT), EoF y metadatos
+	- **Contramedidas y detección (Stegoanálisis):** RST (Rotación, Escalado y Translacin), compresión, cambio en la velocidad del fotograma y añadir, intercambiar o borrar fotograma
+	- **Herramientas:** 
+		- **MSU Stego Video:** Ocultar cualquier fichero en un video
+		- **StegoStick:** Esconder cualquier cosa multimedia en otro archivo (audio, imagen, video, pdf...)
+		- **OpenPuff**
+		- **Steganography Tools**
 
 # Forense
 
