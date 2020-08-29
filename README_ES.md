@@ -166,7 +166,7 @@ Radio en la cual alguna o varias de las funciones de la capa física son definid
 - **dcode.fr:** Página para codificar y decodificar diferentes tipos de algoritmos de cifrado
 - **CyberChef:** Se puede ir metiendo una receta de decodificación (tanto cifrado como codificación)
 - [**John the Ripper**](https://github.com/openwall/john)**:** Permite crackear un montón de tipos de contraseñas
-- **fcrackzip:** Para intentar crackear la información de un zip
+- **fcrackzip:** Para intentar crackear la información de un zip. Ejemplo: `fcrackzip -b --method 2 -D -p /usr/share/wordlists/rockyou.txt -v ./file.zip`
 
 ### Diccionarios
 Para crackear contraseñas necesitaremos diccionarios, aquí dejo algunas opciones:
