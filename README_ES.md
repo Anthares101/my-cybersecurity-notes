@@ -442,6 +442,10 @@ $ fg
 # Push Intro/CTRL-C
 $ export TERM=xterm
 ```
+- También es posible hacer:
+```console
+$ script -qc /bin/bash /dev/null
+```
 
 - [**metasploit**](https://github.com/rapid7/metasploit-framework)**:**
 	- Metasploit tiene un montón de exploits ademas de un entorno de desarrollo para crear nuevos. Para iniciarlo por primera vez: 
