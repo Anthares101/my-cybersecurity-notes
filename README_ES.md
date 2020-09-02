@@ -167,6 +167,7 @@ Radio en la cual alguna o varias de las funciones de la capa física son definid
 - **CyberChef:** Se puede ir metiendo una receta de decodificación (tanto cifrado como codificación)
 - [**John the Ripper**](https://github.com/openwall/john)**:** Permite crackear un montón de tipos de contraseñas. También permite generar diccionarios mediante mutaciones usando las reglas de `/etc/john/john.conf` y usando `john --wordlist=DICCIONARIO_ORIGEN --rules --stdout > OUTPUT.txt`
 - **fcrackzip:** Para intentar crackear la información de un zip. Ejemplo: `fcrackzip -b --method 2 -D -p /usr/share/wordlists/rockyou.txt -v ./file.zip`
+- **OpenSSL:** Paquete de herramientas de administración y bibliotecas relacionadas con la criptografía
 
 ### Diccionarios
 Para crackear contraseñas necesitaremos diccionarios, aquí dejo algunas opciones:
