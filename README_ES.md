@@ -165,14 +165,15 @@ Radio en la cual alguna o varias de las funciones de la capa física son definid
 - **hashidentifier:** Programa para identificar tipo de hash
 - **dcode.fr:** Página para codificar y decodificar diferentes tipos de algoritmos de cifrado
 - **CyberChef:** Se puede ir metiendo una receta de decodificación (tanto cifrado como codificación)
-- [**John the Ripper**](https://github.com/openwall/john)**:** Permite crackear un montón de tipos de contraseñas
+- [**John the Ripper**](https://github.com/openwall/john)**:** Permite crackear un montón de tipos de contraseñas. También permite generar diccionarios mediante mutaciones usando las reglas de `/etc/john/john.conf` y usando `john --wordlist=DICCIONARIO_ORIGEN --rules --stdout > OUTPUT.txt`
 - **fcrackzip:** Para intentar crackear la información de un zip. Ejemplo: `fcrackzip -b --method 2 -D -p /usr/share/wordlists/rockyou.txt -v ./file.zip`
 
 ### Diccionarios
 Para crackear contraseñas necesitaremos diccionarios, aquí dejo algunas opciones:
-- **Localización del algunos de Kali:** `/usr/share/di*`, `/usr/share/wordlist`
+- **Localización de algunos en Kali:** `/usr/share/di*`, `/usr/share/wordlist`
 - [**Rockyou**](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)**:** Un diccionario bastante utilizado
 - [**Kaonashi**](https://github.com/kaonashi-passwords/Kaonashi/tree/master/wordlists)
+- **Crunch y Cewl:** Para creación de diccionarios
 
 ## Steganografía
 Técnicas de ocultación de información. Utilizar videos, imagenes o lo que sea como portadores de info
