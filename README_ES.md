@@ -419,6 +419,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 - [**gobuster**](https://github.com/OJ/gobuster)**:** Para sacar todos los directorios de una web
 - [**Nikto**](https://github.com/sullo/nikto)**:** Escaner de vulnerabilidades web: Escaner de vulnerabilidades web
 - **enum4linux:** Para pillar info de hosts Windows y Samba
+- **showmount:** En el caso de tener un puerto con el servicio NFS puede mostrar si hay algún directorio montado
 - **CVSS:** Se utiliza un sistema de puntuación para dar puntos a las diferentes vulnerabilidades que se encuentren y dar un nivel de riesgo
 - **Etiquetado de vulnerabilidades**
 	- Para buscar las puntuaciones hay que buscar por etiqueta, hay varias:
