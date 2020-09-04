@@ -449,6 +449,7 @@ $ export TERM=xterm
 ```console
 $ script -qc /bin/bash /dev/null
 ```
+- Es interesante mirar archivos con los permisos SUID o SGID puestos (Sobretodo si son ejecutables) ya que podramos usarlos para escalar privilegios: `find / -perm /4000 2> /dev/null` para buscar archivos con el SUID y `find / -perm /2000 2> /dev/null` con el SGID. También explorar todas las `capabilities` (da privilegios de root pero en trozos digamos) de los distintos archivos del sistema viene guay: `getcap -r / 2> /dev/null`
 
 - [**metasploit**](https://github.com/rapid7/metasploit-framework)**:**
 	- Metasploit tiene un montón de exploits ademas de un entorno de desarrollo para crear nuevos. Para iniciarlo por primera vez: 
