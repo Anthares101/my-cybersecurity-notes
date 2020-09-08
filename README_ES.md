@@ -51,25 +51,14 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 # Cosas útiles
 
 - **`[COMAND] 2> /dev/null`:** Para quitar la salida de error y pasar de ella)
-- En `/dev/shm` podemos escribir seamos quien seamos, es la carpeta de memora compartida del sistema
-- Ruta de ejemplo de donde se encuentra el archivo archive.php en Wordpress: `http://10.10.248.106/wp-content/themes/twentyfifteen/archive.php`
 - **Algunas VPN y proxies:** freedom vpn, opera vpn, proxy ultrasurf
 - Se puede utilizar un *spoofer* para cambiar la info del disp
 - Cuidado con las balizas en los acortadores de ip (redirecciones que hacen que puedan pillarte información). Existen herramientas para desacortar un enlace
 - **Logstalgia:** Programita para pasarle un log de conexiones y generar de forma visual las peticiones que hay al sistema
 - **Metasploiteable:** Máquina virtual para practicar
 - **Pirámide de la seguridad informática (CIA):** Confidencialidad, Integridad, Disponibilidad y no repudio
--**smbclient:**
-	- **`smbclient -N -L //IP/`:** Para listar directorios de un server samba windows.
-	- **`smbclient -N //IP/dir`:** Nos conectamos y entramos al directorio que hayamos puesto
-	- Con el comando `get` podemos pillar archivos
-- **Impacket:** Colección de clases de Python para trabajar con protocolos de red. Conectarte a cualquier lado pero gestionando a mano el protocolo, la cosa es que incluye ejemplos tipo:
-	- **mssqlclient:** Un cliente para conectarte a una base de datos SQL
-	- **psexec:** Abrir shell remoto con privilegios
-- **nc:** Super útil, permite conectarse a todo tipo de servicios, mandar comandos, escuchar en un determinado puerto...
 - **Plataforma Atenea:** Plataforma que contiene una recopilación de muchos CTFs
 - **https://ctftime.org/:** Página donde participar en CTFs o ver los write ups de CTFs pasados
-- **Bucket AWS:** A veces se guarda información en la nube utilizando este servicio de amazon, para ver si podemos acceder al menos a ver lo que hay las URL tienen el formato siguiente: `http://bucketname.region-name.s3.amazonaws.com/` (`region-name` se puede omitir)
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se pueden leer la info de una tarjeta de pago, existe una app de android con la que podemos hacerlo facilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
@@ -381,6 +370,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 - **whatweb:** Saca información de una web
 - **TheHarvester:** Recolecta toda la información que se puede obtener de un dominio
 - **Dato curioso:** A veces nos podemos encontrar con que un determinado dominio tiene una carpeta (la raíz por ejemplo) que en vez de esta bloqueada porquen no hay nada que mostrar ahí, hace un directory listing. Con eso se puede sacar cosas guays
+- **Bucket AWS:** A veces se guarda información en la nube utilizando este servicio de amazon. Para ver si podemos acceder al menos a ver lo que hay, las URL tienen el formato siguiente: `http://bucketname.region-name.s3.amazonaws.com/` (`region-name` se puede omitir)
 
 ### Escaneo y enumeración
 - [**rustscan**](https://github.com/RustScan/RustScan)**:** Escanea los puertos muy rápido y después ejecuta nmap
@@ -421,6 +411,10 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 - [**Nikto**](https://github.com/sullo/nikto)**:** Escaner de vulnerabilidades web: Escaner de vulnerabilidades web
 - **enum4linux:** Para pillar info de hosts Windows y Samba
 - **showmount:** En el caso de tener un puerto con el servicio NFS, puede mostrar con el parámetro `-e` si hay algún directorio montado
+- **smbclient:**
+	- **`smbclient -N -L //IP/`:** Para listar directorios de un server samba windows.
+	- **`smbclient -N //IP/dir`:** Nos conectamos y entramos al directorio que hayamos puesto
+	- Con el comando `get` podemos pillar archivos
 - **CVSS:** Se utiliza un sistema de puntuación para dar puntos a las diferentes vulnerabilidades que se encuentren y dar un nivel de riesgo
 - **Etiquetado de vulnerabilidades**
 	- Para buscar las puntuaciones hay que buscar por etiqueta, hay varias:
@@ -431,6 +425,12 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 			- OSVD, NVD, BID, ExploitDB
 
 ### Ganar acceso y escalar privilegios
+- **Impacket:** Colección de clases de Python para trabajar con protocolos de red. Conectarte a cualquier lado pero gestionando a mano el protocolo, la cosa es que incluye ejemplos tipo:
+	- **mssqlclient:** Un cliente para conectarte a una base de datos SQL
+	- **psexec:** Abrir shell remoto con privilegios
+- Ruta de ejemplo de donde se encuentra el archivo archive.php en Wordpress: `http://10.10.248.106/wp-content/themes/twentyfifteen/archive.php` Es un fichero que se suele usar para meter una reverse shell
+- En `/dev/shm` podemos escribir seamos quien seamos, es la carpeta de memoria compartida del sistema
+- **nc:** Super útil, permite conectarse a todo tipo de servicios, mandar comandos, escuchar en un determinado puerto...
 - Como estabilizar un revershell:
 ```console
 # https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/
