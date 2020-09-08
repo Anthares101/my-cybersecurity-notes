@@ -69,6 +69,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - **nc:** Super útil, permite conectarse a todo tipo de servicios, mandar comandos, escuchar en un determinado puerto...
 - **Plataforma Atenea:** Plataforma que contiene una recopilación de muchos CTFs
 - **https://ctftime.org/:** Página donde participar en CTFs o ver los write ups de CTFs pasados
+- **Bucket AWS:** A veces se guarda información en la nube utilizando este servicio de amazon, para ver si podemos acceder al menos a ver lo que hay las URL tienen el formato siguiente: `http://bucketname.region-name.s3.amazonaws.com/` (`region-name` se puede omitir)
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se pueden leer la info de una tarjeta de pago, existe una app de android con la que podemos hacerlo facilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
