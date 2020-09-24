@@ -21,6 +21,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 		1. [Tipos](#tipos)
 		2. [Herramientas](#herramientas-2)
 		3. [Diccionarios](#diccionarios)
+		4. [Reglas](#reglas)
 	2. [Steganografía](#steganografía)
 		1. [Steganografía técnica](#steganografía-técnica)
 			1. [Algunos conceptos](#algunos-conceptos-1)
