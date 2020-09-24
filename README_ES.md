@@ -151,6 +151,7 @@ Radio en la cual alguna o varias de las funciones de la capa física son definid
 ### Herramientas
 - **CrackStation o Google:** Para "revertir" un determinado hash común
 - **hashcat:** Usa varios ataques de fuerza bruta
+- [**colabcat**](https://github.com/someshkar/colabcat)**:** Ejecuta hashcat en google colab
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Permite realizar diferentes tipos de fuerza bruta
 - **filemyhash:** Programa para descifrar un hash (base de datos)
 - **hashidentifier:** Programa para identificar tipo de hash
