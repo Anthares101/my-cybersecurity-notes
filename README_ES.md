@@ -166,6 +166,10 @@ Para crackear contraseñas necesitaremos diccionarios, aquí dejo algunas opcion
 - [**Kaonashi**](https://github.com/kaonashi-passwords/Kaonashi/tree/master/wordlists)
 - **Crunch y Cewl:** Para creación de diccionarios
 
+### Reglas
+Si se combina un buen diccionario con un buen conjunto de reglas las posibilidades de éxito aumentan:
+- [**OneRuleToRuleThemAll**](https://github.com/NotSoSecure/password_cracking_rules)
+
 ## Steganografía
 Técnicas de ocultación de información. Utilizar videos, imagenes o lo que sea como portadores de info
 
