@@ -106,8 +106,8 @@ Trabajan a 125 khz o 13.56 Mhz. Se pueden leer la info de una tarjeta de pago, e
 - **Phising (2FA):** Haciendo que meta el codigo del sms tambien en la web al robar credenciales
 		
 ## Herramientas
-- **bettercap:** Analizador de redes. Puedes hacer lo mas que con wireshark
-- **wireshark:** Sniffer
+- **bettercap:** Analizador de redes. Tiene algunas funcionalidades más avanzadas de las que tiene Wireshark
+- [**Wireshark**](https://www.wireshark.org/)**:** Analizador de protocolos de red más usado. Permite de forma sencilla revisar y filtrar todos los paquetes que circulan por una red
 - Esto para ondas comunes viene bien (Diccionario):
 	- **hcxdumptool:** Lo que hace es monitorizar paquetes que vayan saliendo para ver si son vulnerables y saca el PSK
 	- **hcxpcaptool:** Lo mismo que el otro pero sacando el PMKID
