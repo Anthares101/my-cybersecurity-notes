@@ -85,12 +85,12 @@ Trabajan a 125 khz o 13.56 Mhz. Se pueden leer la info de una tarjeta de pago, e
 	- Lo tipico de los hoteles. Lo facil seria spofeando la mac por la de alguien conectado
 	- Iodine (tunel DNS) o dns2tcp podemos saltar el portal
 - **WEB (ChopChop):**
-	- Detectamos primer bloque de un paquete ARP.
+	- Detectamos primer bloque de un paquete ARP
 	- Tomamos el ultimo byte cifrado y se prueban combinaciones para determinar como se calcula el ICV (Vector inicialización o check de integridad)
 	- La idea es tomar muchos ICVs para poder ir descartando y sacar la clave
 	- Al final se descifra el byte. Así con todos
 - **WPS (Pixie Dust):**
-	- Al ser un pin de 8 digitos se descifra por fuerza bruta y yap.
+	- Al ser un pin de 8 digitos se puede descifrar por fuerza bruta
 - **WPA:** 
 	- No se que del 4  wayhandshake que se captura el tercer paquete (instalación). Este paquete se puede reenviar lo que nos dé la gana y por tanto descifrar el paquete
 	- Bettercap 2 + hcxtools: bettercap --iface nombreInterfaz a utilizar para snif
@@ -174,7 +174,7 @@ Si se combina un buen diccionario con un buen conjunto de reglas las posibilidad
 - [**OneRuleToRuleThemAll**](https://github.com/NotSoSecure/password_cracking_rules)
 
 ## Steganografía
-Técnicas de ocultación de información. Utilizar videos, imagenes o lo que sea como portadores de info
+Técnicas de ocultación de información. Utilizar vídeos, imágenes o lo que sea como portadores de información
 
 ### Steganografía técnica
 
@@ -198,7 +198,7 @@ a la imagen para sacar lo que haya comprimido en el zip
 - **LSBSteg**
 - **F5**
 - **DeepSound**
-Problemas de las herramientas de arriba? Son comunes! Es mejor usar algoritmos propios.
+¿Problemas de las herramientas de arriba? ¡Son comunes! Es mejor usar algoritmos propios.
 
 #### Stegoanálisis
 Ciencia o arte que permite detectar información oculta:
