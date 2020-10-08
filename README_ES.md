@@ -61,6 +61,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - **Plataforma Atenea:** Plataforma que contiene una recopilación de muchos CTFs
 - **https://ctftime.org/:** Página donde participar en CTFs o ver los write ups de CTFs pasados
 - **Foremost:** En Kali contamos con esta herramienta que a partir de las cabeceras, pies de página y las estructuras de datos internas es capaz de recuperar archivos. Puede servir para sacar ficheros de una captura .pcap de forma sencilla.
+- **radare2:** Para hacer reversing. Dejo esto por [aqui](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) para más información
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se pueden leer la info de una tarjeta de pago, existe una app de android con la que podemos hacerlo facilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
