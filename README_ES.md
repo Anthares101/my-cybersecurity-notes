@@ -436,6 +436,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 		- **`--badsum`:** Se mandan paquetes corruptos que el sistema descarta al estar mal y por tanto las respuestas suelen venir de IDS o Firewalls que no miran los checksums
 		- **`--adler32`:** Para utilizar el antiguo algoritmo de cálculo del checksum de un paquete SCTP. Puede venir bien para recibir paquetes de sistemas antiguos
 - **nessus:** Hace un escaneo de vulnerabilidades de un host. Tiene interfaz bonita. No permite escanear de forma remota, solo local en version gratuita, aunque se podría hacer un tunel ssh para nessus. Esta guay para ver las vulnerabilidades directamente con sus puntuaciones y tal.
+- [**BloodHound**](https://github.com/BloodHoundAD/BloodHound)**:** Utilizado para encontrar caminos de escalado de privilegios complejos de forma sencilla en un entorno de Active Directory
 - **MBSA:** Algo obsoleto pero se puede bajar para escanear nuestro PC Windows en busca de brechas de seguridad
 - [**gobuster**](https://github.com/OJ/gobuster)**:** Para sacar todos los directorios de una web
 - [**Nikto**](https://github.com/sullo/nikto)**:** Escaner de vulnerabilidades web: Escaner de vulnerabilidades web
