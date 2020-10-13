@@ -520,6 +520,7 @@ $ script -qc /bin/bash /dev/null
 		1. Abrir un proxy socks4a desde metasploit para utilizar la route que hemos metido antes
 		2. Una vez con eso hecho, vamos al fichero `/etc/proxychains.conf` y añadimos una linea de que proxy usar (Ejemplo: `socks4 127.0.0.1 8080`)
 		3. Con el comando `proxychains` delante de cualquier comando podremos mandar dicho comando a traves de nuestro proxy
+- [**Armitage**](https://github.com/rsmudge/armitage)**:** GUI para metasploit
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Buscar contraseñas por fuerza bruta a tavés de un protocolo o web
 - [**linpeas/winpeas**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)**:** Saca info de la máquina para ver como escalar
 - [**Seatbelt**](https://github.com/GhostPack/Seatbelt)**:** Parecido al anterior pero solo con Windows. [Aquí](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries) se pueden descargar los .exe ya compilados
