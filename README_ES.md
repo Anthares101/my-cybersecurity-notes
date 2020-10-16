@@ -262,7 +262,7 @@ stegcracker: Fuerza bruta sobre al algoritmo de Steghide
 		- **Wav Steg**
 		- **stego-toolkit**
 		- **OpenPuff**
-		- **Spectrology
+		- **Spectrology**
 		- **Steghide**
 		- **Steganography Tools**
 - **Video digital:**
