@@ -243,6 +243,7 @@ stegcracker: Fuerza bruta sobre al algoritmo de Steghide
 	- **Contramedidas y detección (Stegoanálisis):** Histograma, ataques visuales y estadísticos, detección basada en la firma y basada en el hash y detección basada en el aprendizaje automático.
 	- **Herramientas:** 
 		- **GIMP:** Editor de imagenes
+		- [**StegSolve**](https://github.com/zardus/ctf-tools/blob/master/stegsolve/install)**:** Herramienta muy útil para aplicar filtros a imágenes y analizarlas
 		- **StegoSuite:** Herramienta libre steganografía en Java
 		- **StegOnline:** Combina y mejora características de otras herramientas
 		- **stego-toolkil**
