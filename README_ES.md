@@ -76,8 +76,8 @@ Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de 
 
 # Redes WIFI
 ## Algunos conceptos
-**Beacon Frames**: El movil va preguntando si esta disp alguna de las redes a las que se ha conectado a vces. Si alguien esta snifeando, podria hacer un "gemelo" de la red y que el movil se conecte F.
-**Modo promiscuo/ Modo monito**: Nuestra tarjeta de red o WIFI debe permitirlo para poder snifear la red
+- **Beacon Frames**: El móvil va preguntando si esta disp alguna de las redes a las que se ha conectado a vces. Si alguien esta snifeando, podria hacer un "gemelo" de la red
+- **Modo promiscuo o Modo monitor**: Nuestra tarjeta de red o WIFI debe permitirlo para poder snifear la red
 
 ## Ataques
 - **Jamming:** Atacar la señal (inhibidor) Hay jammers reactivos, randoms, constantes.
@@ -94,7 +94,7 @@ Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de 
 - **WPS (Pixie Dust):**
 	- Al ser un pin de 8 digitos se puede descifrar por fuerza bruta
 - **WPA:** 
-	- No se que del 4  wayhandshake que se captura el tercer paquete (instalación). Este paquete se puede reenviar lo que nos dé la gana y por tanto descifrar el paquete
+	- Se captura el tercer paquete del four  way handshake (instalación). Este paquete se puede reenviar lo que nos dé la gana y por tanto descifrar el paquete
 	- Bettercap 2 + hcxtools: bettercap --iface nombreInterfaz a utilizar para snif
 		- Ataque:
 		1. wifi.recon on
@@ -154,7 +154,7 @@ Radio en la cual alguna o varias de las funciones de la capa física son definid
 ### Herramientas
 - **CrackStation o Google:** Para "revertir" un determinado hash común
 - **hashcat:** Usa varios ataques de fuerza bruta
-- [**colabcat**](https://github.com/someshkar/colabcat)**:** Ejecuta hashcat en google colab
+- [**colabcat**](https://github.com/someshkar/colabcat)**:** Ejecuta hashcat en Google Colab
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Permite realizar diferentes tipos de fuerza bruta
 - **filemyhash:** Programa para descifrar un hash (base de datos)
 - **hashidentifier:** Programa para identificar tipo de hash
@@ -213,7 +213,7 @@ stegcracker: Fuerza bruta sobre al algoritmo de Steghide
 - Comando `file` para ver cabecera fichero, `strings` para ver si hay texto legible
 - **exiftool:** Ver tipo fichero metadatos blabla
 - **ghex:** Editor hexadecimal
-- **xxd:** Para leer info hexadecimal
+- **xxd:** Para leer información hexadecimal
 - **BinWalk:** Con `-e` para sacar archivos ocultos de otro. Si solo lo lanzamos contra un fichero saca info del mismo, si hay algo oculta y tal.
 - **StegoVeritas**
 - **Zsteg**
@@ -248,7 +248,7 @@ stegcracker: Fuerza bruta sobre al algoritmo de Steghide
 		- **StegoSuite:** Herramienta libre steganografía en Java
 		- **StegOnline:** Combina y mejora características de otras herramientas
 		- **stego-toolkil**
-		- **Steganography Software:** repositorio histórico de diversas herramientas
+		- **Steganography Software:** Repositorio histórico de diversas herramientas
 		- **Steghide:** Programa de esteganografía que puede ocultar datos en varios tipos de archivos
 		- **Steganography Tools**
 	- **Ejemplo:**
@@ -283,11 +283,11 @@ stegcracker: Fuerza bruta sobre al algoritmo de Steghide
 ### Volatility 
 Herramienta para analizar capturas de RAM. Algunos ejemplos de uso:
 ```console
-Anthares101@kali:~$ volatility -f imagen imageinfo #Saca el SO de la captura de RAM
-Anthares101@kali:~$ volatility -f imagen --profile=PERFIL pstree #Saca el arbol de procesos en RAM
-Anthares101@kali:~$ volatility -f imagen --profile=PERFIL netscan #Escanea buscando artefactos de red
+Anthares101@kali:~$ volatility -f IMAGEN imageinfo #Saca el SO de la captura de RAM
+Anthares101@kali:~$ volatility -f IMAGEN --profile=PERFIL pstree #Saca el arbol de procesos en RAM
+Anthares101@kali:~$ volatility -f IMAGEN --profile=PERFIL netscan #Escanea buscando artefactos de red
 Anthares101@kali:~$ volatility -f IMAGEN --profile=PERFIL cmdscan #Saca del proceso cmd el historial de comandos usados
-Anthares101@kali:~$ volatility -f imagen --profile=PERFIL memdump -p PID -D DIRECTORIO_DESTINO #Dumpea un determinado proceso
+Anthares101@kali:~$ volatility -f IMAGEN --profile=PERFIL memdump -p PID -D DIRECTORIO_DESTINO #Dumpea un determinado proceso
 ```
 El proceso dumpeado podemos procesarlo con WINDBG o strings: `strings FICHERO > salida.txt` que saca las cadenas legibles. Por defecto usa 8bits UTF8, con -el se puede cambiar a UTF16 (16bits):
 ```console
@@ -303,7 +303,7 @@ Windows hashea las contraseñas con un hash tipo NTLM. Funciona tomando una cont
 
 Si no hay contraseña, Windows tiene un tipo de hash por defecto que indica que una cadena esta vacía. Las password de windows son como max de 16 caracteres y se parten de 8 en 8 (Por la mitad vaya) En el hash una pass de 8 caracteres aparecería como el segundo hash, como que se rellenan al revés.
 
-Podemos usar por ejemplo [CrackStation](https://crackstation.net/) para intentar revertir hash de windows comunes.
+Podemos usar por ejemplo [CrackStation](https://crackstation.net/) para intentar revertir hash de Windows comunes.
 	
 ## Imagen de disco
 
@@ -317,7 +317,7 @@ Si se quiere ver si se ha comunicado mediante email con alguien y se ha intentad
 
 Para sacar una contraseña de un gestor de contraseñas (no está en ram), como por ejemplo Keypass, primero hay que buscar la base de datos de las contraseñas, que en este programa esta en `Documents/password.kdbx`. Podemos usar `keypass2jhon.py` para sacar los hashes de la base de datos de keypass. Ahora se limpia lo de `password` que aparece en el fichero generado y se pasa el hash por hashcat:
 ```console
-Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 fichero diccionario --force --show #13400 tipo de keypass
+Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 fichero diccionario --force --show #13400 es el tipo de keypass
 ```
 
 # Hacking web
@@ -373,7 +373,7 @@ Anthares101@kali:~$ sqlmap -D DB -T TABLA --dump --batch -r post_request.txt
 Anthares101@kali:~$ sqlmap -D DB -T TABLA -C id,password,...,... --sql-query "select id,password,...,... from TABLA where COLUMNA like PATRÓN" -r post_request.txt
 # Permite extraer los resultados de una query especifica a una tabla conocida
 ```
-- **RCE (Ejecución de comandos remotos):** En principio, si se esta poniendo el codigo directamente: `shell_exec('ping 8.8.8.8');` siendo la ip lo que el usuario mete, si en vez de eso ponemos ;ls pues aunque `ping` de error ejecuta el comando `ls`. Una vez detectada la vulnerabilidad podriamos ejecutar una WebShell: `;echo'<?php echo shell_exec(s_GET["cmd"]); ?>' > shell1.php`. Si nos vamos a `shell1.php`, con el parámetro de la url `cmd` podremos ejecutar los comandos que nos dé la gana.
+- **RCE (Ejecución de comandos remotos):** En principio, si se esta poniendo el código directamente: `shell_exec('ping 8.8.8.8');` siendo la ip lo que el usuario mete, si en vez de eso ponemos `;ls` pues aunque `ping` de error ejecuta el comando `ls`. Una vez detectada la vulnerabilidad podriamos ejecutar una WebShell: `;echo'<?php echo shell_exec(s_GET["cmd"]); ?>' > shell1.php`. Si nos vamos a `shell1.php`, con el parámetro de la url `cmd` podremos ejecutar los comandos que nos dé la gana.
 - **Metodologia OWASP para testear seguridad en la web:** OWASP broken web application (Para practicar a atacar paginas y esas cosas) 
 
 # Metodología de hacking (Pentest)
@@ -394,7 +394,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 - **geoiplocation:** Saca una localización aproximada de una IP
 - **ardilla.ai:** Mirar operadora de un número movil y ver si en algún momento se ha cortado
 - Si se accede al archivo `robots.txt` de una pagina tenemos info de lo que no se quiere indexar
-- **Foca:** para sacar metadatos de documentos
+- **Foca:** Para sacar metadatos de documentos
 - Existen hosting dedicados y compartidos (varios dominios con una IP)
 - **dnsmap:** Para subdominios
 - **wafwoof:** Sondear firewall
