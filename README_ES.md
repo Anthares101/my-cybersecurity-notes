@@ -542,6 +542,6 @@ la shell reversa que tenemos en el equipo desde server SQL vulnerable.
 		- **`ufw allow from 10.10.10.27 proto tcp to any port 80,443`:** Para abrir los puertos pertinentes en caso de tener `Uncomplicated Firewall` 
 ### Mantener acceso, Cubrir rastro y Reportar
 - **mimikatz:** De lo más utilizado para hacer un dump y crackear contraseñas en sistemas Windows. Se deberá desactivar el antivirus en la máquina objetivo o utilizar una versión ofuscada puesto que al ser tan utilizado es detectado fácilmente
-- [**Servidor de comando y control:**]
+- **Servidor de comando y control:**
 	- [**Powershell Empire**](https://github.com/BC-SECURITY/Empire/)**:** Framework de post explotación. Tiene varias herramientas útiles y permite el control sencillo de máquinas exploiteadas
 	- [**Starkiller**](https://github.com/BC-SECURITY/Starkiller)**:** Frontend para Powershell Empire
