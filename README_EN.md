@@ -9,7 +9,7 @@ These are the notes I've been taking since I started learning about ethical hack
 2. [Identification of radio frequencies (NFC Cards)](#identification-of-radio-frequencies-nfc-cards)
 	1. [Devices](#devices)
 3. [Wireless networks](#wireless-networks)
-	1. [Some Concepts](#some-concepts)
+	1. [Some concepts](#some-concepts)
 	2. [Attacks](#attacks)
 	3. [Tools](#tools)
 4. [SDR (Radio Hacking)](#sdr-radio-hacking)
@@ -24,7 +24,7 @@ These are the notes I've been taking since I started learning about ethical hack
 		4. [Rules](#rules)
 	2. [Steganography](#steganography)
 		1. [Technical steganography](#technical-steganography)
-			1. [Some concepts](#some-concepts)
+			1. [Some concepts](#some-concepts-1)
 			2. [Techniques](#techniques)
 			3. [Various steganography tools (Each will use its algorithm)](#various-steganography-tools-each-will-use-its-algorithm)
 			4. [Stegoanalysis](#stegoanalysis)
@@ -32,10 +32,10 @@ These are the notes I've been taking since I started learning about ethical hack
 				2. [Recommended readings](#recommended-readings)
 		2. [Artistic steganography](#artistic-steganography)
 6. [Forensic](#forensic)
-	1. [Ram-captures](#ram-captures)
+	1. [Ram captures](#ram-captures)
 		1. [Volatility](#volatility)
 			1. [lsass.exe](#lsassexe)
-	2. [Disk-image](#disk-image)
+	2. [Disk image](#disk-image)
 		1. [FTK Imager](#ftk-imager)
 7. [Hacking web](#hacking-web)
 	1. [Tools](#tools-3)
@@ -178,7 +178,7 @@ If you combine a good dictionary with a good set of rules the chances of success
 ## Steganography
 Information concealment techniques. Use videos, images or whatever as carriers of information
 
-### Technical Steganography
+### Technical steganography
 
 #### Some concepts
 - **Polyglot Files:** Allow to put next to for example an extra code image that runs when you open it
@@ -229,7 +229,7 @@ stegcracker: Brute force over Steghide's algorithm
 - **Seganography and Undercover Channels** - By Dr. Alfonso Muñoz
 - **StegoSploit**
 
-### Artistic Steganography
+### Artistic steganography
 
 - **Video games:**
 	- **Use cases:** Playing another video game or entering data into a video game
