@@ -541,7 +541,7 @@ the reverse shell we have on the computer from vulnerable SQL server.
 		- **`python3 -m http.server 80`:** In the directory where you have the `reverseShell` file
 		- **`nc -lvnp 443`:** To listen to the connection of the target machine that will provide us with a remote shell
 		- **`ufw allow from 10.10.10.27 proto tcp to any port 80,443`:** Open the specified ports if you have `Uncomplicated Firewall`
-- [**CrackMapExec**](https://github.com/byt3bl33d3r/CrackMapExec)**:** Post-Exploitation tool that, among other things, allow authentication using hashes in Active Directory networks
+- [**CrackMapExec**](https://github.com/byt3bl33d3r/CrackMapExec)**:** Post-Exploitation tool that, among other things, allows checking the machines where we can access using an user and a password (plain text or hash) in Active Directory networks
 ### Maintain access, Cover trace, and Report
 - **mimikatz:** Most commonly used to dump and crack passwords on Windows systems. You must disable the antivirus on the target machine or use an obfuscated version since being so used is easily detected
 - **Command and Control Server:**
