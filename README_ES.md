@@ -63,9 +63,10 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - **Foremost:** En Kali contamos con esta herramienta que a partir de las cabeceras, pies de página y las estructuras de datos internas es capaz de recuperar archivos. Puede servir para sacar ficheros de una captura .pcap de forma sencilla.
 - **radare2:** Para hacer reversing. Dejo esto por [aquí](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) para más información
 - **Algoritmo DES:** Es un algoritmo de cifrado cuya clave tiene una longitud de 8 bytes (64 bits). Información útil para CTFs
+- [**FoxyProxy**](https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/)**:** Extention to manage proxies easily in Firefox
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
-Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de pago, existe una app de android con la que podemos hacerlo facilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
+Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de pago, existe una app de android con la que podemos hacerlo fácilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
 
 ## Dispositivos
 - **Proxmark3:** Sirve para leer y copiar tarjetas
@@ -539,7 +540,8 @@ la shell reversa que tenemos en el equipo desde server SQL vulnerable.
 	- Recordad hacer en local: 
 		- **`python3 -m http.server 80`:** En el directorio donde se tenga el archivo de `reverseShell`
 		- **`nc -lvnp 443`:** Para escuchar la conexión de la maquina objetivo que nos proporcionará un shell remoto
-		- **`ufw allow from 10.10.10.27 proto tcp to any port 80,443`:** Para abrir los puertos pertinentes en caso de tener `Uncomplicated Firewall` 
+		- **`ufw allow from 10.10.10.27 proto tcp to any port 80,443`:** Para abrir los puertos pertinentes en caso de tener `Uncomplicated Firewall`
+- [**CrackMapExec**](https://github.com/byt3bl33d3r/CrackMapExec)**:** Herramienta de Post-Explotación que, entre otras cosas, permite la autenticación utilizando hashes de contraseñas en redes Active Directory
 ### Mantener acceso, Cubrir rastro y Reportar
 - **mimikatz:** De lo más utilizado para hacer un dump y crackear contraseñas en sistemas Windows. Se deberá desactivar el antivirus en la máquina objetivo o utilizar una versión ofuscada puesto que al ser tan utilizado es detectado fácilmente
 - **Servidor de comando y control:**
