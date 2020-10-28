@@ -507,7 +507,7 @@ $ script -qc /bin/bash /dev/null
 		- **Shellcode:** Set of instructions within a payload that is usually in assembler
 		- **Encoder:** Hide payloads
 	- To upgrade shell to meterpreter: `post/multi/manage/shell_to_meterpreter` and once in meterpreter we can use useful post modules:	
-		- **`run post/windows/gather/checkvm`
+		- **`run post/windows/gather/checkvm`**
 		- **`run post/multi/recon/local_exploit_suggester`:** To see what we can use to upload privileges
 		- **`run post/windows/manage/enable_rdp`:** To open the remote desktop control
 		- **`run autoroute -h`:** Allows you to use the victim machine as a gateway to access other parts of the network
