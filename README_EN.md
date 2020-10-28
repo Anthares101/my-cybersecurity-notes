@@ -63,6 +63,7 @@ These are the notes I've been taking since I started learning about ethical hack
 - **Foremost:** In Kali we have this tool that from headers, footers and internal data structures is able to recover files. It can be used to remove files from a .pcap capture in a simple way.
 - **radare2:** To reversing. I leave this for [here](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) for more information
 - **DES Algorithm:** It is an encryption algorithm whose key has a length of 8 bytes (64 bits). Useful information for CTFs
+- [**FoxyProxy**](https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/)**:** Extensión para gestionar proxies en Firefox fácilmente
 
 # Identification of radio frequencies (NFC cards)
 They work at 125 khz or 13.56 Mhz. You can read the information of a payment card, there is an android app with which we can do it easily: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
@@ -539,7 +540,8 @@ the reverse shell we have on the computer from vulnerable SQL server.
 	- Remember to do this locally: 
 		- **`python3 -m http.server 80`:** In the directory where you have the `reverseShell` file
 		- **`nc -lvnp 443`:** To listen to the connection of the target machine that will provide us with a remote shell
-		- **`ufw allow from 10.10.10.27 proto tcp to any port 80,443`:** Open the specified ports if you have `Uncomplicated Firewall` 
+		- **`ufw allow from 10.10.10.27 proto tcp to any port 80,443`:** Open the specified ports if you have `Uncomplicated Firewall`
+- [**CrackMapExec**](https://github.com/byt3bl33d3r/CrackMapExec)**:** Post-Exploitation tool that, among other things, allow authentication using hashes in Active Directory networks
 ### Maintain access, Cover trace, and Report
 - **mimikatz:** Most commonly used to dump and crack passwords on Windows systems. You must disable the antivirus on the target machine or use an obfuscated version since being so used is easily detected
 - **Command and Control Server:**
