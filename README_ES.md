@@ -507,7 +507,7 @@ $ script -qc /bin/bash /dev/null
 		- **Shellcode:** Conjunto de instrucciones dentro de un payload que suele estar en ensamblador
 		- **Encoder:** Esconde los payloads
 	- Para upgradear shell a meterpreter: `post/multi/manage/shell_to_meterpreter` y una vez en meterpreter podemos usar módulos de post útiles:	
-		- **`run post/windows/gather/checkvm`
+		- **`run post/windows/gather/checkvm`**
 		- **`run post/multi/recon/local_exploit_suggester`:** Para ver que podemos usar para subir privilegios
 		- **`run post/windows/manage/enable_rdp`:** Para abrir el control de escritorio remoto
 		- **`run autoroute -h`:** Permite usar como gateway la máquina victima para acceder a otras partes de la red
