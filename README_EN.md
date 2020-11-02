@@ -528,6 +528,7 @@ $ script -qc /bin/bash /dev/null
 		1. Open a socks4a proxy from metasploit to use the route we've put in before
 		2. Once with that done, let's go to the file `/etc/proxychains.conf` and add a line of which proxy to use (Example: `socks4 127.0.0.1 8080`)
 		3. With the `proxychains` command in front of any command you can send that command through your proxy
+	- You can create scripts for metasploit and make common workflows faster `msfconsole -r resourcescript.rc`
 - [**Armitage**](https://github.com/rsmudge/armitage)**:** GUI para metasploit
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Search for passwords by brute force through a protocol or web
 - [**linpeas/winpeas**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)**:** Take info out of the machine to see how to scale
