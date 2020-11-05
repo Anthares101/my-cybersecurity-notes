@@ -64,7 +64,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - **radare2:** Para hacer reversing. Dejo esto por [aquí](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) para más información
 - **Algoritmo DES:** Es un algoritmo de cifrado cuya clave tiene una longitud de 8 bytes (64 bits). Información útil para CTFs
 - [**FoxyProxy**](https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/)**:** Extention to manage proxies easily in Firefox
-- **searchsploit:** Una base de datos donde buscar diferentes vulnerabilidades
+- **`searchsploit`:** Una base de datos donde buscar diferentes vulnerabilidades
     - Con `-x PATH` podemos imprimir el contenido del archivo adjuntado a una vulnerabilidad (Código o explicación detallada)
     - Con `-m PATH` podemos copiar a nuestro directorio actual el archivo adjuntado a una vulnerabilidad
 
