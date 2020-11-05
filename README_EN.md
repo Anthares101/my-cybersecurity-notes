@@ -64,6 +64,9 @@ These are the notes I've been taking since I started learning about ethical hack
 - **radare2:** To reversing. I leave this for [here](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) for more information
 - **DES Algorithm:** It is an encryption algorithm whose key has a length of 8 bytes (64 bits). Useful information for CTFs
 - [**FoxyProxy**](https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/)**:** Extensión para gestionar proxies en Firefox fácilmente
+- **searchsploit:** Database to search for vulnerabilities:
+    - With `-x PATH` we can print the content of the  file attached to a vulnerability (Code or detailed information)
+    - With `-m PATH` we can copy the file attached to a vulnerability to our current directory.
 
 # Identification of radio frequencies (NFC cards)
 They work at 125 khz or 13.56 Mhz. You can read the information of a payment card, there is an android app with which we can do it easily: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
