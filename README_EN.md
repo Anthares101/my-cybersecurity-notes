@@ -67,6 +67,7 @@ These are the notes I've been taking since I started learning about ethical hack
 - **`searchsploit`:** Database to search for vulnerabilities:
     - With `-x PATH` we can print the content of the  file attached to a vulnerability (Code or detailed information)
     - With `-m PATH` we can copy the file attached to a vulnerability to our current directory.
+- **`dmesg`**: Can be used to check segmentation faults
 
 # Identification of radio frequencies (NFC cards)
 They work at 125 khz or 13.56 Mhz. You can read the information of a payment card, there is an android app with which we can do it easily: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
