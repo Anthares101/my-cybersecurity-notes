@@ -67,6 +67,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - **`searchsploit`:** Una base de datos donde buscar diferentes vulnerabilidades
     - Con `-x PATH` podemos imprimir el contenido del archivo adjuntado a una vulnerabilidad (Código o explicación detallada)
     - Con `-m PATH` podemos copiar a nuestro directorio actual el archivo adjuntado a una vulnerabilidad
+- **`dmesg`:** Útil para comprobar errores de desbordamiento
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de pago, existe una app de android con la que podemos hacerlo fácilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
