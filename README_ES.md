@@ -68,6 +68,8 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
     - Con `-x PATH` podemos imprimir el contenido del archivo adjuntado a una vulnerabilidad (Código o explicación detallada)
     - Con `-m PATH` podemos copiar a nuestro directorio actual el archivo adjuntado a una vulnerabilidad
 - **`dmesg`:** Útil para comprobar errores de desbordamiento
+- [**pwntools**](https://github.com/Gallopsled/pwntools)**:** Es un framework para CTF y también una librería para desarrollar exploits
+- [**peda**](https://github.com/longld/peda)**:** Asistente hecho en Python para el desarrollo de exploits en GDB
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de pago, existe una app de android con la que podemos hacerlo fácilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
