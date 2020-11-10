@@ -40,7 +40,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 7. [Hacking web](#hacking-web)
 	1. [Herramientas](#herramientas-3)
 	2. [Ataques](#ataques-1)
-8. [Ingeniería inversa y exploit de binarios](#ingenieria-inversa-y-exploit-de-binarios)
+8. [Ingeniería inversa y exploit de binarios](#ingeniería-inversa-y-exploit-de-binarios)
     1. [Herramientas y comandos](#herramientas-y-comandos)
 9. [Metodología de hacking (Pentest)](#metodología-de-hacking-pentest)
 	1. [Ciclo de vida de un pentest](#ciclo-de-vida-de-un-pentest)
