@@ -40,7 +40,9 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 7. [Hacking web](#hacking-web)
 	1. [Herramientas](#herramientas-3)
 	2. [Ataques](#ataques-1)
-8. [Metodología de hacking (Pentest)](#metodología-de-hacking-pentest)
+8. [Ingeniería inversa y exploit de binarios](#ingenieria-inversa-y-exploit-de-binarios)
+    1. [Herramientas y comandos](#herramientas-y-comandos)
+9. [Metodología de hacking (Pentest)](#metodología-de-hacking-pentest)
 	1. [Ciclo de vida de un pentest](#ciclo-de-vida-de-un-pentest)
 		1. [Reconocimiento (OSINT o inteligencia de fuentes abiertas)](#reconocimiento-osint-o-inteligencia-de-fuentes-abiertas)
 		2. [Escaneo y enumeración](#escaneo-y-enumeración)
@@ -67,9 +69,6 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - **`searchsploit`:** Una base de datos donde buscar diferentes vulnerabilidades
     - Con `-x PATH` podemos imprimir el contenido del archivo adjuntado a una vulnerabilidad (Código o explicación detallada)
     - Con `-m PATH` podemos copiar a nuestro directorio actual el archivo adjuntado a una vulnerabilidad
-- **`dmesg`:** Útil para comprobar errores de desbordamiento
-- [**pwntools**](https://github.com/Gallopsled/pwntools)**:** Es un framework para CTF y también una librería para desarrollar exploits
-- [**peda**](https://github.com/longld/peda)**:** Asistente hecho en Python para el desarrollo de exploits en GDB
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de pago, existe una app de android con la que podemos hacerlo fácilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
@@ -383,6 +382,47 @@ Anthares101@kali:~$ sqlmap -D DB -T TABLA -C id,password,...,... --sql-query "se
 - **RCE (Ejecución de comandos remotos):** En principio, si se esta poniendo el código directamente: `shell_exec('ping 8.8.8.8');` siendo la ip lo que el usuario mete, si en vez de eso ponemos `;ls` pues aunque `ping` de error ejecuta el comando `ls`. Una vez detectada la vulnerabilidad podriamos ejecutar una WebShell: `;echo'<?php echo shell_exec(s_GET["cmd"]); ?>' > shell1.php`. Si nos vamos a `shell1.php`, con el parámetro de la url `cmd` podremos ejecutar los comandos que nos dé la gana.
 - **Metodologia OWASP para testear seguridad en la web:** OWASP broken web application (Para practicar a atacar paginas y esas cosas) 
 
+# Ingeniería inversa y exploit de binarios
+En esta sección quiero recoger 
+
+- Decompiladores: Revierte binarios a lenguajes de alto nivel como C
+- Desambladores: Revierte binarios a lenguaje ensamblador
+- Debuggers: Permiten ver y cambiar el estado de un programa en ejecución
+
+## Herramientas y comandos
+- **GDB:** Uso básico:
+```console
+$ gdb binary
+(gdb)> set disassembly-flavor intel # Para que el formato de lo siguiente sea mas bonito
+(gdb)> disassemble main # Saca las instrucciones realizadas en la función main
+(gdb)> break *main # Coloca un breakpoint al principio de main
+(gdb)> run [arguments if the program need them]
+(gdb)> info registers # Estamos parados en el breakpoint de antes y podemos mirar que hay en los registros en ese punto
+(gdb)> ni # Siguiente instrucción (Si despues de este comando pulsamos intro podemos ir pasando de instrucción sin tener que escribirlo again)
+(gdb)> continue # Continua la ejecución hasta el proximo breakpoint o el final del mismo
+(gdb)> $eax=0 # Da al registro eax el valor 0 (Esto se puede hacer con cualquier registro)
+(gdb)> x/s mem_dir # Imprime lo que hay en una determinada dirección de memoria
+```
+- [**peda**](https://github.com/longld/peda)**:** Asistente hecho en Python para el desarrollo de exploits en GDB
+- **Ghidra:** Herramienta de ingeniería inversa gratuita
+- **`objdump`:** 
+```console
+$ objdump -d binary # Desensambla el binario e imprime las instrucciones
+$ objdump -x binary # Información sobre el binario
+```
+- **`strace binary`:** Muestra las llamadas al sistema que se realizan en un binario
+- **`ltrace binary`:** Muestra las llamadas a funciones de librerias que se realizan en un binario
+- **`dmesg`:** Útil para comprobar errores de desbordamiento
+- [**pwntools**](https://github.com/Gallopsled/pwntools)**:** Es un framework para CTF y también una librería para desarrollar exploits
+    - **`pwn checksec`:** Muy últil para comprobar que tipo de seguridad tiene un binario activada
+- **Radare:** Uso básico:
+    - Ejecutamos radare de la siguiente forma `radare2 binario`
+    - Lo primero sería hacer `aa` parar analizar el binario y despues podriamos utilizar `afl` para mostrar todas las funciones encontradas
+    - En este punto podemos poner `pdf@main` por ejemplo para desensamblar la función `main` (Esto se puede hacer con cualquier función)
+    - También se podría usar `s direccionMemoria`, siendo la dirección de memoria la entrada de alguna función. Esto nos moverá a dicha posición pudiendo hacer simplemente `pdf` sin especificar nada más
+    - Si iniciamos radare con `-d` y podemos poner un breakpoint en el programa con `db` `direcciónMemoria`
+    - En una determinada función podríamos usar `VV` para ver un gráfico del flujo del programa y si pulsamos `:` podemos meter comandos como en vim, en este caso pondremos `dc` para iniciar la ejecución del programa. (Podemos usar `?` para ver la ayuda)
+    - La ejecución del programa parará en nuestro breakpoint y podremos ir paso a paso con le tecla `s` viendo los pasos en el gráfico. Más información [aquí](https://monosource.gitbooks.io/radare2-explorations/content/intro/visual_graphs.html)
 # Metodología de hacking (Pentest)
 Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente las cosas que hay que testear en un sistema.
 
