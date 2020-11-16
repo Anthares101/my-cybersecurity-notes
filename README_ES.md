@@ -402,6 +402,7 @@ $ gdb binary
 (gdb)> continue # Continua la ejecución hasta el proximo breakpoint o el final del mismo
 (gdb)> $eax=0 # Da al registro eax el valor 0 (Esto se puede hacer con cualquier registro)
 (gdb)> x/s mem_dir # Imprime lo que hay en una determinada dirección de memoria
+(gdb)> p variable # Imprime el valor de una variable (El binario debe estar compilado en modo debug)
 ```
 - [**peda**](https://github.com/longld/peda)**:** Asistente hecho en Python para el desarrollo de exploits en GDB
 - **Ghidra:** Herramienta de ingeniería inversa gratuita
