@@ -335,7 +335,7 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 fichero diccionario --force --sho
 	- **`-X`:** Cambia tipo de petición
 	- **`-v`:** Más información en la salida del comando
 	- **`-H`:** Para editar cabeceras: "User-Agent: kali"
-- **Proxy inverso:** Burpsuite (o OWASP ZAP), captura todas las peticiones del navegador y permite su edicion. El modulo repeater de este proxy permite ir mandando y recibiendo cabeceras como si fuesemos el navegador vaya (las que queramos)
+- **Burpsuite (o OWASP ZAP):** Captura todas las peticiones del navegador y permite su edicion. El modulo repeater de este proxy permite ir mandando y recibiendo cabeceras como si fuesemos el navegador vaya (las que queramos)
 - [**Nikto**](https://github.com/sullo/nikto)**:** Escaner de vulnerabilidades web
 - **WebShells:** Implementación basada en web del concepto de shell
 - **ReverseShells:** El objetivo realiza la conexión e inicia una `shell` mientras el atacante escucha para despues obtener acceso a dicha `shell`
