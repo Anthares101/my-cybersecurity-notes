@@ -69,6 +69,9 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - **`searchsploit`:** Una base de datos donde buscar diferentes vulnerabilidades
     - Con `-x PATH` podemos imprimir el contenido del archivo adjuntado a una vulnerabilidad (Código o explicación detallada)
     - Con `-m PATH` podemos copiar a nuestro directorio actual el archivo adjuntado a una vulnerabilidad
+- Algunas herramientas útiles para hacer phishing:
+	- [**GoPhish**](https://github.com/gophish/gophish)
+	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de pago, existe una app de android con la que podemos hacerlo fácilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
@@ -390,7 +393,7 @@ En esta sección quiero recoger
 - Debuggers: Permiten ver y cambiar el estado de un programa en ejecución
 
 ## Herramientas y comandos
-- **GDB:** Uso básico:
+- **GDB:** Uso básico ([cheatsheet](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)):
 ```console
 $ gdb binary
 (gdb)> set disassembly-flavor intel # Para que el formato de lo siguiente sea mas bonito
@@ -421,9 +424,10 @@ $ objdump -x binary # Información sobre el binario
     - Lo primero sería hacer `aa` parar analizar el binario y despues podriamos utilizar `afl` para mostrar todas las funciones encontradas
     - En este punto podemos poner `pdf@main` por ejemplo para desensamblar la función `main` (Esto se puede hacer con cualquier función)
     - También se podría usar `s direccionMemoria`, siendo la dirección de memoria la entrada de alguna función. Esto nos moverá a dicha posición pudiendo hacer simplemente `pdf` sin especificar nada más
-    - Si iniciamos radare con `-d` y podemos poner un breakpoint en el programa con `db` `direcciónMemoria`
+    - Si iniciamos radare con `-d` y podemos poner un breakpoint en el programa con `db direcciónMemoria`
     - En una determinada función podríamos usar `VV` para ver un gráfico del flujo del programa y si pulsamos `:` podemos meter comandos como en vim, en este caso pondremos `dc` para iniciar la ejecución del programa. (Podemos usar `?` para ver la ayuda)
     - La ejecución del programa parará en nuestro breakpoint y podremos ir paso a paso con le tecla `s` viendo los pasos en el gráfico. Más información [aquí](https://monosource.gitbooks.io/radare2-explorations/content/intro/visual_graphs.html)
+
 # Metodología de hacking (Pentest)
 Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente las cosas que hay que testear en un sistema.
 

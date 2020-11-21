@@ -40,7 +40,9 @@ These are the notes I've been taking since I started learning about ethical hack
 7. [Hacking web](#hacking-web)
 	1. [Tools](#tools-3)
 	2. [Attacks](#attacks-1)
-8. [Hacking methodology (Pentest)](#hacking-methodology-pentest)
+8. [Reverse engineering and binary exploitation](#reverse-engineering-and-binary-exploitation)
+    1. [Tools and commands](#tools-and-commands)
+9. [Hacking methodology (Pentest)](#hacking-methodology-pentest)
 	1. [Life cycle of a pentest](#life-cycle-of-a-pentest)
 		1. [Recognition (OSINT or Open Source Intelligence)](#recognition-osint-or-open-source-intelligence)
 		2. [Scanning and enumeration](#scanning-and-enumeration)
@@ -67,9 +69,9 @@ These are the notes I've been taking since I started learning about ethical hack
 - **`searchsploit`:** Database to search for vulnerabilities:
     - With `-x PATH` we can print the content of the  file attached to a vulnerability (Code or detailed information)
     - With `-m PATH` we can copy the file attached to a vulnerability to our current directory.
-- **`dmesg`**: Can be used to check segmentation faults
-- [**pwntools**](https://github.com/Gallopsled/pwntools)**:** Pwntools is a CTF framework and exploit development library
-- [**peda**](https://github.com/longld/peda)**:** Python Exploit Development Assistance for GDB
+- Some useful tools for phishing:
+	- [**GoPhish**](https://github.com/gophish/gophish)
+	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
 
 # Identification of radio frequencies (NFC cards)
 They work at 125 khz or 13.56 Mhz. You can read the information of a payment card, there is an android app with which we can do it easily: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
@@ -381,7 +383,50 @@ Anthares101@kali:~$ sqlmap -D DB -T TABLE -C id,password,...,... --sql-query "se
 # Extracts the result of a specific query to a known table
 ```
 - **RCE (Remote Command Execution):** If you are putting the code directly: `shell_exec('ping 8.8.8.8');` being the ip what the user enters, if instead we put `;ls`, although `ping` prints an error the command `ls` is executed. Once the vulnerability is detected we could run a WebShell: `;echo'<?php echo shell_exec(s_GET["cmd"]); ?>' > shell1.php`. If we go to `shell1.php`, with the parameter of the url `cmd` we can execute the commands that we want.
-- **OWASP methodology for testing web security:** OWASP broken web application (To practice attacking pages and stuff) 
+- **OWASP methodology for testing web security:** OWASP broken web application (To practice attacking pages and stuff)
+
+# Reverse engineering and binary exploitation
+In this section i want to group:
+
+- Decompilers: Revert binaries to high-level languages like C
+- Disassemblers: Revert binaries to assembly language
+- Debuggers: They allow you to see and change the status of a running program
+
+## Tools and commands
+- **GDB:** Basic use ([cheatsheet](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)):
+```console
+$ gdb binary
+(gdb)> set disassembly-flavor intel # To make the following format more beautiful
+(gdb)> disassemble main # Remove the instructions made in the main function
+(gdb)> break *main # Put a breakpoint at the beginning of main
+(gdb)> run [arguments if the program need them]
+(gdb)> info registers # We are standing at the breakpoint from before and we can see what is in the registers at that point
+(gdb)> ni # Next instruction (If after this command we press enter we can go through the instruction without having to write it again)
+(gdb)> continue # Continue execution until the next breakpoint or the end of it
+(gdb)> $eax = 0 # Give the eax register the value 0 (This can be done with any register)
+(gdb)> x/s mem_dir # Print what is in a certain memory address
+(gdb)> p variable # Print the value of a variable (The binary must be compiled in debug mode)
+```
+- [**peda**](https://github.com/longld/peda)**:** Asistente hecho en Python para el desarrollo de exploits en GDB
+- **Ghidra:** Free reverse engineering tool
+- **`objdump`:** 
+```console
+$ objdump -d binary # Disassemble the binary and print the instructions
+$ objdump -x binary # Information about the binary
+```
+- **`strace binary`:** Show system calls that are made in a binary
+- **`ltrace binary`:** Shows library function calls that are made in a binary
+- **`dmesg`:** Useful for checking overflow errors
+- [**pwntools**](https://github.com/Gallopsled/pwntools)**:** It is a framework for CTF and also a library to develop exploits
+    - **`pwn checksec`:** Very useful to check what type of security a binary has activated
+- **Radare:** Basic use:
+    - We execute radare in the following way `radare2 binary`
+    - The first thing would be to do `aa` to analyze the binary and then we could use `afl` to show all the functions found
+    - At this point we can put `pdf@main` for example to disassemble the function `main` (This can be done with any function)
+    - You could also use `s memoryAddress`, the memory address being the input of some function. This will move us to that position being able to simply do `pdf` without specifying anything else
+    - If we start radare with `-d` and we can put a breakpoint in the program with `db memoryAddress`
+    - In a certain function we could use `VV` to see a graph of the program flow and if we press`: `we can enter commands as in vim, in this case we will put `dc` to start the execution of the program. (We can use `?` To see help)
+    - The execution of the program will stop at our breakpoint and we can go step by step with the `s` key, seeing the steps in the graph. More information [here](https://monosource.gitbooks.io/radare2-explorations/content/intro/visual_graphs.html)
 
 # Hacking methodology (Pentest)
 We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the things to test on a system.
