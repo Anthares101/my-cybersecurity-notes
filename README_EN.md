@@ -342,8 +342,9 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 file dictionary --force --show #1
 - [**Nikto**](https://github.com/sullo/nikto)**:** Web Vulnerability Scanner
 - **WebShells:** Web-based implementation of the shell concept
 - **ReverseShells:** The target makes the connection and initiates a shell while the attacker listens and then accesses that shell
-- To remove all directories from a website we can use [gobuster](https://github.com/OJ/gobuster) or OWASP DirBuster
+- To get all directories from a website we can use [gobuster](https://github.com/OJ/gobuster) or OWASP DirBuster. We can even search for files using the `-x` parameter followed by the file extensions to search for
 - If you find a `.git` on a website, download it. [GitTools] (https://github.com/internetwache/GitTools) has interesting things to work with repositories (Like to download them from a website)
+- [**CeWL**](https://github.com/digininja/CeWL)**:** Custom wordlist generator. Analyze a specific URL with a certain depth and generate a wordlist with the words that it considers relevant
 
 ## Attacks
 

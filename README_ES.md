@@ -342,8 +342,9 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 fichero diccionario --force --sho
 - [**Nikto**](https://github.com/sullo/nikto)**:** Escaner de vulnerabilidades web
 - **WebShells:** Implementación basada en web del concepto de shell
 - **ReverseShells:** El objetivo realiza la conexión e inicia una `shell` mientras el atacante escucha para despues obtener acceso a dicha `shell`
-- Para sacar todos los directorios de una web podemos usar [gobuster](https://github.com/OJ/gobuster) o OWASP DirBuster
+- Para sacar todos los directorios de una web podemos usar [gobuster](https://github.com/OJ/gobuster) o OWASP DirBuster. Con gobuster podemos incluso buscar ficheros accesibles con el parámetro `-x` seguido de las extensiones de ficheros a buscar
 - Si encuentras un `.git` en una web BÁJALO. [GitTools](https://github.com/internetwache/GitTools) tiene cositas interesantes para trabajar con repos (Como bajarlos de una web)
+- [**CeWL**](https://github.com/digininja/CeWL)**:** Generador de diccionarios personalizados. Analiza una URL especifica con una determinada profundidad y genera un diccionario con las palabras que considera relevantes
 
 ## Ataques
 
