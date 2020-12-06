@@ -338,7 +338,8 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 file dictionary --force --show #1
 	- **`-X`:** Changes request type
 	- **`-v`:** More information in the command output
 	- **`-H`:** To edit headers: "User-Agent: kali"
-- **Burpsuite (or OWASP ZAP):** Captures all browser requests and allows editing them. The repeater module allows us to send and receive headers as if we were the browser going (the ones we want)
+- **Burpsuite:** Captures all browser requests and allows editing them. The repeater module allows us to send and receive headers as if we were the browser going (the ones we want)
+- **OWASP ZAP:** Web security scanner
 - [**Nikto**](https://github.com/sullo/nikto)**:** Web Vulnerability Scanner
 - **WebShells:** Web-based implementation of the shell concept
 - **ReverseShells:** The target makes the connection and initiates a shell while the attacker listens and then accesses that shell
