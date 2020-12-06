@@ -509,6 +509,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 	- **`smbclient -N -L //IP/`:** Para listar directorios de un server samba windows.
 	- **`smbclient -N //IP/dir`:** Nos conectamos y entramos al directorio que hayamos puesto
 	- Con el comando `get` podemos pillar archivos
+	- Con el comando `put` podemos subir archivos
 - **CVSS:** Se utiliza un sistema de puntuación para dar puntos a las diferentes vulnerabilidades que se encuentren y dar un nivel de riesgo
 - **Etiquetado de vulnerabilidades**
 	- Para buscar las puntuaciones hay que buscar por etiqueta, hay varias:

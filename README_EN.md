@@ -509,6 +509,7 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 	- **`smbclient -N -L //IP/`:** Para listar directorios de un server samba windows.
 	- **`smbclient -N //IP/dir`:** We connect and enter the directory we have put
 	- With the `get` command we can catch files
+	- With the `put` command we can upload files
 - **CVSS:** A scoring system is used to give points to the different vulnerabilities found and give a level of risk
 - **Etiquetado de vulnerabilidades**
 	- To search for scores you have to search by tag, there are several:
