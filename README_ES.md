@@ -520,7 +520,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 			- OSVD, NVD, BID, ExploitDB
 
 ### Ganar acceso y escalar privilegios
-- **Impacket:** Colección de clases de Python para trabajar con protocolos de red. Conectarte a cualquier lado pero gestionando a mano el protocolo, la cosa es que incluye ejemplos tipo:
+- [**Impacket**](https://github.com/SecureAuthCorp/impacket)**:** Colección de clases de Python para trabajar con protocolos de red. Conectarte a cualquier lado pero gestionando a mano el protocolo, la cosa es que incluye ejemplos tipo:
 	- **mssqlclient:** Un cliente para conectarte a una base de datos SQL
 	- **psexec:** Abrir shell remoto con privilegios
 - Ruta de ejemplo de donde se encuentra el archivo archive.php en Wordpress: `http://10.10.248.106/wp-content/themes/twentyfifteen/archive.php` Es un fichero que se suele usar para meter una reverse shell
