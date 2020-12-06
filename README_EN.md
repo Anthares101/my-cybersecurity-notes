@@ -546,6 +546,7 @@ $ export TERM=xterm
 $ script -qc /bin/bash /dev/null
 ```
 - It is interesting to look at files with SUID or SGID permissions set (especially if they are executable) since we can use them to scale privileges: `find / -perm /4000 2> /dev/null` to search for files with the SUID and `find / -perm /2000 2> /dev/null` with the SGID. Also exploring all the `capabilities` (gives root privileges but in pieces) of the different system files comes handy: `getcap -r / 2> /dev/null`
+- Testing the `sudo -l` command can sometimes detect possible privilege escalation methods
 - With `ltrace` you can run a program and show some of the function calls that are made
 - [**Responder**](https://github.com/lgandx/Responder)**:** LLMNR/NBT-NS/mDNS Poisoner y NTLMv1/2 Relay
 - [**metasploit**](https://github.com/rapid7/metasploit-framework)**:**
