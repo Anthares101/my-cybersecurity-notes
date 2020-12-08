@@ -72,6 +72,8 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - Algunas herramientas útiles para hacer phishing:
 	- [**GoPhish**](https://github.com/gophish/gophish)
 	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
+- Para resolver peticiones DNS podemos usar `nslookup` o `dig`
+- [**RouterSploit**](https://github.com/threat9/routersploit)**:** Un framework para la explotación de dispositivos embebidos
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de pago, existe una app de android con la que podemos hacerlo fácilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment

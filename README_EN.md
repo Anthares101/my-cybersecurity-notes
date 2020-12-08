@@ -72,6 +72,8 @@ These are the notes I've been taking since I started learning about ethical hack
 - Some useful tools for phishing:
 	- [**GoPhish**](https://github.com/gophish/gophish)
 	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
+- To resolve DNS requests we can use `nslookup` or` dig`
+- [**RouterSploit**](https://github.com/threat9/routersploit)**:** A framework for the exploitation of embedded devices
 
 # Identification of radio frequencies (NFC cards)
 They work at 125 khz or 13.56 Mhz. You can read the information of a payment card, there is an android app with which we can do it easily: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
