@@ -526,6 +526,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 - [**Impacket**](https://github.com/SecureAuthCorp/impacket)**:** Colección de clases de Python para trabajar con protocolos de red. Conectarte a cualquier lado pero gestionando a mano el protocolo, la cosa es que incluye ejemplos tipo:
 	- **mssqlclient:** Un cliente para conectarte a una base de datos SQL
 	- **psexec:** Abrir shell remoto con privilegios
+- [**GTFOBins**](https://gtfobins.github.io/)**:** Una lista de binarios de Unix que se pueden usar para eludir las restricciones de seguridad locales en sistemas mal configurados
 - Ruta de ejemplo de donde se encuentra el archivo archive.php en Wordpress: `http://10.10.248.106/wp-content/themes/twentyfifteen/archive.php` Es un fichero que se suele usar para meter una reverse shell
 - En `/dev/shm` podemos escribir seamos quien seamos, es la carpeta de memoria compartida del sistema
 - **nc:** Super útil, permite conectarse a todo tipo de servicios, mandar comandos, escuchar en un determinado puerto...

@@ -526,6 +526,7 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 - [**Impacket**](https://github.com/SecureAuthCorp/impacket)**:** Collection of Python classes to work with network protocols. Connecting anywhere but managing the protocol by hand, the thing is that it includes examples type:
 	- **mssqlclient:** A client to connect to a SQL database
 	- **psexec:** Open remote shell with privileges
+- [**GTFOBins**](https://gtfobins.github.io/)**:** A curated list of Unix binaries that can used to bypass local security restrictions in misconfigured systems
 - Example path of where the archive.php file is located in Wordpress: `http://10.10.248.106/wp-content/themes/twentyfifteen/archive.php` it is a file that is usually used to put a reverse shell
 - In `/dev/shm` we can write whoever we are, it is the shared memory folder of the system
 - **nc:** Super useful, allows you to connect to all kinds of services, send commands, listen on a certain port...
