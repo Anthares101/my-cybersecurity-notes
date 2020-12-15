@@ -447,6 +447,7 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 - **Whois:** Using https://whois.domaintools.com/ or the Linux command `whois`
 - Command `host <dominio>`
 - Memory leaks in domains (https://pastebin.pl/). With https://haveibeenpwned.com/ we can also see if it's worth looking for
+- In https://scylla.sh/ we can find information leaks but it also shows us the leaked passwords
 - **mailfy:** You enter an email and it tells you if you have any social media accounts linked
 - **h8mail:** Enter an email and search for leak information
 - [**Shodan**](https://www.shodan.io/)**:** Searching for devices using ip, domains that they use in their services...
