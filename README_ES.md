@@ -431,7 +431,7 @@ $ objdump -x binary # Información sobre el binario
     - Lo primero sería hacer `aa` parar analizar el binario y despues podriamos utilizar `afl` para mostrar todas las funciones encontradas
     - En este punto podemos poner `pdf@main` por ejemplo para desensamblar la función `main` (Esto se puede hacer con cualquier función)
     - También se podría usar `s direccionMemoria`, siendo la dirección de memoria la entrada de alguna función. Esto nos moverá a dicha posición pudiendo hacer simplemente `pdf` sin especificar nada más
-    - Si iniciamos radare con `-d` y podemos poner un breakpoint en el programa con `db direcciónMemoria`
+    - Si iniciamos radare con `-d` podemos poner un breakpoint en el programa con `db direcciónMemoria`
     - En una determinada función podríamos usar `VV` para ver un gráfico del flujo del programa y si pulsamos `:` podemos meter comandos como en vim, en este caso pondremos `dc` para iniciar la ejecución del programa. (Podemos usar `?` para ver la ayuda)
     - La ejecución del programa parará en nuestro breakpoint y podremos ir paso a paso con le tecla `s` viendo los pasos en el gráfico. Más información [aquí](https://monosource.gitbooks.io/radare2-explorations/content/intro/visual_graphs.html)
 
