@@ -553,6 +553,7 @@ $ script -qc /bin/bash /dev/null
 ```
 - Es interesante mirar archivos con los permisos SUID o SGID puestos (Sobretodo si son ejecutables) ya que podramos usarlos para escalar privilegios: `find / -perm /4000 2> /dev/null` para buscar archivos con el SUID y `find / -perm /2000 2> /dev/null` con el SGID. También explorar todas las `capabilities` (da privilegios de root pero en trozos digamos) de los distintos archivos del sistema viene guay: `getcap -r / 2> /dev/null`
 - Probar el comando `sudo -l` a veces puede servir para detectar posibles métodos de escalado de privilegios
+- Si el usuario pertenece al grupo lxd o docker puede que podamos montar todo el sistema de archivos de la victima en un contenedor y acceder al mismo como root dentro del contenedor
 - Con `ltrace` se puede ejecutar un programa y que se muestren algunas de las llamadas a funciones que se realizan
 - [**Responder**](https://github.com/lgandx/Responder)**:** LLMNR/NBT-NS/mDNS Poisoner y NTLMv1/2 Relay
 - [**metasploit**](https://github.com/rapid7/metasploit-framework)**:**
