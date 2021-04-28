@@ -531,6 +531,7 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 			- OSVD, NVD, BID, ExploitDB
 
 ### Gaining access and scaling privileges
+- In Linux always search for the version of the OS, kernel and also use `apt list --upgradeable` to check for outdated packages. For example, old `snap` versions could be vulnerable to exploits like [dirty_sock](https://www.exploit-db.com/exploits/46362)
 - [**PayloadAllTheThings Linux - Privilege Escalation**](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)**:** Privilege escalation cheatsheet for Linux systems. The rest of the repository contains useful information about other topics.
 - [**Impacket**](https://github.com/SecureAuthCorp/impacket)**:** Collection of Python classes to work with network protocols. Connecting anywhere but managing the protocol by hand, the thing is that it includes examples type:
 	- **mssqlclient:** A client to connect to a SQL database

@@ -531,6 +531,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 			- OSVD, NVD, BID, ExploitDB
 
 ### Ganar acceso y escalar privilegios
+- En Linux busca siempre la versión del SO, la del kernel y también usa `apt list --upgradeable` para comprobar paquetes no actualizados. Por ejemplo, versiones antiguas de `snap` pueden ser vulnerables a exploits como [dirty_sock](https://www.exploit-db.com/exploits/46362)
 - [**PayloadAllTheThings Linux - Privilege Escalation**](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)**:** Una chuleta con cosas para probar para escalar privilegios en un sistema Linux. El resto del repositorio contiene un montón de información útil sobre otros temas.
 - [**Impacket**](https://github.com/SecureAuthCorp/impacket)**:** Colección de clases de Python para trabajar con protocolos de red. Conectarte a cualquier lado pero gestionando a mano el protocolo, la cosa es que incluye ejemplos tipo:
 	- **mssqlclient:** Un cliente para conectarte a una base de datos SQL
