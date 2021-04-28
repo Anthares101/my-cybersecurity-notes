@@ -343,7 +343,7 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 fichero diccionario --force --sho
 - **Burpsuite:** Captura todas las peticiones del navegador y permite su edicion. El módulo repeater permite ir mandando y recibiendo cabeceras como si fuesemos el navegador vaya (las que queramos)
 - **OWASP ZAP:** Escáner de seguridad web
 - [**Nikto**](https://github.com/sullo/nikto)**:** Escaner de vulnerabilidades web
-- **WebShells:** Implementación basada en web del concepto de shell
+- **WebShells:** Implementación basada en web del concepto de shell. [Example](https://github.com/flozz/p0wny-shell)
 - **ReverseShells:** El objetivo realiza la conexión e inicia una `shell` mientras el atacante escucha para despues obtener acceso a dicha `shell`
 - Para sacar todos los directorios de una web podemos usar [gobuster](https://github.com/OJ/gobuster) o OWASP DirBuster. Con gobuster podemos incluso buscar ficheros accesibles con el parámetro `-x` seguido de las extensiones de ficheros a buscar
 - Si encuentras un `.git` en una web BÁJALO. [GitTools](https://github.com/internetwache/GitTools) tiene cositas interesantes para trabajar con repos (Como bajarlos de una web)
@@ -531,6 +531,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 			- OSVD, NVD, BID, ExploitDB
 
 ### Ganar acceso y escalar privilegios
+- [**PayloadAllTheThings Linux - Privilege Escalation**](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)**:** Una chuleta con cosas para probar para escalar privilegios en un sistema Linux. El resto del repositorio contiene un montón de información útil sobre otros temas.
 - [**Impacket**](https://github.com/SecureAuthCorp/impacket)**:** Colección de clases de Python para trabajar con protocolos de red. Conectarte a cualquier lado pero gestionando a mano el protocolo, la cosa es que incluye ejemplos tipo:
 	- **mssqlclient:** Un cliente para conectarte a una base de datos SQL
 	- **psexec:** Abrir shell remoto con privilegios

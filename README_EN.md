@@ -343,7 +343,7 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 file dictionary --force --show #1
 - **Burpsuite:** Captures all browser requests and allows editing them. The repeater module allows us to send and receive headers as if we were the browser going (the ones we want)
 - **OWASP ZAP:** Web security scanner
 - [**Nikto**](https://github.com/sullo/nikto)**:** Web Vulnerability Scanner
-- **WebShells:** Web-based implementation of the shell concept
+- **WebShells:** Web-based implementation of the shell concept. [Example](https://github.com/flozz/p0wny-shell)
 - **ReverseShells:** The target makes the connection and initiates a shell while the attacker listens and then accesses that shell
 - To get all directories from a website we can use [gobuster](https://github.com/OJ/gobuster) or OWASP DirBuster. Using gobuster we can even search for files using the `-x` parameter followed by the file extensions to search for
 - If you find a `.git` on a website, download it. [GitTools] (https://github.com/internetwache/GitTools) has interesting things to work with repositories (Like to download them from a website)
@@ -531,6 +531,7 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 			- OSVD, NVD, BID, ExploitDB
 
 ### Gaining access and scaling privileges
+- [**PayloadAllTheThings Linux - Privilege Escalation**](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)**:** Privilege escalation cheatsheet for Linux systems. The rest of the repository contains useful information about other topics.
 - [**Impacket**](https://github.com/SecureAuthCorp/impacket)**:** Collection of Python classes to work with network protocols. Connecting anywhere but managing the protocol by hand, the thing is that it includes examples type:
 	- **mssqlclient:** A client to connect to a SQL database
 	- **psexec:** Open remote shell with privileges
