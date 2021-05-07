@@ -477,6 +477,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 	- [**Maltego**](https://www.maltego.com/)
 
 ### Escaneo y enumeración
+- [**threader3000**](https://github.com/dievus/threader3000)**:** Escaner de puertos multihilo
 - [**rustscan**](https://github.com/RustScan/RustScan)**:** Escanea los puertos muy rápido y después ejecuta nmap
 - [**nmap**](https://github.com/nmap/nmap)**:**
 	- Las flags que usa por defecto son: `-PE`, `-PS`, `-PA` y `-PP`
@@ -604,6 +605,7 @@ $ script -qc /bin/bash /dev/null
 - [**Armitage**](https://github.com/rsmudge/armitage)**:** GUI para metasploit
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Buscar contraseñas por fuerza bruta a tavés de un protocolo o web
 - [**linpeas/winpeas**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)**:** Saca info de la máquina para ver como escalar
+- Para mirar que permisos tenemos en Windows podemos ejecutar: `whoami /priv`. Si tenemos `SeImpersonatePrivilege` o `SeImpersonatePrivilege` posiblemente podamos escalar privilegios fácilmente
 - [**Seatbelt**](https://github.com/GhostPack/Seatbelt)**:** Parecido al anterior pero solo con Windows. [Aquí](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries) se pueden descargar los .exe ya compilados
 	- Si Seatbelt pilla que una cuenta tiene las credenciales guardadas en el Gestor de Credenciales de Windows podemos ejecutar comandos como dicha cuenta de la siguiente manera: `runas /savecred /user:<usario> /profile "cmd.exe"`
 - [**John the Ripper**](https://github.com/openwall/john)**:** Permite crackear un montón de tipos de contraseñas.
