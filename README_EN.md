@@ -164,6 +164,7 @@ Scope of cryptology dealing with encryption or encoded techniques aimed at alter
 
 ### Tools
 - **CrackStation or Google:** To "reverse" a certain common hash
+- **hashid:** Identify a hash
 - **hashcat:** Can use plenty of brute force attacks
 - [**colabcat**](https://github.com/someshkar/colabcat)**:** Execute hashcat on Google Colab
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Allows different types of brute force to be performed
