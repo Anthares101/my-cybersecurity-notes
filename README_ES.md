@@ -478,6 +478,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 	- [**Maltego**](https://www.maltego.com/)
 
 ### Escaneo y enumeración
+- **wpscan:** Viene genial para atacar Wordpress
 - [**threader3000**](https://github.com/dievus/threader3000)**:** Escaner de puertos multihilo
 - [**rustscan**](https://github.com/RustScan/RustScan)**:** Escanea los puertos muy rápido y después ejecuta nmap
 - [**nmap**](https://github.com/nmap/nmap)**:**

@@ -478,6 +478,7 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 	- [**Maltego**](https://www.maltego.com/)
 
 ### Scanning and enumeration
+- **wpscan:** Cool to attack Wordpress
 - [**threader3000**](https://github.com/dievus/threader3000)**:** Multi-threaded port scanner
 - [**rustscan**](https://github.com/RustScan/RustScan)**:** Scans ports very fast and then runs nmap
 - [**nmap**](https://github.com/nmap/nmap)**:**
