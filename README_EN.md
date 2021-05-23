@@ -543,6 +543,7 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 - Example path of where the archive.php file is located in Wordpress: `http://10.10.248.106/wp-content/themes/twentyfifteen/archive.php` it is a file that is usually used to put a reverse shell
 - In `/dev/shm` we can write whoever we are, it is the shared memory folder of the system
 - **nc:** Super useful, allows you to connect to all kinds of services, send commands, listen on a certain port...
+- **socat:** Like netcat but can redirect ports between eachother. Useful for pivoting
 - How to stabilize a revershell:
 ```console
 # https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/

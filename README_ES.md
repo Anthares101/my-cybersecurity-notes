@@ -543,6 +543,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 - Ruta de ejemplo de donde se encuentra el archivo archive.php en Wordpress: `http://10.10.248.106/wp-content/themes/twentyfifteen/archive.php` Es un fichero que se suele usar para meter una reverse shell
 - En `/dev/shm` podemos escribir seamos quien seamos, es la carpeta de memoria compartida del sistema
 - **nc:** Super útil, permite conectarse a todo tipo de servicios, mandar comandos, escuchar en un determinado puerto...
+- **socat:** Parecido a netcat pero con la capacidad de redireccionar puertos entre si. Útil para pivotar
 - Como estabilizar un revershell:
 ```console
 # https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/
