@@ -74,6 +74,8 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
 - Para resolver peticiones DNS podemos usar `nslookup` o `dig`
 - [**RouterSploit**](https://github.com/threat9/routersploit)**:** Un framework para la explotación de dispositivos embebidos
+- [**PacketWhisper**](https://github.com/TryCatchHCF/PacketWhisper)**:** Para exfiltrar información usando DNS
+- [**Updog**](https://github.com/sc0tfree/updog)**:** Alternativa al `SimpleHTTPServer` de Python que además permite también subir archivos
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de pago, existe una app de android con la que podemos hacerlo fácilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
@@ -532,6 +534,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 		- El propio de Windows
 		- **Bases de datos:**
 			- OSVD, NVD, BID, ExploitDB
+- [**egresscheck-framework**](https://github.com/stufus/egresscheck-framework)**:** Herramienta para comprobar que puertos bloquea un firewall de salida
 
 ### Ganar acceso y escalar privilegios
 - En Linux busca siempre la versión del SO, la del kernel y también usa `apt list --upgradeable` para comprobar paquetes no actualizados. Por ejemplo, versiones antiguas de `snap` pueden ser vulnerables a exploits como [dirty_sock](https://www.exploit-db.com/exploits/46362)
