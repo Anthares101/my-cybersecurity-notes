@@ -76,6 +76,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - [**RouterSploit**](https://github.com/threat9/routersploit)**:** Un framework para la explotación de dispositivos embebidos
 - [**PacketWhisper**](https://github.com/TryCatchHCF/PacketWhisper)**:** Para exfiltrar información usando DNS
 - [**Updog**](https://github.com/sc0tfree/updog)**:** Alternativa al `SimpleHTTPServer` de Python que además permite también subir archivos
+- [**Olevba**](https://github.com/decalage2/oletools/wiki/olevba)**:** Script para buscar macros en documentos office
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de pago, existe una app de android con la que podemos hacerlo fácilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment

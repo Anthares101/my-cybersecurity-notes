@@ -76,6 +76,7 @@ These are the notes I've been taking since I started learning about ethical hack
 - [**RouterSploit**](https://github.com/threat9/routersploit)**:** A framework for the exploitation of embedded devices
 - [**PacketWhisper**](https://github.com/TryCatchHCF/PacketWhisper)**:** Used to exfiltrate information using DNS
 - [**Updog**](https://github.com/sc0tfree/updog)**:** Replacement for Python's `SimpleHTTPServer` that also allows uploading files
+- [**Olevba**](https://github.com/decalage2/oletools/wiki/olevba)**:** Script to search for macros in office documents
 
 # Identification of radio frequencies (NFC cards)
 They work at 125 khz or 13.56 Mhz. You can read the information of a payment card, there is an android app with which we can do it easily: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
