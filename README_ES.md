@@ -624,6 +624,7 @@ la shell reversa que tenemos en el equipo desde server SQL vulnerable.
 		- **`nc -lvnp 443`:** Para escuchar la conexión de la maquina objetivo que nos proporcionará un shell remoto
 		- **`ufw allow from 10.10.10.27 proto tcp to any port 80,443`:** Para abrir los puertos pertinentes en caso de tener `Uncomplicated Firewall`
 ### Mantener acceso, Cubrir rastro y Reportar
+- **Túneles SSH:** Utilizando un reenvio dinámico de puertos con SSH podemos usar la máquina remota como proxy SOCKS y configurarlo en `proxychains` para pivotar: `ssh -q -N -D 127.0.0.1:8000 -i privateKey.pem user@remoteHost`
 - **mimikatz:** De lo más utilizado para hacer un dump y crackear contraseñas en sistemas Windows. Se deberá desactivar el antivirus en la máquina objetivo o utilizar una versión ofuscada puesto que al ser tan utilizado es detectado fácilmente
 - **Servidor de comando y control:**
 	- [**Powershell Empire**](https://github.com/BC-SECURITY/Empire/)**:** Framework de post explotación. Tiene varias herramientas útiles y permite el control sencillo de máquinas exploiteadas

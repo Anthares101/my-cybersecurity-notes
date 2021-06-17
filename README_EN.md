@@ -624,6 +624,7 @@ the reverse shell we have on the computer from vulnerable SQL server.
 		- **`nc -lvnp 443`:** To listen to the connection of the target machine that will provide us with a remote shell
 		- **`ufw allow from 10.10.10.27 proto tcp to any port 80,443`:** Open the specified ports if you have `Uncomplicated Firewall`
 ### Maintain access, Cover trace, and Report
+- **SSH tunneling:** Using a dynamic port forwarding with SSH we can use the remote host as a SOCKS and configure it in `proxychains` for pivoting: `ssh -q -N -D 127.0.0.1:8000 -i privateKey.pem user@remoteHost`
 - **mimikatz:** Most commonly used to dump and crack passwords on Windows systems. You must disable the antivirus on the target machine or use an obfuscated version since being so used is easily detected
 - **Command and Control Server:**
 	- [**Powershell Empire**](https://github.com/BC-SECURITY/Empire/)**:** Post-exploitation Framework. It has several useful tools and allows easy control of exploited machines
