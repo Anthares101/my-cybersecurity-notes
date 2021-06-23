@@ -528,7 +528,7 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 - **enum4linux:** To catch info from Windows and Samba hosts
 - Showmount:** If you have a port with the NFS service, you can display with the parameter `-e` if there are any directories mounted
 - **smbclient:**
-	- **`smbclient -N -L //IP/`:** Para listar directorios de un server samba windows.
+	- **`smbclient -N -L //IP/`:** List directories in a Windows server
 	- **`smbclient -N //IP/dir`:** We connect and enter the directory we have put
 	- With the `get` command we can catch files
 	- With the `put` command we can upload files
