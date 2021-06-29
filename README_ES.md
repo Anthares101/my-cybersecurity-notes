@@ -186,7 +186,7 @@ Radio en la cual alguna o varias de las funciones de la capa física son definid
 
 ### Diccionarios
 Para crackear contraseñas necesitaremos diccionarios, aquí dejo algunas opciones:
-- **Localización de algunos en Kali:** `/usr/share/di*`, `/usr/share/wordlist`
+- **Localización de algunos en Kali:** `/usr/share/di*`, `/usr/share/wordlist`, `/usr/share/ncrack`
 - [**Rockyou**](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)**:** Un diccionario bastante utilizado
 - [**Kaonashi**](https://github.com/kaonashi-passwords/Kaonashi/tree/master/wordlists)
 - **Crunch y Cewl:** Para creación de diccionarios

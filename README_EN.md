@@ -186,7 +186,7 @@ Scope of cryptology dealing with encryption or encoded techniques aimed at alter
 
 ### Dictionaries
 To crack passwords we will need dictionaries, here are some options:
-- **Localization of some in Kali:** `/usr/share/di*`, `/usr/share/wordlist`
+- **Localization of some in Kali:** `/usr/share/di*`, `/usr/share/wordlist`, `/usr/share/ncrack`
 - [**Rockyou**](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)**:** A widely used dictionary
 - [**Kaonashi**](https://github.com/kaonashi-passwords/Kaonashi/tree/master/wordlists)
 - **Crunch and Cewl:** For creating dictionaries
