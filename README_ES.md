@@ -53,6 +53,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 
 # Cosas útiles
 
+- **Generador de reverse shells:** https://www.revshells.com/
 - **`[COMAND] 2> /dev/null`:** Para quitar la salida de error y pasar de ella)
 - **Algunas VPN y proxies:** freedom vpn, opera vpn, proxy ultrasurf
 - Se puede utilizar un *spoofer* para cambiar la información de un dispositivo

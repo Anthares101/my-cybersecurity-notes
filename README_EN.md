@@ -53,6 +53,7 @@ These are the notes I've been taking since I started learning about ethical hack
 
 # Useful things
 
+- **Reverse shells generator:** https://www.revshells.com/
 - **`[COMAND] 2> /dev/null`:** To remove the error output and move from it)
 - **Some VPNs and proxies:** freedom vpn, opera vpn, ultrasurf proxy
 - You can use a *spoofer* to change the information of a device
