@@ -213,6 +213,7 @@ to the image to take out what you've compressed on the zip
 
 #### Various Steganography Tools (Each will use its algorithm)
 - **Image Editors**
+- **Outguess**
 - **Steghide:** Widely used, allows you to embed files in others by encrypting the info if you want. Use LSB.
 - **OpenStego:** Allows you to embed files in others like the previous one but with interface. Also meter watermark (works with .bmp)
 - **StegoSuite**

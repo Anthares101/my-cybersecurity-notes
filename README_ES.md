@@ -213,6 +213,7 @@ a la imagen para sacar lo que haya comprimido en el zip
 
 #### Herramientas varias de steganografía (Cada uno usará su algoritmo)
 - **Editores de imagenes**
+- **Outguess**
 - **Steghide:** Muy utilizada, permite embeber archivos en otros cifrando la info si queremos. Usa LSB.
 - **OpenStego:** Permite embeber archivos en otros como la anterior pero con interfaz. Tambien meter watermark (trabaja con .bmp)
 - **StegoSuite**
