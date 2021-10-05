@@ -432,7 +432,7 @@ $ gdb binary
 (gdb)> x/s mem_dir # Print what is in a certain memory address
 (gdb)> p variable # Print the value of a variable (The binary must be compiled in debug mode)
 ```
-- [**peda**](https://github.com/longld/peda)**:** Asistente hecho en Python para el desarrollo de exploits en GDB
+- [**peda**](https://github.com/longld/peda)**:** Assistant made in Python to develop exploits in GDB
 - **Ghidra:** Free reverse engineering tool
 - **`objdump`:** 
 ```console
