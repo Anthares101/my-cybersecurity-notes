@@ -83,6 +83,8 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 echo 1 > /proc/sys/net/ipv4/ip_forward # Activa la redirección de paquetes en el kernel de Linux para evitar problemas de comunicación entre las víctimas
 arpspoof -i eht0 -t <VICTIM_IP_A> -r <VICTIM_IP_B>
 ```
+- Con `python3 -m http.server 8080` podemos montar un servidor web en el puerto 8080
+- Si necesitamos un servidor php para hacer pruebas o lo que sea, podemos montarlo rapidamente con `php -S 127.0.0.1:8080` en el puerto 8080
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de pago, existe una app de android con la que podemos hacerlo fácilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
