@@ -530,7 +530,7 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 - [**gobuster**](https://github.com/OJ/gobuster)**:** To remove all directories from a website
 - [**Nikto**](https://github.com/sullo/nikto)**:** Web Vulnerability Scanner: Web Vulnerability Scanner
 - **enum4linux:** To catch info from Windows and Samba hosts
-- Showmount:** If you have a port with the NFS service, you can display with the parameter `-e` if there are any directories mounted
+- **showmount:** If you have a port with the NFS service, you can display with the parameter `-e` if there are any directories mounted
 - **smbclient:**
 	- **`smbclient -N -L //IP/`:** List directories in a Windows server
 	- **`smbclient -N //IP/dir`:** We connect and enter the directory we have put
