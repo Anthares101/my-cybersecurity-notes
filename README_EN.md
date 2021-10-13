@@ -66,7 +66,7 @@ These are the notes I've been taking since I started learning about ethical hack
 - **Foremost:** In Kali we have this tool that from headers, footers and internal data structures is able to recover files. It can be used to remove files from a .pcap capture in a simple way.
 - **radare2:** To reversing. I leave this for [here](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) for more information
 - **DES Algorithm:** It is an encryption algorithm whose key has a length of 8 bytes (64 bits). Useful information for CTFs
-- [**FoxyProxy**](https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/)**:** Extensión para gestionar proxies en Firefox fácilmente
+- [**FoxyProxy**](https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/)**:** Firefox extention to manage proxies easily
 - **`searchsploit`:** Database to search for vulnerabilities:
     - With `-x PATH` we can print the content of the  file attached to a vulnerability (Code or detailed information)
     - With `-m PATH` we can copy the file attached to a vulnerability to our current directory.
@@ -103,7 +103,7 @@ They work at 125 khz or 13.56 Mhz. You can read the information of a payment car
 
 ## Attacks
 - **Jamming:** Attack the signal (inhibitor) There are reactive jammers, randoms, constants.
-- **Deauth de usuarios:** No es un jammer
+- **Deauth de usuarios:** Not a jammer
 - **Public Networks:** Care because you don't know who's behind 
 - **Portal cautivo:**
 	- The typical of hotels. The easy thing would be by spofeing the mac by that of someone connected
