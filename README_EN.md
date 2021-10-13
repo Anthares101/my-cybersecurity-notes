@@ -63,7 +63,7 @@ These are the notes I've been taking since I started learning about ethical hack
 - **Pyramid of Computer Security (CIA):** Confidentiality, Integrity, Availability and Non-Repudiation
 - **Athena Platform:** Platform containing a collection of many CTFs
 - **https://ctftime.org/:** Page where to participate in CTFs or view the write ups of past CTFs
-- **Foremost:** In Kali we have this tool that from headers, footers and internal data structures is able to recover files. It can be used to remove files from a .pcap capture in a simple way.
+- **Foremost:** In Kali we have this tool that from headers, footers and internal data structures is able to recover files. It can be used to remove files from a .pcap capture in a simple way
 - **radare2:** To reversing. I leave this for [here](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) for more information
 - **DES Algorithm:** It is an encryption algorithm whose key has a length of 8 bytes (64 bits). Useful information for CTFs
 - [**FoxyProxy**](https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/)**:** Firefox extention to manage proxies easily
@@ -216,7 +216,7 @@ to the image to take out what you've compressed on the zip
 #### Various Steganography Tools (Each will use its algorithm)
 - **Image Editors**
 - **Outguess**
-- **Steghide:** Widely used, allows you to embed files in others by encrypting the info if you want. Use LSB.
+- **Steghide:** Widely used, allows you to embed files in others by encrypting the info if you want. Use LSB with mathematical graph theory for swap lsb-bits between pixels in graph for maximum usage of existing data
 - **OpenStego:** Allows you to embed files in others like the previous one but with interface. Also meter watermark (works with .bmp)
 - **StegoSuite**
 - **Jsteg**
@@ -313,7 +313,7 @@ Anthares101@kali:~$ volatility -f IMAGE --profile=PERFIL netscan #Scans for netw
 Anthares101@kali:~$ volatility -f IMAGE --profile=PERFIL cmdscan #Gets the history of used commands from the cmd process
 Anthares101@kali:~$ volatility -f IMAGE --profile=PERFIL memdump -p PID -D DIRECTORIO_DESTINO #Dumps a process
 ```
-The dumped process can be processed with WINDBG or strings: `strings FILE > output.txt` that pulls out the readable strings. By default it uses 8bits UTF8, with -el you can switch to UTF16 (16bits):
+The dumped process can be processed with WINDBG or strings: `strings FILE > output.txt` that pulls out the readable strings. By default it uses 8bits UTF8, with -el you can switch to UTF16 (16 bits):
 ```console
 Anthares101@kali:~$ strings -td -a FILE.dmp
 Anthares101@kali:~$ strings -td -el -a FILE.dmp
@@ -323,9 +323,9 @@ Windows security process, performs authentication. If this process is in memory,
 ```console
 Anthares101@kali:~$ volatility -f imagen --profile=PERFIL hashdump
 ```
-Windows hashes passwords with an NTLM hash. It works by taking a password, part in half and hashing the parts separately.
+Old versions of Windows (Or new ones if enabled) hashes passwords with a LM hash. It works by taking a password, part it in half and hashing the parts separately.
 
-If there is no password, Windows has a default hash type that indicates that a string is empty. Windows passwordes are like 16-character max and start from 8 to 8 (In half go) In the hash an 8-character pass would appear as the second hash, as they are filled upside down.
+If there is no password, Windows has a default hash type that indicates that a string is empty. Windows passwords using this hash are 14-character max (Null-padded to 14 bytes if necessary). If a password is 7 characters long, its hash would appear as the second hash, as they are filled in reverse order.
 
 We can use [CrackStation](https://crackstation.net/) to try to crack common Windows hashes.
 	
@@ -348,11 +348,11 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 file dictionary --force --show #1
 
 ## Tools
 
-- Basically use debugguer and browser console to defuse code and execute functions. You can also look at the network to look at requests (what is sent and received) to get information.
+- We can use the debugguer and browser console to defuse code and execute functions. You can also look at the network to look at requests (what is sent and received) to get information.
 - You can use curl to modify the headers that are sent to a website:
 	- **`-X`:** Changes request type
 	- **`-v`:** More information in the command output
-	- **`-H`:** To edit headers: "User-Agent: kali"
+	- **`-H`:** To edit headers: `User-Agent: kali`
 - **Burpsuite:** Captures all browser requests and allows editing them. The repeater module allows us to send and receive headers as if we were the browser going (the ones we want)
 - **OWASP ZAP:** Web security scanner
 - [**Nikto**](https://github.com/sullo/nikto)**:** Web Vulnerability Scanner

@@ -63,7 +63,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - **Pirámide de la seguridad informática (CIA):** Confidencialidad, Integridad, Disponibilidad y no repudio
 - **Plataforma Atenea:** Plataforma que contiene una recopilación de muchos CTFs
 - **https://ctftime.org/:** Página donde participar en CTFs o ver los write ups de CTFs pasados
-- **Foremost:** En Kali contamos con esta herramienta que a partir de las cabeceras, pies de página y las estructuras de datos internas es capaz de recuperar archivos. Puede servir para sacar ficheros de una captura .pcap de forma sencilla.
+- **Foremost:** En Kali contamos con esta herramienta que a partir de las cabeceras, pies de página y las estructuras de datos internas es capaz de recuperar archivos. Puede servir para sacar ficheros de una captura .pcap de forma sencilla
 - **radare2:** Para hacer reversing. Dejo esto por [aquí](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) para más información
 - **Algoritmo DES:** Es un algoritmo de cifrado cuya clave tiene una longitud de 8 bytes (64 bits). Información útil para CTFs
 - [**FoxyProxy**](https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/)**:** Extention to manage proxies easily in Firefox
@@ -117,16 +117,16 @@ Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de 
 	- Al ser un pin de 8 digitos se puede descifrar por fuerza bruta
 - **WPA:** 
 	- Se captura el tercer paquete del four  way handshake (instalación). Este paquete se puede reenviar lo que nos dé la gana y por tanto descifrar el paquete
-	- Bettercap 2 + hcxtools: bettercap --iface nombreInterfaz a utilizar para snif
+	- Bettercap 2 + hcxtools: bettercap --iface nombreInterfaz a utilizar para sniffear
 		- Ataque:
 		1. wifi.recon on
 		2. Nos limitamos a mirar solo un canal para reducir el ruido (wifi.recon.channel 6)
-		3. Con bettercap podemos hacer ataques de deautentificación a un AP (wifi.deauth macRouter). Lo hacemos para forzar a disp a reconectar
-		4. Se captura el WPA2 handshake (hcxdumptool puede sacar el psk aunque tambien podemos crackear el paquetito que hemos capturado)
-		5. Con lo capturado pues crackeamos con hashcat para sacar el PSK (clave del router vaya) a partir del PMK
+		3. Con bettercap podemos hacer ataques de deautentificación a un AP (wifi.deauth macRouter). Lo hacemos para forzar a un dispositivo a reconectarse
+		4. Se captura el WPA2 handshake (hcxdumptool puede sacar el psk aunque tambien podemos crackear el paquete que hemos capturado)
+		5. Con lo capturado pues crackeamos con hashcat para sacar el PSK (clave del router) a partir del PMK
 		6. Para no tener que esperar a un cliente para robar el handsake nos podemos asociar a un AP (No hace falta saber clave)
 		7. wifi.assoc all (Sacamos el PKMID el cual es un hash que se genera hasheando una cadena fija + mac de cliente + AP usando de contraseña el PSK)
-- **Suplantación:** Hacer pensar que te conectas a un sitio pero nope jeje. Herramienta: hostapd y dnsmask (esto para el tema dns y dhcp) / wifiphisher, evil engines 2
+- **Suplantación:** Hacer pensar que te conectas a un sitio pero no. Herramienta: hostapd y dnsmask (esto para el tema dns y dhcp) / wifiphisher, evil engines 2
 - **Phising (2FA):** Haciendo que meta el codigo del sms tambien en la web al robar credenciales
 		
 ## Herramientas
@@ -216,7 +216,7 @@ a la imagen para sacar lo que haya comprimido en el zip
 #### Herramientas varias de steganografía (Cada uno usará su algoritmo)
 - **Editores de imagenes**
 - **Outguess**
-- **Steghide:** Muy utilizada, permite embeber archivos en otros cifrando la info si queremos. Usa LSB.
+- **Steghide:** Muy utilizada, permite embeber archivos en otros cifrando la info si queremos. Usa LSB junto a teoría de grafos para maximizar el uso de los datos del archivo original.
 - **OpenStego:** Permite embeber archivos en otros como la anterior pero con interfaz. Tambien meter watermark (trabaja con .bmp)
 - **StegoSuite**
 - **Jsteg**
@@ -238,7 +238,7 @@ stegcracker: Fuerza bruta sobre al algoritmo de Steghide
 - **exiftool:** Ver tipo fichero metadatos blabla
 - **ghex:** Editor hexadecimal
 - **xxd:** Para leer información hexadecimal
-- **BinWalk:** Con `-e` para sacar archivos ocultos de otro. Si solo lo lanzamos contra un fichero saca info del mismo, si hay algo oculta y tal.
+- **BinWalk:** Con `-e` para sacar archivos ocultos de otro. Si solo lo lanzamos contra un fichero saca información del mismo (Por ejemplo si hay algún archivo oculto)
 - **StegoVeritas**
 - **Zsteg**
 - **StegDetect:** Busca exploits conocidos
@@ -313,7 +313,7 @@ Anthares101@kali:~$ volatility -f IMAGEN --profile=PERFIL netscan #Escanea busca
 Anthares101@kali:~$ volatility -f IMAGEN --profile=PERFIL cmdscan #Saca del proceso cmd el historial de comandos usados
 Anthares101@kali:~$ volatility -f IMAGEN --profile=PERFIL memdump -p PID -D DIRECTORIO_DESTINO #Dumpea un determinado proceso
 ```
-El proceso dumpeado podemos procesarlo con WINDBG o strings: `strings FICHERO > salida.txt` que saca las cadenas legibles. Por defecto usa 8bits UTF8, con -el se puede cambiar a UTF16 (16bits):
+El proceso dumpeado podemos procesarlo con WINDBG o strings: `strings FICHERO > salida.txt` que saca las cadenas legibles. Por defecto usa 8bits UTF8, con -el se puede cambiar a UTF16 (16 bits):
 ```console
 Anthares101@kali:~$ strings -td -a FILE.dmp
 Anthares101@kali:~$ strings -td -el -a FILE.dmp
@@ -323,9 +323,9 @@ Proceso de seguridad de windows, realiza la autentificación. Si está en memori
 ```console
 Anthares101@kali:~$ volatility -f imagen --profile=PERFIL hashdump
 ```
-Windows hashea las contraseñas con un hash tipo NTLM. Funciona tomando una contraseña, la parte por la mitad y hashea las partes por separado.
+En versiones antiguas de Windows (O en las modernas si está activo) se hashea las contraseñas con un hash tipo LM. Funciona tomando una contraseña, la parte por la mitad y hashea las partes por separado.
 
-Si no hay contraseña, Windows tiene un tipo de hash por defecto que indica que una cadena esta vacía. Las password de windows son como max de 16 caracteres y se parten de 8 en 8 (Por la mitad vaya) En el hash una pass de 8 caracteres aparecería como el segundo hash, como que se rellenan al revés.
+Si no hay contraseña, Windows tiene un tipo de hash por defecto que indica que una cadena esta vacía. Las contraseñas de Windows que se hashean así son como máximo de 14 caracteres (Se usa padding con caractéres nulos para llegar a 14 si es necesario). En el hash, una contraseña de 7 caracteres aparecería como el segundo hash, como que se rellenan al revés.
 
 Podemos usar por ejemplo [CrackStation](https://crackstation.net/) para intentar revertir hash de Windows comunes.
 	
@@ -348,11 +348,11 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 fichero diccionario --force --sho
 
 ## Herramientas
 
-- Utilizar basicamente el debugguer y la consola de los navegadores para desofuscar codigo y ejecutar funciones. También se puede mirar la red para mirar las peticiones (lo que se manda y recibe) para sacar información.
+- Debugguer y la consola de los navegadores para desofuscar codigo y ejecutar funciones. También se puede mirar la red para mirar las peticiones (lo que se manda y recibe) para sacar información
 - Se puede utilizar curl para modificar las cabeceras que se mandan a una web:
 	- **`-X`:** Cambia tipo de petición
 	- **`-v`:** Más información en la salida del comando
-	- **`-H`:** Para editar cabeceras: "User-Agent: kali"
+	- **`-H`:** Para editar cabeceras: `User-Agent: kali`
 - **Burpsuite:** Captura todas las peticiones del navegador y permite su edicion. El módulo repeater permite ir mandando y recibiendo cabeceras como si fuesemos el navegador vaya (las que queramos)
 - **OWASP ZAP:** Escáner de seguridad web
 - [**Nikto**](https://github.com/sullo/nikto)**:** Escaner de vulnerabilidades web
@@ -587,7 +587,7 @@ $ script -qc /bin/bash /dev/null
 	Anthares101@kali:~$ sudo msfdb init #Inicializa base de datos
 	Anthares101@kali:~$ msf console #Iniciar metasploit
 	```
-	- **Así cosas basicas:**
+	- **Así cosas básicas:**
 		- **`use [ruta exploit]`:** Así se selecciona que se utilizará
 		- **`show options`:** Mostrará los parámetros del exploit a configurar
 		- Podemos hacer `set [PARAM] [VALUE]` para configurar un determinado parámetro: `set LHOST 10.0.2.4`
