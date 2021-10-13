@@ -560,19 +560,19 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 - Como estabilizar un revershell:
 ```console
 # https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/
-# In the reverse shell
+# En la shell reversa
 $ python -c 'import pty; pty.spawn("/bin/bash")'
 # Ctrl-Z
 
-# In our machine
+# En nuestra máquina
 $ stty raw -echo
 $ fg
 
-# In reverse shell
-# Push Intro/CTRL-C
+# En la shell reversa
+# Presionar Intro/CTRL-C
 $ export TERM=xterm
 ```
-- También es posible hacer:
+- Si Python no estuviese disponible también es posible hacer:
 ```console
 $ script -qc /bin/bash /dev/null
 ```

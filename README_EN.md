@@ -572,7 +572,7 @@ $ fg
 # Push Intro/CTRL-C
 $ export TERM=xterm
 ```
-- It is also possible to do:
+- If Python wasn't available it is also possible to do:
 ```console
 $ script -qc /bin/bash /dev/null
 ```
