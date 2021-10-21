@@ -193,6 +193,7 @@ Para crackear contraseñas necesitaremos diccionarios, aquí dejo algunas opcion
 - [**Rockyou**](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)**:** Un diccionario bastante utilizado
 - [**Kaonashi**](https://github.com/kaonashi-passwords/Kaonashi/tree/master/wordlists)
 - **Crunch y Cewl:** Para creación de diccionarios
+- [**Mentalist**](https://github.com/sc0tfree/mentalist)**:** Herramienta gráfica para la generación de diccionarios
 
 ### Reglas
 Si se combina un buen diccionario con un buen conjunto de reglas las posibilidades de éxito aumentan:

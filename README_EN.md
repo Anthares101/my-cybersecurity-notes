@@ -193,6 +193,7 @@ To crack passwords we will need dictionaries, here are some options:
 - [**Rockyou**](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)**:** A widely used dictionary
 - [**Kaonashi**](https://github.com/kaonashi-passwords/Kaonashi/tree/master/wordlists)
 - **Crunch and Cewl:** For creating dictionaries
+- [**Mentalist**](https://github.com/sc0tfree/mentalist)**:** A graphical tool for custom wordlist generation
 
 ### Rules
 If you combine a good dictionary with a good set of rules the chances of success increase:
