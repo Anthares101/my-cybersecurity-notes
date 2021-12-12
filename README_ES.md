@@ -85,7 +85,7 @@ arpspoof -i eht0 -t <VICTIM_IP_A> -r <VICTIM_IP_B>
 ```
 - Con `python3 -m http.server 8080` podemos montar un servidor web en el puerto 8080
 - Si necesitamos un servidor php para hacer pruebas o lo que sea, podemos montarlo rapidamente con `php -S 127.0.0.1:8080` en el puerto 8080
-- Para conectarnos con RDP a una máquina en Kali podemos hacer: `xfreerdp /u:USER /p:PASSWORD /v:IP`
+- Para conectarnos con RDP a una máquina en Kali podemos hacer: `xfreerdp /u:USER /p:PASSWORD /v:IP /dynamic-resolution`
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de pago, existe una app de android con la que podemos hacerlo fácilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment

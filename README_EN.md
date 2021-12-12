@@ -85,7 +85,7 @@ arpspoof -i eht0 -t <VICTIM_IP_A> -r <VICTIM_IP_B>
 ```
 - Using `python3 -m http.server 8080` we can spin up a web server in the port 8080
 - If we need a php server for testing or whatever, we can spin one up in the port 8080 with `php -S 127.0.0.1:8080`
-- In Kali we can connect with RDP to a machine with: `xfreerdp /u:USER /p:PASSWORD /v:IP`
+- In Kali we can connect with RDP to a machine with: `xfreerdp /u:USER /p:PASSWORD /v:IP /dynamic-resolution`
 
 # Identification of radio frequencies (NFC cards)
 They work at 125 khz or 13.56 Mhz. You can read the information of a payment card, there is an android app with which we can do it easily: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
