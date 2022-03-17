@@ -73,6 +73,8 @@ These are the notes I've been taking since I started learning about ethical hack
 - Some useful tools for phishing:
 	- [**GoPhish**](https://github.com/gophish/gophish)
 	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
+	- [**Zphisher**](https://github.com/htr-tech/zphisher)
+	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish)
 - To resolve DNS requests we can use `nslookup` or `dig`
 - [**RouterSploit**](https://github.com/threat9/routersploit)**:** A framework for the exploitation of embedded devices
 - [**PacketWhisper**](https://github.com/TryCatchHCF/PacketWhisper)**:** Used to exfiltrate information using DNS

@@ -73,6 +73,8 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - Algunas herramientas útiles para hacer phishing:
 	- [**GoPhish**](https://github.com/gophish/gophish)
 	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
+	- [**Zphisher**](https://github.com/htr-tech/zphisher)
+	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish)
 - Para resolver peticiones DNS podemos usar `nslookup` o `dig`
 - [**RouterSploit**](https://github.com/threat9/routersploit)**:** Un framework para la explotación de dispositivos embebidos
 - [**PacketWhisper**](https://github.com/TryCatchHCF/PacketWhisper)**:** Para exfiltrar información usando DNS
