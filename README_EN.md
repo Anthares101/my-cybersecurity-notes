@@ -518,8 +518,8 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 	- With this script you can determine if a host is good zombie `nmap --script ipidseq [--script-args probepor-port] target` (With `-O -v` we might also know). The zombie machine must be idle (IDLE) and use an IP ID Sequence Generation (IP ID Sequence Generation) of type `Incremental` or `Broken little-endian incremental` in order to predict which ID will be placed in the packets.
 		- Example: `nmap -Pn -sI zombie_ip target_ip` The flag `-Pn` is important, since if we don't put it nmap will ping the target first to know if it is alive and the fun part of being stealthy is lost
 	- **`-b`:** Useful if everything fails. Scan target from ftp host
-	- **Scipts**
-		- **Categorias:** auth, broadcast, brute, default, discovery, dos, exploit, external, fuzzer, intrusive, malware, safe, vuln
+	- **Scripts**
+		- **Categories:** auth, broadcast, brute, default, discovery, dos, exploit, external, fuzzer, intrusive, malware, safe, vuln
 		- There is a script that we can use with `--script-banner` that what it does is determine service versions from the banner that you get when connecting. This can be done with telnet and netcat as well.
 	- **Timing**
 		- Nmap has parameters to determine response times, each story send packets... but in the end you usually use a template: `-T paranoid | sneaky | polite | normal | aggressive |insane (0 to 5)`
