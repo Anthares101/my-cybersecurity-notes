@@ -58,7 +58,7 @@ These are the notes I've been taking since I started learning about ethical hack
 - **Some VPNs and proxies:** freedom vpn, opera vpn, ultrasurf proxy
 - You can use a *spoofer* to change the information of a device
 - Beware of beacons in ip shorteners (redirects that make them can catch you information). There are tools to untie a link
-- **Logstalgia:** Programite to pass you a connection log and visually generate the requests that are to the system
+- **Logstalgia:** Program to pass logs and visually see how the requests hit the system
 - **Metasploitable:** Virtual machine to practice
 - **Pyramid of Computer Security (CIA):** Confidentiality, Integrity, Availability and Non-Repudiation
 - **Athena Platform:** Platform containing a collection of many CTFs
