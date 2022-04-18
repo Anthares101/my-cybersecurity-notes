@@ -464,6 +464,9 @@ $ objdump -x binary # Information about the binary
 - **IDA PRO:** Another reverse engineering tool
 - **UPX:** Packer for executables
 - **Immunity Debugger:** Debugging program
+- **CFF Explorer:** A freeware suite of tools including a PE editor called CFF Explorer and a process viewer
+- **Resource Hacker:** Allow to extract resources from a binary
+- **Exeinfo PE:** Verify exe files
 
 # Hacking methodology (Pentest)
 We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the things to test on a system.

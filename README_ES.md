@@ -464,6 +464,9 @@ $ objdump -x binary # Información sobre el binario
 - **IDA PRO:** Otra herramienta de ingeniería inversa
 - **UPX:** Empaquetador para ejecutables
 - **Immunity Debugger:** Programa para hacer debugging
+- **CFF Explorer:** Un conjunto de herramientas gratuito que incluye un editor de PE llamado CFF Explorer y un visor de procesos
+- **Resource Hacker:** Permite extraer recursos de binarios
+- **Exeinfo PE:** Verifica archivos exe
 
 # Metodología de hacking (Pentest)
 Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente las cosas que hay que testear en un sistema.
