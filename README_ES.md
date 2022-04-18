@@ -463,6 +463,7 @@ $ objdump -x binary # Información sobre el binario
 - **ILSpy:** Descompilador .NET
 - **IDA PRO:** Otra herramienta de ingeniería inversa
 - **UPX:** Empaquetador para ejecutables
+- **Immunity Debugger:** Programa para hacer debugging
 
 # Metodología de hacking (Pentest)
 Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente las cosas que hay que testear en un sistema.
