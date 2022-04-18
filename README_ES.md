@@ -467,6 +467,7 @@ $ objdump -x binary # Información sobre el binario
 - **CFF Explorer:** Un conjunto de herramientas gratuito que incluye un editor de PE llamado CFF Explorer y un visor de procesos
 - **Resource Hacker:** Permite extraer recursos de binarios
 - **Exeinfo PE:** Verifica archivos exe
+- **PE Tools:** Conjunto de herramientas para manipular archivos exe
 
 # Metodología de hacking (Pentest)
 Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente las cosas que hay que testear en un sistema.
