@@ -64,7 +64,6 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - **Plataforma Atenea:** Plataforma que contiene una recopilación de muchos CTFs
 - **https://ctftime.org/:** Página donde participar en CTFs o ver los write ups de CTFs pasados
 - **Foremost:** En Kali contamos con esta herramienta que a partir de las cabeceras, pies de página y las estructuras de datos internas es capaz de recuperar archivos. Puede servir para sacar ficheros de una captura .pcap de forma sencilla
-- **radare2:** Para hacer reversing. Dejo esto por [aquí](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) para más información
 - **Algoritmo DES:** Es un algoritmo de cifrado cuya clave tiene una longitud de 8 bytes (64 bits). Información útil para CTFs
 - [**FoxyProxy**](https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/)**:** Extention to manage proxies easily in Firefox
 - **`searchsploit`:** Una base de datos donde buscar diferentes vulnerabilidades
@@ -459,6 +458,11 @@ $ objdump -x binary # Información sobre el binario
     - Si iniciamos radare con `-d` podemos poner un breakpoint en el programa con `db direcciónMemoria`
     - En una determinada función podríamos usar `VV` para ver un gráfico del flujo del programa y si pulsamos `:` podemos meter comandos como en vim, en este caso pondremos `dc` para iniciar la ejecución del programa. (Podemos usar `?` para ver la ayuda)
     - La ejecución del programa parará en nuestro breakpoint y podremos ir paso a paso con le tecla `s` viendo los pasos en el gráfico. Más información [aquí](https://monosource.gitbooks.io/radare2-explorations/content/intro/visual_graphs.html)
+    - Dejo [esto](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) para más información
+- **PEiD:** Detectan los empaquetadores de código más comunes
+- **ILSpy:** Descompilador .NET
+- **IDA PRO:** Otra herramienta de ingeniería inversa
+- **UPX:** Empaquetador para ejecutables
 
 # Metodología de hacking (Pentest)
 Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente las cosas que hay que testear en un sistema.

@@ -64,7 +64,6 @@ These are the notes I've been taking since I started learning about ethical hack
 - **Athena Platform:** Platform containing a collection of many CTFs
 - **https://ctftime.org/:** Page where to participate in CTFs or view the write ups of past CTFs
 - **Foremost:** In Kali we have this tool that from headers, footers and internal data structures is able to recover files. It can be used to remove files from a .pcap capture in a simple way
-- **radare2:** To reversing. I leave this for [here](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) for more information
 - **DES Algorithm:** It is an encryption algorithm whose key has a length of 8 bytes (64 bits). Useful information for CTFs
 - [**FoxyProxy**](https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/)**:** Firefox extention to manage proxies easily
 - **`searchsploit`:** Database to search for vulnerabilities:
@@ -459,6 +458,11 @@ $ objdump -x binary # Information about the binary
     - If we start radare with `-d` and we can put a breakpoint in the program with `db memoryAddress`
     - In a certain function we could use `VV` to see a graph of the program flow and if we press`: `we can enter commands as in vim, in this case we will put `dc` to start the execution of the program. (We can use `?` To see help)
     - The execution of the program will stop at our breakpoint and we can go step by step with the `s` key, seeing the steps in the graph. More information [here](https://monosource.gitbooks.io/radare2-explorations/content/intro/visual_graphs.html)
+    - I will leave [this](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) for more information
+- **PEiD:** Detects most common packers
+- **ILSpy:** .NET decompiler
+- **IDA PRO:** Another reverse engineering tool
+- **UPX:** Packer for executables
 
 # Hacking methodology (Pentest)
 We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the things to test on a system.
