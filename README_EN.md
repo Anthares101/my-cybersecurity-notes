@@ -450,6 +450,17 @@ $ objdump -x binary # Information about the binary
 - **`dmesg`:** Useful for checking overflow errors
 - [**pwntools**](https://github.com/Gallopsled/pwntools)**:** It is a framework for CTF and also a library to develop exploits
     - **`pwn checksec`:** Very useful to check what type of security a binary has activated
+    - To get shellcode that executes the `sh` command we can use this:
+    ```python
+    from pwn import *
+
+    # Don't forget to specify the context:
+    context.binary = './binary' # This way the context is set from the target binary
+	context.update(arch='i386', os='linux') # This is how you set the context by hand
+
+    payload = asm(shellcraft.sh())
+	payload += asm(shellcraft.exit())
+    ```
 - **Radare:** Basic use:
     - We execute radare in the following way `radare2 binary`
     - The first thing would be to do `aa` to analyze the binary and then we could use `afl` to show all the functions found
@@ -458,6 +469,7 @@ $ objdump -x binary # Information about the binary
     - If we start radare with `-d` and we can put a breakpoint in the program with `db memoryAddress`
     - In a certain function we could use `VV` to see a graph of the program flow and if we press`: `we can enter commands as in vim, in this case we will put `dc` to start the execution of the program. (We can use `?` To see help)
     - The execution of the program will stop at our breakpoint and we can go step by step with the `s` key, seeing the steps in the graph. More information [here](https://monosource.gitbooks.io/radare2-explorations/content/intro/visual_graphs.html)
+    - More information about debugging with Radare [here](https://monosource.gitbooks.io/radare2-explorations/content/intro/debugging.html)
     - I will leave [this](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) for more information
 - **PEiD:** Detects most common packers
 - **ILSpy:** .NET decompiler

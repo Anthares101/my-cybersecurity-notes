@@ -450,6 +450,17 @@ $ objdump -x binary # Información sobre el binario
 - **`dmesg`:** Útil para comprobar errores de desbordamiento
 - [**pwntools**](https://github.com/Gallopsled/pwntools)**:** Es un framework para CTF y también una librería para desarrollar exploits
     - **`pwn checksec`:** Muy últil para comprobar que tipo de seguridad tiene un binario activada
+    - Para generar shellcode que ejecute el comando `sh` se puede hacer esto:
+    ```python
+    from pwn import *
+
+    # Es necesario especificar el contexto del binario:
+    context.binary = './binary' # Asi se especifica el contexto de forma automática
+	context.update(arch='i386', os='linux') # Asi se especifica el contecto a mano
+
+    payload = asm(shellcraft.sh())
+	payload += asm(shellcraft.exit())
+    ```
 - **Radare:** Uso básico:
     - Ejecutamos radare de la siguiente forma `radare2 binario`
     - Lo primero sería hacer `aa` parar analizar el binario y despues podriamos utilizar `afl` para mostrar todas las funciones encontradas
@@ -458,6 +469,7 @@ $ objdump -x binary # Información sobre el binario
     - Si iniciamos radare con `-d` podemos poner un breakpoint en el programa con `db direcciónMemoria`
     - En una determinada función podríamos usar `VV` para ver un gráfico del flujo del programa y si pulsamos `:` podemos meter comandos como en vim, en este caso pondremos `dc` para iniciar la ejecución del programa. (Podemos usar `?` para ver la ayuda)
     - La ejecución del programa parará en nuestro breakpoint y podremos ir paso a paso con le tecla `s` viendo los pasos en el gráfico. Más información [aquí](https://monosource.gitbooks.io/radare2-explorations/content/intro/visual_graphs.html)
+    - Más información para debuguear con Radare [aquí](https://monosource.gitbooks.io/radare2-explorations/content/intro/debugging.html)
     - Dejo [esto](https://drive.google.com/file/d/1maTcdquyqnZCIcJO7jLtt4cNHuRQuK4x/view) para más información
 - **PEiD:** Detectan los empaquetadores de código más comunes
 - **ILSpy:** Descompilador .NET
