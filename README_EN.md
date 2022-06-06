@@ -366,6 +366,7 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 file dictionary --force --show #1
 - If you find a `.git` on a website, download it. [GitTools] (https://github.com/internetwache/GitTools) has interesting things to work with repositories (Like to download them from a website)
 - [**CeWL**](https://github.com/digininja/CeWL)**:** Custom wordlist generator. Analyze a specific URL with a certain depth and generate a wordlist with the words that it considers relevant
 - [**Wfuzz**](https://github.com/xmendez/wfuzz)**:** Ease web fuzzing
+- [**Feroxbuster**](https://github.com/epi052/feroxbuster)**:** Enumerate all directories from a website with the possibility of a recursive scan. Also helps finding backup files
 
 ## Attacks
 
