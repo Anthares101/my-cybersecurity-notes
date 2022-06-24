@@ -75,6 +75,8 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 	- [**Zphisher**](https://github.com/htr-tech/zphisher)
 	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish)
 - Para resolver peticiones DNS podemos usar `nslookup` o `dig`
+	- Zone transfer con `dig`: `dig axfr example.com @DNS-SERVER-ADDR`
+	- Zone transfer con `dig` (Reverse lookup): `dig axfr -x 192.168 @DNS-SERVER-ADDR`
 - [**RouterSploit**](https://github.com/threat9/routersploit)**:** Un framework para la explotación de dispositivos embebidos
 - [**PacketWhisper**](https://github.com/TryCatchHCF/PacketWhisper)**:** Para exfiltrar información usando DNS
 - [**Updog**](https://github.com/sc0tfree/updog)**:** Alternativa al `SimpleHTTPServer` de Python que además permite también subir archivos
@@ -88,6 +90,7 @@ arpspoof -i eht0 -t <VICTIM_IP_A> -r <VICTIM_IP_B>
 - Si necesitamos un servidor php para hacer pruebas o lo que sea, podemos montarlo rapidamente con `php -S 127.0.0.1:8080` en el puerto 8080
 - Para conectarnos con RDP a una máquina en Kali podemos hacer: `xfreerdp /u:USER /p:PASSWORD /v:IP /dynamic-resolution`
 - Para analizar archivos de office en busca de macros se puede utilizar: [Oledump](https://blog.didierstevens.com/programs/oledump-py/)
+- Para determinar si una imagen ha sido editada (mejor si es un formato con pérdida) se puede usar [Forensically](https://29a.ch/photo-forensics/#error-level-analysis)
 
 # Identificación de frecuencias de radio (Tarjetas NFC)
 Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de pago, existe una app de android con la que podemos hacerlo fácilmente: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
@@ -501,7 +504,6 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 - **geoiplocation:** Saca una localización aproximada de una IP
 - **ardilla.ai:** Mirar operadora de un número movil y ver si en algún momento se ha cortado
 - Si se accede al archivo `robots.txt` de una pagina tenemos info de lo que no se quiere indexar
-- **Foca:** Para sacar metadatos de documentos
 - Existen hosting dedicados y compartidos (varios dominios con una IP)
 - **dnsmap:** Para subdominios
 - **wafwoof:** Sondear firewall
@@ -515,6 +517,9 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 - Un par de frameworks de OSINT:
 	- [**iKy**](https://github.com/kennbroorg/iKy)
 	- [**Maltego**](https://www.maltego.com/)
+- [**Foca**](https://github.com/ElevenPaths/FOCA)**:** Enumeración de organizaciones a partir de archivos que recolecta y escanea
+- Wayback machine para visitar paginas web en un estado anterior
+- Usando el dork the Google: `cache:URL` es posible obtener las versiones cacheadas del sitio web en cuestión
 
 ### Escaneo y enumeración
 - **wpscan:** Viene genial para atacar Wordpress

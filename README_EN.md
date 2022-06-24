@@ -75,6 +75,8 @@ These are the notes I've been taking since I started learning about ethical hack
 	- [**Zphisher**](https://github.com/htr-tech/zphisher)
 	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish)
 - To resolve DNS requests we can use `nslookup` or `dig`
+	- Zone transfer with `dig`: `dig axfr example.com @DNS-SERVER-ADDR`
+	- Zone transfer with `dig` (Reverse lookup): `dig axfr -x 192.168 @DNS-SERVER-ADDR`
 - [**RouterSploit**](https://github.com/threat9/routersploit)**:** A framework for the exploitation of embedded devices
 - [**PacketWhisper**](https://github.com/TryCatchHCF/PacketWhisper)**:** Used to exfiltrate information using DNS
 - [**Updog**](https://github.com/sc0tfree/updog)**:** Replacement for Python's `SimpleHTTPServer` that also allows uploading files
@@ -88,6 +90,7 @@ arpspoof -i eht0 -t <VICTIM_IP_A> -r <VICTIM_IP_B>
 - If we need a php server for testing or whatever, we can spin one up in the port 8080 with `php -S 127.0.0.1:8080`
 - In Kali we can connect with RDP to a machine with: `xfreerdp /u:USER /p:PASSWORD /v:IP /dynamic-resolution`
 - We can analyse office files looking for macros with: [Oledump](https://blog.didierstevens.com/programs/oledump-py/)
+- To check if an image has been modified (best if it is a lossy format) you can use [Forensically](https://29a.ch/photo-forensics/#error-level-analysis)
 
 # Identification of radio frequencies (NFC cards)
 They work at 125 khz or 13.56 Mhz. You can read the information of a payment card, there is an android app with which we can do it easily: https://github.com/devnied/EMV-NFC-Paycard-Enrollment
@@ -501,7 +504,6 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 - **geoiplocation:** Removes an approximate location from an IP
 - **ardilla.ai:** Look at the operator of a mobile number and see if it has ever been cut
 - If you access the `robots.txt` file on a page we have info of what you don't want to index
-- **Foca:** Gets documents metadata
 - There are dedicated and shared hosting (multiple domains with one IP)
 - **dnsmap:** For subdomains
 - **wafwoof:** Probe firewall
@@ -515,6 +517,9 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 - Two frameworks for OSINT:
 	- [**iKy**](https://github.com/kennbroorg/iKy)
 	- [**Maltego**](https://www.maltego.com/)
+- [**Foca**](https://github.com/ElevenPaths/FOCA)**:** Enumerates organizations with collected archives
+- Wayback machine can be used to check pages in a previous state
+- Using the Google dork: `cache:URL` it is possible to see the cache version of the requested site
 
 ### Scanning and enumeration
 - **wpscan:** Cool to attack Wordpress
