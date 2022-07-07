@@ -83,6 +83,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - [**Olevba**](https://github.com/decalage2/oletools/wiki/olevba)**:** Script para buscar macros en documentos office
 - En redes con switches necesitaremos hacer ARP poisoning para poder hacer sniff de paquetes (Man in the middle):
 ```console
+# https://www.kali.org/tools/dsniff/
 echo 1 > /proc/sys/net/ipv4/ip_forward # Activa la redirección de paquetes en el kernel de Linux para evitar problemas de comunicación entre las víctimas
 arpspoof -i eht0 -t <VICTIM_IP_A> -r <VICTIM_IP_B>
 ```
@@ -184,7 +185,7 @@ Radio en la cual alguna o varias de las funciones de la capa física son definid
 - **hashid:** Identifica un hash
 - **hashcat:** Usa varios ataques de fuerza bruta
 - [**colabcat**](https://github.com/someshkar/colabcat)**:** Ejecuta hashcat en Google Colab
-- [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Permite realizar diferentes tipos de fuerza bruta
+- [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Permite realizar diferentes tipos de fuerza bruta ([Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet))
 - **filemyhash:** Programa para descifrar un hash (base de datos)
 - **hashidentifier:** Programa para identificar tipo de hash
 - **dcode.fr:** Página para codificar y decodificar diferentes tipos de algoritmos de cifrado

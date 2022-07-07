@@ -83,6 +83,7 @@ These are the notes I've been taking since I started learning about ethical hack
 - [**Olevba**](https://github.com/decalage2/oletools/wiki/olevba)**:** Script to search for macros in office documents
 - In switched networks we will need ARP poisoning to sniff packages (Man in the middle):
 ```console
+https://www.kali.org/tools/dsniff/
 echo 1 > /proc/sys/net/ipv4/ip_forward # Activate packages forwarding to avoid comunications problems between the victims
 arpspoof -i eht0 -t <VICTIM_IP_A> -r <VICTIM_IP_B>
 ```
@@ -184,7 +185,7 @@ Scope of cryptology dealing with encryption or encoded techniques aimed at alter
 - **hashid:** Identify a hash
 - **hashcat:** Can use plenty of brute force attacks
 - [**colabcat**](https://github.com/someshkar/colabcat)**:** Execute hashcat on Google Colab
-- [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Allows different types of brute force to be performed
+- [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Allows to perform different types of brute force attacks ([Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet))
 - **filemyhash:** Program that decrypts hashes (database)
 - **hashidentifier:** Program to identify hash type
 - **dcode.fr:** Page to encode and decode different types of encryption algorithms
