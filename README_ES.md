@@ -201,6 +201,7 @@ Para crackear contraseñas necesitaremos diccionarios, aquí dejo algunas opcion
 - [**Kaonashi**](https://github.com/kaonashi-passwords/Kaonashi/tree/master/wordlists)
 - **Crunch y Cewl:** Para creación de diccionarios
 - [**Mentalist**](https://github.com/sc0tfree/mentalist)**:** Herramienta gráfica para la generación de diccionarios
+- [**RSMangler**](https://github.com/digininja/RSMangler)**:** Permite generar diccionarios a partir de un conjunto de palabras
 
 ### Reglas
 Si se combina un buen diccionario con un buen conjunto de reglas las posibilidades de éxito aumentan:
@@ -371,6 +372,7 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 fichero diccionario --force --sho
 - [**CeWL**](https://github.com/digininja/CeWL)**:** Generador de diccionarios personalizados. Analiza una URL especifica con una determinada profundidad y genera un diccionario con las palabras que considera relevantes
 - [**Wfuzz**](https://github.com/xmendez/wfuzz)**:** Facilita el fuzzing web
 - [**Feroxbuster**](https://github.com/epi052/feroxbuster)**:** Enumerador de directorios recursivo y que ademas facilita entre otras cosas encontrar archivos de backup
+- [**EyeWitness**](https://github.com/FortyNorthSecurity/EyeWitness)**:** Diseñado para tomar capturas de los sitios webs especificados, proveer información de las cabeceras del servidor e intentar identificar si se estan utilizando credenciales por defecto en aplicaciones conocidas
 
 ## Ataques
 
