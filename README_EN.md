@@ -653,6 +653,7 @@ $ script -qc /bin/bash /dev/null
 		2. Once with that done, let's go to the file `/etc/proxychains.conf` and add a line of which proxy to use (Example: `socks4 127.0.0.1 8080`)
 		3. With the `proxychains` command in front of any command you can send that command through your proxy
 	- You can create scripts for metasploit and make common workflows faster `msfconsole -r resourcescript.rc`
+	- Using `auxiliary/gather/impersonate_ssl` you can copy a TLS certificate from a website (self signed) to avoid IDs/IPs
 - [**Armitage**](https://github.com/rsmudge/armitage)**:** GUI para metasploit
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Search for passwords by brute force through a protocol or web
 - [**linpeas/winpeas**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)**:** Take info out of the machine to see how to scale
