@@ -686,6 +686,7 @@ $ script -qc /bin/bash /dev/null
 		   ```
 - [**Armitage**](https://github.com/rsmudge/armitage)**:** GUI para metasploit
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Search for passwords by brute force through a protocol or web
+- [**SessionGopher**](https://github.com/Arvanaghi/SessionGopher)**:** SessionGopher is a PowerShell tool that finds and decrypts saved session information for remote access tools
 - [**linpeas/winpeas**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)**:** Take info out of the machine to see how to scale
 - To see what permissions we have in Windows we can execute: `whoami /priv`. If we have `SeImpersonatePrivilege` or `SeImpersonatePrivilege` we can possibly escalate privileges easily
 - [**Seatbelt**](https://github.com/GhostPack/Seatbelt)**:** Similar to the previous one but only with Windows. [Here](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries) you can download the already compiled .exe
