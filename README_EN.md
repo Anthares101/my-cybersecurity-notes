@@ -746,7 +746,7 @@ $ script -qc /bin/bash /dev/null
 	  ┌──(rootkali)-[~]
 	  └─# upx --best --ultra-brute -o hello_sneak.exe hello_world.exe
       ```
-     The payload that must be used in this case in the Metasploit handler would be windows/meterpreter/reverse_tcp
+      The payload that must be used in this case in the Metasploit handler would be `windows/meterpreter/reverse_tcp`
 - [**Armitage**](https://github.com/rsmudge/armitage)**:** GUI para metasploit
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Search for passwords by brute force through a protocol or web
 - [**SessionGopher**](https://github.com/Arvanaghi/SessionGopher)**:** SessionGopher is a PowerShell tool that finds and decrypts saved session information for remote access tools
