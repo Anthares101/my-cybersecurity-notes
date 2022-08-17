@@ -74,6 +74,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
 	- [**Zphisher**](https://github.com/htr-tech/zphisher)
 	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish)
+	- [**Social Engineer Toolkit**](https://github.com/trustedsec/social-engineer-toolkit)
 - Para resolver peticiones DNS podemos usar `nslookup` o `dig`
 	- Zone transfer con `dig`: `dig axfr example.com @DNS-SERVER-ADDR`
 	- Zone transfer con `dig` (Reverse lookup): `dig axfr -x 192.168 @DNS-SERVER-ADDR`

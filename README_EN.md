@@ -74,6 +74,7 @@ These are the notes I've been taking since I started learning about ethical hack
 	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
 	- [**Zphisher**](https://github.com/htr-tech/zphisher)
 	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish)
+	- [**Social Engineer Toolkit**](https://github.com/trustedsec/social-engineer-toolkit)
 - To resolve DNS requests we can use `nslookup` or `dig`
 	- Zone transfer with `dig`: `dig axfr example.com @DNS-SERVER-ADDR`
 	- Zone transfer with `dig` (Reverse lookup): `dig axfr -x 192.168 @DNS-SERVER-ADDR`
