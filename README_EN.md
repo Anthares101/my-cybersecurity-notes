@@ -695,8 +695,10 @@ $ script -qc /bin/bash /dev/null
 
 		   [*] Exploit running as background job.
 		   ```
-	- [**PowerSploit**](https://github.com/PowerShellMafia/PowerSploit): A lot of Poweshell modules (Including PowerUp and PowerView) that you can import with the Powershell module to perform a lot of things in a Windows host
-	- [**Posh-SecMod**](https://github.com/darkoperator/Posh-SecMod): Another Powershell modules bundle that can be interesting (Powershell v3 only)
+	- [**PowerSploit**](https://github.com/PowerShellMafia/PowerSploit)**:** A lot of Poweshell modules (Including PowerUp and PowerView) that you can import with the Powershell module to perform a lot of things in a Windows host
+	- [**Nishang**](https://github.com/samratashok/nishang)**:** Nishang is a framework and collection of scripts and payloads
+	- [**Posh-SecMod**](https://github.com/darkoperator/Posh-SecMod)**:** Another Powershell modules bundle that can be interesting (Powershell v3 only)
+	- [**Psgetsystem**](https://github.com/decoder-it/psgetsystem)**:** Powershell script to get SYSTEM using the parent process technique
 	- If you are not able to use the `getsystem` Meterpreter command to escalate maybe you need to bypass UAC. You can search for possible bypasses in Metasploit using the `post/multi/recon/local_exploit_suggester` module or use [UACME](https://github.com/hfiref0x/UACME)
 	- If an AV is in place, [Veil](https://github.com/Veil-Framework/Veil) alongside the [UPX](https://upx.github.io/) packer can be used to bypass it. First open Veil and generate a Meterpreter executable:
       ```bash
