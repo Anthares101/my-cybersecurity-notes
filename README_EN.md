@@ -700,6 +700,7 @@ $ script -qc /bin/bash /dev/null
 	- [**Posh-SecMod**](https://github.com/darkoperator/Posh-SecMod)**:** Another Powershell modules bundle that can be interesting (Powershell v3 only)
 	- [**Psgetsystem**](https://github.com/decoder-it/psgetsystem)**:** Powershell script to get SYSTEM using the parent process technique
 	- If you are not able to use the `getsystem` Meterpreter command to escalate maybe you need to bypass UAC. You can search for possible bypasses in Metasploit using the `post/multi/recon/local_exploit_suggester` module or use [UACME](https://github.com/hfiref0x/UACME)
+	- With the `exploit/multi/script/web_delivery` module a web server is setup with a payload that will be executed when the Metasploit provided command is executed in the victim machine
 	- If an AV is in place, [Veil](https://github.com/Veil-Framework/Veil) alongside the [UPX](https://upx.github.io/) packer can be used to bypass it. First open Veil and generate a Meterpreter executable:
       ```bash
       ...
