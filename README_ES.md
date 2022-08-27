@@ -697,6 +697,7 @@ $ script -qc /bin/bash /dev/null
 		   ```
 	- [**PowerSploit**](https://github.com/PowerShellMafia/PowerSploit)**:** Conjunto de módulos Powershell (Incluye PowerUp y PowerView) que puedes importar con el módulo de Powershell para realizar diversas acciones en máquinas Windows
 	- [**Nishang**](https://github.com/samratashok/nishang)**:** Nishang es un framework y colección de scripts y payloads
+	- [**PowerLurk**](https://github.com/Sw4mpf0x/PowerLurk)**:** Conjunto de herramientas para crear suscripciones maliciosas a eventos WMI (Para conseguir persistencia)
 	- [**Posh-SecMod**](https://github.com/darkoperator/Posh-SecMod)**:** Otro conjunto de módulos Powershell que pueden ser interesantes (Powershell v3 solo)
 	- [**Psgetsystem**](https://github.com/decoder-it/psgetsystem)**:** Script de Powershell para conseguir SYSTEM usando un proceso como padre
 	- Si el comando `getsystem` de Meterpreter no consigue escalar puede que se necesite hace un bypass a UAC. En Metasploit hay algunos módulos que podrían ayudar con esto, usa el módulo `post/multi/recon/local_exploit_suggester` para comprobar si alguno vale. En caso de no poder realizar el bypass con Metasploit, siempre queda [UACME](https://github.com/hfiref0x/UACME)
