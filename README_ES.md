@@ -565,7 +565,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 - **MBSA:** Algo obsoleto pero se puede bajar para escanear nuestro PC Windows en busca de brechas de seguridad
 - [**gobuster**](https://github.com/OJ/gobuster)**:** Para sacar todos los directorios de una web
 - [**Nikto**](https://github.com/sullo/nikto)**:** Escaner de vulnerabilidades web: Escaner de vulnerabilidades web
-- **enum4linux:** Para pillar info de hosts Windows y Samba
+- **enum4linux o smbmap:** Para pillar info de hosts Windows y Samba
 - **showmount:** En el caso de tener un puerto con el servicio NFS, puede mostrar con el parámetro `-e` si hay algún directorio montado
 - **smbclient:**
 	- **`smbclient -N -L //IP/`:** Para listar directorios de un server samba windows.

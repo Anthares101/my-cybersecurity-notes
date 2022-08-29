@@ -565,7 +565,7 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 - **MBSA:** Something obsolete but can be lowered to scan our Windows PC for security breaches
 - [**gobuster**](https://github.com/OJ/gobuster)**:** To remove all directories from a website
 - [**Nikto**](https://github.com/sullo/nikto)**:** Web Vulnerability Scanner: Web Vulnerability Scanner
-- **enum4linux:** To catch info from Windows and Samba hosts
+- **enum4linux or smbmap:** To catch info from Windows and Samba hosts
 - **showmount:** If you have a port with the NFS service, you can display with the parameter `-e` if there are any directories mounted
 - **smbclient:**
 	- **`smbclient -N -L //IP/`:** List directories in a Windows server
