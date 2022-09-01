@@ -778,3 +778,4 @@ the reverse shell we have on the computer from vulnerable SQL server.
 	- [**Starkiller**](https://github.com/BC-SECURITY/Starkiller)**:** Frontend for Powershell Empire
 - [**CrackMapExec**](https://github.com/byt3bl33d3r/CrackMapExec)**:** Post-Exploitation tool that, among other things, allows checking the machines where we can access using an user and a password (plain text or hash) in Active Directory networks
 - [**Evil-WinRM**](https://github.com/Hackplayers/evil-winrm)**:** Allow the conection to a Windows machine using Windows Remote Management. The hash NT can be used for login instead of plain password
+- [**3snake**](https://github.com/blendin/3snake)**:** Extracts in memory credentials from `sudo` and `sshd` processes system calls
