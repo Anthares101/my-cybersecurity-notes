@@ -145,6 +145,8 @@ They work at 125 khz or 13.56 Mhz. You can read the information of a payment car
 	- **hcxpcaptool:** Same as the other but taking out the PMKID
 - **cap2hccapx:** Change capture format to hashcat
 - **hashcat:** Can use plenty of brute force attacks (Command for this: hashcat -m2500 (For PMK) (-m16800 for PKMID) -a3 -w3 file)
+- [**Kismet**](https://www.kismetwireless.net/)**:** A wireless network and device detector, sniffer, wardriving tool, and WIDS (wireless intrusion detection) framework
+- [**Aircrck-ng**](https://www.aircrack-ng.org/)**:** Complete suite of tools to assess WiFi network security
 
 # SDR (Radio Hacking):
 Some or more of the functions of the physical layer are defined by software: filters, mixers, amplifiers...

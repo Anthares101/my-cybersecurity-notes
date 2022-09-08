@@ -145,6 +145,8 @@ Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de 
 	- **hcxpcaptool:** Lo mismo que el otro pero sacando el PMKID
 - **cap2hccapx:** Cambio de formato de captura a hashcat
 - **hashcat:** Usa varios ataques de fuerza bruta (Comando para esto: hashcat -m2500 (Para PMK) (-m16800 para PKMID) -a3 -w3 file)
+- [**Kismet**](https://www.kismetwireless.net/)**:** Detector de redes y dispositivos wireless, sniffer, herramienta de wardriving y un framework WIDS (wireless intrusion detection)
+- [**Aircrck-ng**](https://www.aircrack-ng.org/)**:** Completo conjunto de herramientas para evaluar la seguridad de redes WIFI
 
 # SDR (Radio Hacking):
 Radio en la cual alguna o varias de las funciones de la capa física son definidas mediante software: filtros, mezcladores, amplificadores...
