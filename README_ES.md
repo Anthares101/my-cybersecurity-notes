@@ -146,7 +146,10 @@ Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de 
 - **cap2hccapx:** Cambio de formato de captura a hashcat
 - **hashcat:** Usa varios ataques de fuerza bruta (Comando para esto: hashcat -m2500 (Para PMK) (-m16800 para PKMID) -a3 -w3 file)
 - [**Kismet**](https://www.kismetwireless.net/)**:** Detector de redes y dispositivos wireless, sniffer, herramienta de wardriving y un framework WIDS (wireless intrusion detection)
-- [**Aircrck-ng**](https://www.aircrack-ng.org/)**:** Completo conjunto de herramientas para evaluar la seguridad de redes WIFI
+- [**Aircrack-ng**](https://www.aircrack-ng.org/)**:** Completo conjunto de herramientas para evaluar la seguridad de redes WIFI
+- [**Airgeddon**](https://github.com/v1s1t0r1sh3r3/airgeddon)**:** Framework para realizar auditorias WiFi
+- [**Eaphammer**](https://github.com/s0lst1c3/eaphammer)**:** Conjunto de herramientas para realizar ataques de Evil Twin a redes WPA2-Enterprise
+- [**Wigle**](https://wigle.net/tools)**:** Herramienta para hacer wardriving
 
 # SDR (Radio Hacking):
 Radio en la cual alguna o varias de las funciones de la capa física son definidas mediante software: filtros, mezcladores, amplificadores...
