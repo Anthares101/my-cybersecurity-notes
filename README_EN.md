@@ -151,6 +151,7 @@ They work at 125 khz or 13.56 Mhz. You can read the information of a payment car
 - [**Eaphammer**](https://github.com/s0lst1c3/eaphammer)**:** Toolkit to perform Evil Twin attacks to WPA2-Enterprise networks
 - [**Wigle**](https://wigle.net/tools)**:** Wardriving tool
 - [**Wifiphisher**](https://github.com/wifiphisher/wifiphisher)**:** A rogue Access Point framework for conducting red team engagements or Wi-Fi security testing
+- [**Wifite2**](https://github.com/derv82/wifite2)**:** Designed to use all known methods for retrieving the password of a wireless access point
 
 # SDR (Radio Hacking):
 Some or more of the functions of the physical layer are defined by software: filters, mixers, amplifiers...

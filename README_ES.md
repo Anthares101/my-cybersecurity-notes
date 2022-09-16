@@ -151,6 +151,7 @@ Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de 
 - [**Eaphammer**](https://github.com/s0lst1c3/eaphammer)**:** Conjunto de herramientas para realizar ataques de Evil Twin a redes WPA2-Enterprise
 - [**Wigle**](https://wigle.net/tools)**:** Herramienta para hacer wardriving
 - [**Wifiphisher**](https://github.com/wifiphisher/wifiphisher)**:** Framework para realizar auditorias Wi-Fi con puntos de acceso falsos
+- [**Wifite2**](https://github.com/derv82/wifite2)**:** Diseñado para lanzar todos los métodos conocidos para obtener la contraseña de un punto de acceso wireless
 
 # SDR (Radio Hacking):
 Radio en la cual alguna o varias de las funciones de la capa física son definidas mediante software: filtros, mezcladores, amplificadores...
