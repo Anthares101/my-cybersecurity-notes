@@ -72,6 +72,7 @@ These are the notes I've been taking since I started learning about ethical hack
 - Some useful tools for phishing:
 	- [**GoPhish**](https://github.com/gophish/gophish)
 	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
+	- [**Evilgophish**](https://github.com/fin3ss3g0d/evilgophish)
 	- [**Zphisher**](https://github.com/htr-tech/zphisher)
 	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish)
 	- [**Social Engineer Toolkit**](https://github.com/trustedsec/social-engineer-toolkit)
