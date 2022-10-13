@@ -613,6 +613,7 @@ $ script -qc /bin/bash /dev/null
 - If the user belongs to the lxd or docker group, we may be able to mount the entire file system of the victim in a container and access it as root within the container
 - With `ltrace` you can run a program and show some of the function calls that are made
 - [**Responder**](https://github.com/lgandx/Responder)**:** LLMNR/NBT-NS/mDNS Poisoner y NTLMv1/2 Relay
+- [**Hoaxshell**](https://github.com/t3l3machus/hoaxshell)**:** An unconventional Windows reverse shell, currently undetected by Microsoft Defender and possibly other AV solutions, solely based on HTTP(s) traffic
 - [**metasploit**](https://github.com/rapid7/metasploit-framework)**:**
 	- Metasploit has a lot of exploits in addition to a development environment to create new ones. To start it for the first time: 
 	```console
