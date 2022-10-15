@@ -72,10 +72,10 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
 - Algunas herramientas útiles para hacer phishing:
 	- [**GoPhish**](https://github.com/gophish/gophish): Framework de phishing que facilita mucho las campañas
 	- [**Evilginx**](https://github.com/kgretzky/evilginx2): Framework que permite realizar ataques MITM para robar credenciales junto a cookies de sesión, lo que permite saltarse el 2FA
-	- [**Evilgophish**](https://github.com/fin3ss3g0d/evilgophish): 
-	- [**Zphisher**](https://github.com/htr-tech/zphisher)
-	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish)
-	- [**Social Engineer Toolkit**](https://github.com/trustedsec/social-engineer-toolkit)
+	- [**Evilgophish**](https://github.com/fin3ss3g0d/evilgophish): Combinación de GoPhish y Evilginx
+	- [**Zphisher**](https://github.com/htr-tech/zphisher): Herramienta de phishing autimatizada
+	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish): Parecido a Evilginx pero en mi opinión menos potente
+	- [**Social Engineer Toolkit**](https://github.com/trustedsec/social-engineer-toolkit): Framework que permite lanzar diferentes tipos de ataques de ingeniería social rápidamente
 - Para resolver peticiones DNS podemos usar `nslookup` o `dig`
 	- Zone transfer con `dig`: `dig axfr example.com @DNS-SERVER-ADDR`
 	- Zone transfer con `dig` (Reverse lookup): `dig axfr -x 192.168 @DNS-SERVER-ADDR`
