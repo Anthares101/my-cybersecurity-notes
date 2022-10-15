@@ -70,8 +70,8 @@ These are the notes I've been taking since I started learning about ethical hack
     - With `-x PATH` we can print the content of the  file attached to a vulnerability (Code or detailed information)
     - With `-m PATH` we can copy the file attached to a vulnerability to our current directory.
 - Some useful tools for phishing:
-	- [**GoPhish**](https://github.com/gophish/gophish)
-	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
+	- [**GoPhish**](https://github.com/gophish/gophish): Phishing framework that makes campaigns much easier
+	- [**Evilginx**](https://github.com/kgretzky/evilginx2): Framework that allows MITM attacks to steal credentials along side session cookies, which allows bypassing 2FA
 	- [**Evilgophish**](https://github.com/fin3ss3g0d/evilgophish)
 	- [**Zphisher**](https://github.com/htr-tech/zphisher)
 	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish)
