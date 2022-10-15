@@ -72,10 +72,10 @@ These are the notes I've been taking since I started learning about ethical hack
 - Some useful tools for phishing:
 	- [**GoPhish**](https://github.com/gophish/gophish): Phishing framework that makes campaigns much easier
 	- [**Evilginx**](https://github.com/kgretzky/evilginx2): Framework that allows MITM attacks to steal credentials along side session cookies, which allows bypassing 2FA
-	- [**Evilgophish**](https://github.com/fin3ss3g0d/evilgophish)
-	- [**Zphisher**](https://github.com/htr-tech/zphisher)
-	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish)
-	- [**Social Engineer Toolkit**](https://github.com/trustedsec/social-engineer-toolkit)
+	- [**Evilgophish**](https://github.com/fin3ss3g0d/evilgophish): GoPhish and Evilginx combination
+	- [**Zphisher**](https://github.com/htr-tech/zphisher): Automated phishing tool
+	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish): Similar to Evilginx but not as good in my opinion
+	- [**Social Engineer Toolkit**](https://github.com/trustedsec/social-engineer-toolkit): Framework that allows launching different types of social engineering attacks quickly
 - To resolve DNS requests we can use `nslookup` or `dig`
 	- Zone transfer with `dig`: `dig axfr example.com @DNS-SERVER-ADDR`
 	- Zone transfer with `dig` (Reverse lookup): `dig axfr -x 192.168 @DNS-SERVER-ADDR`
