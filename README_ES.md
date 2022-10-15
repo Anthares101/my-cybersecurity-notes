@@ -70,9 +70,9 @@ Estas son las notas que he ido cogiendo desde que empecé a aprender sobre hacki
     - Con `-x PATH` podemos imprimir el contenido del archivo adjuntado a una vulnerabilidad (Código o explicación detallada)
     - Con `-m PATH` podemos copiar a nuestro directorio actual el archivo adjuntado a una vulnerabilidad
 - Algunas herramientas útiles para hacer phishing:
-	- [**GoPhish**](https://github.com/gophish/gophish)
-	- [**Evilginx**](https://github.com/kgretzky/evilginx2)
-	- [**Evilgophish**](https://github.com/fin3ss3g0d/evilgophish)
+	- [**GoPhish**](https://github.com/gophish/gophish): Framework de phishing que facilita mucho las campañas
+	- [**Evilginx**](https://github.com/kgretzky/evilginx2): Framework que permite realizar ataques MITM para robar credenciales junto a cookies de sesión, lo que permite saltarse el 2FA
+	- [**Evilgophish**](https://github.com/fin3ss3g0d/evilgophish): 
 	- [**Zphisher**](https://github.com/htr-tech/zphisher)
 	- [**SocialPhish**](https://github.com/xHak9x/SocialPhish)
 	- [**Social Engineer Toolkit**](https://github.com/trustedsec/social-engineer-toolkit)
