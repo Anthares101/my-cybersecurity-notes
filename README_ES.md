@@ -525,6 +525,7 @@ Usaremos OSSTM (Metodologia abierta de Comprobación y Seguridad), básicamente 
 - **Dato curioso:** A veces nos podemos encontrar con que un determinado dominio tiene una carpeta (la raíz por ejemplo) que en vez de esta bloqueada porquen no hay nada que mostrar ahí, hace un directory listing. Con eso se puede sacar cosas guays
 - **Bucket AWS:** A veces se guarda información en la nube utilizando este servicio de amazon. Para ver si podemos acceder al menos a ver lo que hay, las URL tienen el formato siguiente: `http://bucketname.region-name.s3.amazonaws.com/` (`region-name` se puede omitir)
 - [**sherlock**](https://github.com/sherlock-project/sherlock)**:** Permite buscar uno o más nombres de usuario en todas las páginas que se te ocurran
+- [**Nexfil**](https://github.com/thewhiteh4t/nexfil)**:** Alternativa a sherlock
 - [**LittleBrother**](https://github.com/lulz3xploit/LittleBrother)**:** Parecido a sherlock pero pudiendo buscar por nombre, correo, apellidos, usuario...
 - Un par de frameworks de OSINT:
 	- [**iKy**](https://github.com/kennbroorg/iKy)

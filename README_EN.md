@@ -525,6 +525,7 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 - **Curious data:** Sometimes we may find that a certain domain has a folder (the root for example) that instead of this blocked because there is nothing to show there, makes a directory listing. With that you can take out cool things
 - **AWS Bucket:** Sometimes information is saved in the cloud using this amazon service. To see if we can at least access to see what's there, URLs are in the following format: `http://bucketname.region-name.s3.amazonaws.com/` (`region-name` can be omitted)
 - [**sherlock**](https://github.com/sherlock-project/sherlock)**:** Search for one or more usernames on all pages you can think of
+- [**Nexfil**](https://github.com/thewhiteh4t/nexfil)**:** sherlock alternative
 - [**LittleBrother**](https://github.com/lulz3xploit/LittleBrother)**:** Similar to sherlock but being able to search by name, mail, last name, user...
 - Two frameworks for OSINT:
 	- [**iKy**](https://github.com/kennbroorg/iKy)
