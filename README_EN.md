@@ -786,6 +786,7 @@ the reverse shell we have on the computer from vulnerable SQL server.
 - **Command and Control Server:**
 	- [**Powershell Empire**](https://github.com/BC-SECURITY/Empire/)**:** Post-exploitation Framework. It has several useful tools and allows easy control of exploited machines
 	- [**Starkiller**](https://github.com/BC-SECURITY/Starkiller)**:** Frontend for Powershell Empire
+	- [**Villain**](https://github.com/t3l3machus/villain)**:** Backdoor generator and multi-session handler that allows users to connect with sibling servers (other machines running Villain) and share their backdoor sessions
 - [**CrackMapExec**](https://github.com/byt3bl33d3r/CrackMapExec)**:** Post-Exploitation tool that, among other things, allows checking the machines where we can access using an user and a password (plain text or hash) in Active Directory networks
 - [**Evil-WinRM**](https://github.com/Hackplayers/evil-winrm)**:** Allow the conection to a Windows machine using Windows Remote Management. The hash NT can be used for login instead of plain password
 - [**3snake**](https://github.com/blendin/3snake)**:** Extracts in memory credentials from `sudo` and `sshd` processes system calls

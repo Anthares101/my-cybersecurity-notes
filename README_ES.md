@@ -786,6 +786,7 @@ la shell reversa que tenemos en el equipo desde server SQL vulnerable.
 - **Servidor de comando y control:**
 	- [**Powershell Empire**](https://github.com/BC-SECURITY/Empire/)**:** Framework de post explotación. Tiene varias herramientas útiles y permite el control sencillo de máquinas exploiteadas
 	- [**Starkiller**](https://github.com/BC-SECURITY/Starkiller)**:** Frontend para Powershell Empire
+	- [**Villain**](https://github.com/t3l3machus/villain)**:** Generador de puertas traseras y gestor de sesiones que permite a los usuarios conectar con otras instancias de Villain y compartir sesiones
 - [**CrackMapExec**](https://github.com/byt3bl33d3r/CrackMapExec)**:** Herramienta de Post-Explotación que, entre otras cosas, permite comprobar a que máquinas tenemos acceso especificando usuario y contraseña (En plano o el hash) en redes Active Directory
 - [**Evil-WinRM**](https://github.com/Hackplayers/evil-winrm)**:** Permite la conexión a una máquina Windows usando el Gestor Remoto de Windows. Se puede usar el hash NT en vez de una contraseña en texto plano para iniciar sesión
 - [**3snake**](https://github.com/blendin/3snake)**:** Extrae credenciales de memoria de las llamadas a sistema de los procesos `sudo` y `sshd`
