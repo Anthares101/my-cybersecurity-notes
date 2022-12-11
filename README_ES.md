@@ -477,6 +477,7 @@ $ objdump -x binary # Información sobre el binario
     payload = asm(shellcraft.sh())
 	payload += asm(shellcraft.exit())
     ```
+- [**PESecurity**](https://github.com/NetSPI/PESecurity)**:** Comprueba que tipo de seguridad tiene activada un binario para Windows
 - **Radare:** Uso básico:
     - Ejecutamos radare de la siguiente forma `radare2 binario`
     - Lo primero sería hacer `aa` parar analizar el binario y despues podriamos utilizar `afl` para mostrar todas las funciones encontradas
