@@ -158,7 +158,7 @@ They work at 125 khz or 13.56 Mhz. You can read the information of a payment car
 Some or more of the functions of the physical layer are defined by software: filters, mixers, amplifiers...
 
 ## Concepts
-- **Shortwave:** Or High Frequency (HF)
+- **Shortwave Or High Frequency (HF)**
 
 ## Phases
 - **Sampling**
