@@ -235,7 +235,7 @@ to the image to take out what you've compressed on the zip
 - **Image Editors**
 - **Outguess**
 - **Steghide:** Widely used, allows you to embed files in others by encrypting the info if you want. Use LSB with mathematical graph theory for swap lsb-bits between pixels in graph for maximum usage of existing data
-- **OpenStego:** Allows you to embed files in others like the previous one but with interface. Also meter watermark (works with .bmp)
+- **OpenStego:** Allows you to embed files in others like the previous one but with interface. Also can put a watermark (works with .bmp)
 - **StegoSuite**
 - **Jsteg**
 - **Stegano**
