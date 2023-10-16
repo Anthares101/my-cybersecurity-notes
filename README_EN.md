@@ -567,7 +567,7 @@ We'll use OSSTM (Open Source Security Testing Methodology Manual), basically the
 	- **Firewalls**
 		- With this option you can modify the IP packets sent to try to skip a firewall `--ip-options R (record-route) T (record-timestamp) U (R &amp; T)  L (Ruting loose) <ip> S (Ruting strict) <list ip>`
 		- **`--spoof-mac`:** You can pass it 0 to be random, an Apple-like name Cisco or any hexadecimal string (if not complete nmap terminating)
-		- **`--proxies`:** It is quite green as documented, only scripts and version scan work with this. You basically specify a number of proxies to pass through before connecting to the target. I prefer to use [Proxychains](https://github.com/haad/proxychains) directly the truth.
+		- **`--proxies`:** It is quite basic as documented, only scripts and version scan work with this. You basically specify a number of proxies to pass through before connecting to the target. I prefer to use [Proxychains](https://github.com/haad/proxychains) directly the truth.
 		- **`--badsum`:** Corrupt packets are sent that the system discards when it is wrong and therefore responses usually come from IDS or firewalls that do not look at checksums
 		- **`--adler32`:** To use the old checksum calculation algorithm of an SCTP package. It may come in fine to receive packages from older systems
 - **nessus:** Scans a host for vulnerabilities. It has a nice interface. It does not allow scanning remotely, only local in free version, although you could make an ssh tunnel for nessus. This cool to see the vulnerabilities directly with your scores and such.
